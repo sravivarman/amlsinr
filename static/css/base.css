@@ -1240,13 +1240,22 @@ body.conference-site .site-nav {
   background: rgba(248, 247, 242, 0.9);
   border: 1px solid rgba(13, 26, 43, 0.12);
   box-shadow: 0 12px 30px rgba(13, 26, 43, 0.08);
-  gap: 0.85rem;
-  flex-wrap: wrap;
+  gap: 0.65rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+body.conference-site .site-nav::-webkit-scrollbar {
+  display: none;
 }
 
 body.conference-site .site-brand {
   color: #043344;
   text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 body.conference-site .menu-toggle {
@@ -1263,6 +1272,7 @@ body.conference-site .site-nav a {
   padding: 0.45rem 0.78rem;
   border-radius: 999px;
   color: #0d1a2b;
+  white-space: nowrap;
   transition: background-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
 }
 
@@ -1275,6 +1285,7 @@ body.conference-site .site-nav summary {
   border-radius: 999px;
   color: #0d1a2b;
   cursor: pointer;
+  white-space: nowrap;
   transition: background-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
 }
 
@@ -1305,6 +1316,7 @@ body.conference-site .site-nav a:hover {
 
 body.conference-site .nav-dropdown {
   position: relative;
+  flex-shrink: 0;
 }
 
 body.conference-site .nav-dropdown-menu {
