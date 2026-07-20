@@ -15,13 +15,17 @@
 
   <header class="site-header">
     <nav class="site-nav">
-      <a href="{{ site_root or './' }}">Home</a>
-      <a href="{{ site_root }}about/">About</a>
-      <a href="{{ site_root }}program/">Program</a>
-      <a href="{{ site_root }}speakers/">Speakers</a>
-      <a href="{{ site_root }}venue/">Venue</a>
-      <a href="{{ site_root }}registration/">Registration</a>
-      <a href="{{ site_root }}contact/">Contact</a>
+      <a class="site-brand" href="{{ site_root or './' }}">{{ conference.abbrev }}</a>
+      <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav-links">Menu</button>
+      <div id="site-nav-links" class="site-nav-links" data-site-nav-links>
+        <a href="{{ site_root or './' }}">Home</a>
+        <a href="{{ site_root }}about/">About</a>
+        <a href="{{ site_root }}program/">Program</a>
+        <a href="{{ site_root }}speakers/">Speakers</a>
+        <a href="{{ site_root }}venue/">Venue</a>
+        <a href="{{ site_root }}registration/">Registration</a>
+        <a href="{{ site_root }}contact/">Contact</a>
+      </div>
     </nav>
 
     {% if show_hero %}
@@ -73,5 +77,31 @@
   <footer class="site-footer">
     <p>&copy; 2026 {{ conference.abbrev }}. {{ conference.host }}.</p>
   </footer>
+  <script>
+    (() => {
+      const nav = document.querySelector(".site-nav");
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const links = document.querySelector("[data-site-nav-links]");
+      if (!nav || !toggle || !links) return;
+
+      const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      links.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 820) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
