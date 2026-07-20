@@ -99,6 +99,12 @@ To preview it locally:
 uv run python serve.py
 ```
 
+To build output specifically for GitHub Pages from the `docs/` folder:
+
+```bash
+make build-pages
+```
+
 By default, the preview server serves `dist/` at:
 
 ```text
@@ -118,6 +124,17 @@ Before committing changes, run:
 ```bash
 make check
 ```
+
+## GitHub Pages Setup
+
+If your live URL shows the README page, GitHub Pages is using the wrong publish source.
+
+Use one of these options:
+
+1. **Deploy from branch**: set source to `main` branch and `/docs` folder, then run `make build-pages` before pushing.
+2. **GitHub Actions**: set source to **GitHub Actions** and keep the existing workflow-based deployment.
+
+This repository also includes a root `index.html` redirect to `docs/` so root-based publishing does not fall back to README.
 
 This runs the source consistency check, rebuilds the site, verifies `dist/index.html` exists, and prints git status.
 
