@@ -1305,6 +1305,14 @@ body.conference-site .conference-hero-panel {
   gap: 1rem;
 }
 
+body.conference-site .conference-hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(13, 26, 43, 0.12);
+}
+
 body.conference-site .hero-role,
 body.conference-site .page-kicker {
   background: linear-gradient(135deg, #ffb703, #ffd166);
@@ -1364,45 +1372,6 @@ body.conference-site .conference-chip {
   font-weight: 700;
 }
 
-body.conference-site .conference-hero-spotlight h2 {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin-top: 0.25rem;
-}
-
-body.conference-site .conference-hero-spotlight p:last-child {
-  margin-top: 0.5rem;
-  color: rgba(13, 26, 43, 0.72);
-}
-
-body.conference-site .conference-stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-body.conference-site .conference-stat-card {
-  padding: 1rem;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(0, 107, 132, 0.08), rgba(0, 107, 132, 0.03));
-  border: 1px solid rgba(0, 107, 132, 0.16);
-}
-
-body.conference-site .conference-stat-value {
-  display: block;
-  font-family: "Bahnschrift", "Segoe UI Variable Display", sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1;
-  color: #043344;
-}
-
-body.conference-site .conference-stat-label {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 0.86rem;
-  color: rgba(13, 26, 43, 0.72);
-}
 
 body.conference-site .site-main {
   padding-top: 3.75rem;
@@ -1554,10 +1523,6 @@ body.conference-site .site-footer a {
 
   body.conference-site .site-nav-links {
     border-top-color: rgba(13, 26, 43, 0.14);
-  }
-
-  body.conference-site .conference-stat-grid {
-    grid-template-columns: 1fr;
   }
 }
 

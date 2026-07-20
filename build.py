@@ -431,7 +431,7 @@ def render_markdown_tree(value, fields: set[str] | None = None) -> None:
 
 def collect_local_assets(value) -> None:
     """Copy local static assets referenced anywhere in conference content."""
-    asset_keys = {"image_path", "logo_path", "photo_path", "map_image", "paper_path", "pdf_path"}
+    asset_keys = {"image_path", "logo_path", "photo_path", "map_image", "paper_path", "pdf_path", "hero_image_path"}
 
     if isinstance(value, dict):
         for key, child in value.items():

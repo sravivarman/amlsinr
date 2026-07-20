@@ -9,6 +9,8 @@ hero_summary: |
 dates: "14-16 October 2026"
 location: "Detroit, Michigan, USA"
 host: "Hosted by the Center for Sustainable Mobility and Global Energy Systems Alliance"
+hero_image_path: "img/placeholder_project_1.png"
+hero_image_alt: "Placeholder image for conference hero panel"
 primary_cta:
   label: "Register Now"
   url: "registration/"
