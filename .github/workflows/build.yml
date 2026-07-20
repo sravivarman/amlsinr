@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Check source consistency
+        run: uv run python tools/check_consistency.py
+
+      - name: Build site
+        run: uv run python build.py --output dist
+
+      - name: Check build output exists
+        run: test -f dist/index.html

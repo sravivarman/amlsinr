@@ -1,0 +1,620 @@
+"""
+build.py  —  Static site builder for Arkesh Das's portfolio website.
+
+Usage:
+    uv run python build.py
+
+What this script does:
+  1. Reads portfolio_config.yaml.
+  2. Loads profile, project, and writing YAML.
+  3. Renders templates into dist/.
+  4. Copies static assets and writes dist/css/site.css.
+
+After running this script, open dist/index.html in a browser or run
+  uv run python serve.py
+to preview the site locally.
+"""
+
+import argparse
+import hashlib
+import re
+import shutil
+import sys
+from html import escape
+from pathlib import Path
+from urllib.parse import parse_qs, urlencode, urlparse
+
+import yaml
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+try:
+    import markdown
+except ModuleNotFoundError:
+    markdown = None
+
+
+# ── Paths ──────────────────────────────────────────────────────────────────
+ROOT = Path(__file__).parent          # repo root
+TEMPLATES_DIR = ROOT / "templates"
+STATIC_DIR    = ROOT / "static"
+BUILD_DIR      = ROOT / "dist"
+CONFIG_FILE   = ROOT / "portfolio_config.yaml"
+
+
+# ── Helpers ────────────────────────────────────────────────────────────────
+
+def load_yaml(path: Path) -> dict:
+    """Read a YAML file and return its contents as a Python dictionary."""
+    with open(path, encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
+def repo_path(rel_path: str, label: str) -> Path:
+    """Resolve a repo-relative path and reject absolute/outside paths."""
+    path = (ROOT / rel_path).resolve()
+    try:
+        path.relative_to(ROOT.resolve())
+    except ValueError:
+        sys.exit(f"Error: {label} path points outside the repo: {rel_path}")
+    return path
+
+
+def youtube_embed_url(url: str, start_seconds: int = 0, captions: bool = False, captions_lang: str = "en") -> str:
+    """Return a YouTube embed URL for common watch/share URL formats."""
+    parsed = urlparse(url)
+    host = parsed.netloc.lower().removeprefix("www.")
+
+    if host in {"youtube.com", "m.youtube.com"}:
+        video_id = parse_qs(parsed.query).get("v", [""])[0]
+    elif host == "youtu.be":
+        video_id = parsed.path.strip("/").split("/")[0]
+    else:
+        return url
+
+    video_id = video_id.split("?")[0]
+    if not video_id:
+        return url
+
+    params = {}
+    if start_seconds:
+        params["start"] = max(0, int(start_seconds))
+    if captions:
+        params["cc_load_policy"] = 1
+        params["cc_lang_pref"] = captions_lang
+
+    query = f"?{urlencode(params)}" if params else ""
+    return f"https://www.youtube-nocookie.com/embed/{video_id}{query}"
+
+
+def output_path(output_dir: str) -> Path:
+    """Resolve a repo-relative output path and reject unsafe targets."""
+    path = repo_path(output_dir, "output")
+    if path == ROOT:
+        sys.exit("Error: refusing to use the repository root as the build output.")
+    return path
+
+
+def clean_build_dir() -> None:
+    """Remove generated output before rebuilding."""
+    if BUILD_DIR.exists():
+        shutil.rmtree(BUILD_DIR)
+    BUILD_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def should_copy_static_file(path: Path) -> bool:
+    """Skip local metadata files that should not be published."""
+    return not path.is_absolute() and ".." not in path.parts and not any(part.startswith(".") for part in path.parts)
+
+
+def copy_static_asset(asset_path: str) -> None:
+    """Copy one referenced static asset into dist/."""
+    if not asset_path:
+        return
+
+    relative = Path(asset_path)
+    if not should_copy_static_file(relative):
+        print(f"  [warn] Skipping unsafe static asset path: {asset_path}")
+        return
+
+    src = STATIC_DIR / relative
+    dest = BUILD_DIR / relative
+    if not src.exists():
+        return
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dest)
+    print(f"  copied  static/{relative}")
+
+
+def markdown_image_paths(text: str) -> list[str]:
+    """Return local static image paths referenced by Markdown image syntax."""
+    paths = []
+    for match in re.finditer(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)", text or ""):
+        path = match.group(1).strip()
+        if path.startswith(("http://", "https://", "data:", "#")):
+            continue
+        paths.append(path.removeprefix("static/"))
+    return paths
+
+
+def copy_post_assets(post: dict) -> None:
+    """Copy assets named by a writing post."""
+    copy_static_asset(post.get("image_path"))
+
+    for image in post.get("images", []):
+        if isinstance(image, dict):
+            copy_static_asset(image.get("path"))
+        elif isinstance(image, str):
+            copy_static_asset(image)
+
+    for media in post.get("media", []):
+        if isinstance(media, dict):
+            copy_static_asset(media.get("path"))
+
+    for image_path in markdown_image_paths(post.get("raw_content", "")):
+        copy_static_asset(image_path)
+
+
+def copy_scholarship_assets(scholarship: dict) -> None:
+    """Copy assets named by scholarship page content."""
+    featured = scholarship.get("featured_project", {})
+    copy_static_asset(featured.get("paper_path"))
+
+    for project in scholarship.get("additional_projects", []):
+        copy_static_asset(project.get("poster_url"))
+
+
+def copy_referenced_assets(student: dict, projects: list[dict], writing_posts: list[dict], scholarship: dict) -> None:
+    """Copy only assets referenced by YAML content."""
+    copy_static_asset(student.get("headshot"))
+
+    for project in projects:
+        copy_static_asset(project.get("image_path"))
+
+    for post in writing_posts:
+        copy_post_assets(post)
+
+    copy_scholarship_assets(scholarship)
+
+
+def toggle_themes(theme: str, theme_toggle: dict) -> list[str]:
+    """Return configured toggle themes, preserving order and uniqueness."""
+    if not theme_toggle.get("enabled"):
+        return []
+
+    themes = [
+        theme_toggle.get("light_theme") or theme,
+        theme_toggle.get("dark_theme"),
+    ]
+    return list(dict.fromkeys(t for t in themes if t))
+
+
+def stylesheet_fingerprint(theme: str, theme_toggle: dict | None = None) -> str:
+    """Create a cache-busting version from the actual source CSS."""
+    digest = hashlib.sha256()
+    theme_toggle = theme_toggle or {}
+    theme_names = list(dict.fromkeys([theme, *toggle_themes(theme, theme_toggle)]))
+    paths = [
+        STATIC_DIR / "css" / "base.css",
+        *[STATIC_DIR / "css" / "themes" / f"{theme_name}.css" for theme_name in theme_names],
+    ]
+    for path in paths:
+        digest.update(path.read_bytes())
+    return digest.hexdigest()[:12]
+
+
+def scoped_theme_css(css: str, theme: str) -> str:
+    """Scope theme selectors to an html data attribute for toggling."""
+    scope = f'html[data-site-theme="{theme}"]'
+
+    def scoped_selector(selector: str) -> str:
+        parts = []
+        for part in selector.split(","):
+            item = part.strip()
+            if item:
+                parts.append(f"{scope} {item}")
+        return ",\n".join(parts)
+
+    def replace(match: re.Match) -> str:
+        return f"{scoped_selector(match.group(1))} {{{match.group(2)}}}\n"
+
+    return re.sub(r"(?s)([^{}@][^{}]+?)\s*\{([^{}]*)\}", replace, css)
+
+
+def write_combined_styles(theme: str, theme_toggle: dict | None = None) -> None:
+    """Combine base.css, default theme, and optional scoped toggle themes."""
+    theme_toggle = theme_toggle or {}
+    base_css = STATIC_DIR / "css" / "base.css"
+    theme_css = STATIC_DIR / "css" / "themes" / f"{theme}.css"
+    output_css = BUILD_DIR / "css" / "site.css"
+
+    if not base_css.exists():
+        sys.exit(f"Error: base stylesheet not found: {base_css}")
+    if not theme_css.exists():
+        sys.exit(f"Error: theme stylesheet not found: {theme_css}")
+
+    toggle_theme_names = [
+        theme_name for theme_name in toggle_themes(theme, theme_toggle)
+        if theme_name != theme
+    ]
+    for theme_name in toggle_theme_names:
+        path = STATIC_DIR / "css" / "themes" / f"{theme_name}.css"
+        if not path.exists():
+            sys.exit(f"Error: toggle theme '{theme_name}' not found at static/css/themes/{theme_name}.css")
+
+    stylesheet_parts = [
+        "/* Generated by build.py. Do not edit dist/css/site.css directly. */\n\n",
+        f"/* base.css */\n{base_css.read_text(encoding='utf-8')}\n\n",
+        f"/* themes/{theme}.css */\n{theme_css.read_text(encoding='utf-8')}\n",
+    ]
+    for theme_name in toggle_theme_names:
+        path = STATIC_DIR / "css" / "themes" / f"{theme_name}.css"
+        stylesheet_parts.append(
+            f"\n/* themes/{theme_name}.css scoped */\n"
+            f"{scoped_theme_css(path.read_text(encoding='utf-8'), theme_name)}\n"
+        )
+
+    output_css.parent.mkdir(parents=True, exist_ok=True)
+    output_css.write_text("".join(stylesheet_parts), encoding="utf-8")
+
+    scoped_names = "".join(f" + scoped {name}" for name in toggle_theme_names)
+    print(f"  wrote   css/site.css  (base + {theme}{scoped_names})")
+
+
+def warn_if_missing_static_asset(asset_path: str, context: str) -> None:
+    if not asset_path:
+        return
+
+    if not should_copy_static_file(Path(asset_path)):
+        print(f"  [warn] Unsafe asset path for {context}: {asset_path}")
+        return
+
+    p = STATIC_DIR / asset_path
+    if not p.exists():
+        print(f"  [warn] Missing asset for {context}: static/{asset_path}")
+
+
+def require_fields(item: dict, fields: list[str], context: str) -> None:
+    missing = [field for field in fields if item.get(field) in (None, "")]
+    if missing:
+        sys.exit(f"Error: {context} is missing required field(s): {', '.join(missing)}")
+
+
+def validate_student(student: dict) -> None:
+    require_fields(student, ["name", "role", "headline"], "student profile")
+    warn_if_missing_static_asset(student.get("headshot"), "student headshot")
+
+    endpoint = student.get("formspree_endpoint", "")
+    if endpoint and "YOUR_FORM_ID" in endpoint:
+        print("  [warn] Formspree endpoint still uses YOUR_FORM_ID placeholder.")
+
+    video_url = student.get("featured_video_url")
+    embed_url = student.get("featured_video_embed_url")
+    if video_url and embed_url == video_url:
+        print(f"  [warn] Featured video URL was not converted to an embed URL: {video_url}")
+
+
+def validate_projects(projects: list[dict]) -> None:
+    for project in projects:
+        title = project.get("title", "Untitled project")
+        require_fields(project, ["title", "short_summary"], f"project '{title}'")
+        warn_if_missing_static_asset(project.get("image_path"), title)
+
+
+def validate_writing_post(post: dict) -> None:
+    title = post.get("title", "Untitled post")
+    require_fields(post, ["title", "date", "short_summary"], f"writing post '{title}'")
+
+    if post.get("has_original_post") and not post.get("original_post_url"):
+        sys.exit(f"Error: writing post '{title}' has_original_post is true but original_post_url is empty.")
+
+    if post.get("original_post_url") and not post.get("has_original_post"):
+        print(f"  [warn] Writing post '{title}' has original_post_url but has_original_post is false.")
+
+    warn_if_missing_static_asset(post.get("image_path"), f"writing post '{title}'")
+    for image in post.get("images", []):
+        image_path = image.get("path") if isinstance(image, dict) else image
+        warn_if_missing_static_asset(image_path, f"writing post '{title}'")
+    for media in post.get("media", []):
+        if isinstance(media, dict):
+            warn_if_missing_static_asset(media.get("path"), f"writing post '{title}'")
+    for image_path in markdown_image_paths(post.get("raw_content", "")):
+        warn_if_missing_static_asset(image_path, f"writing post '{title}'")
+
+
+def markdown_field(item: dict, field: str) -> None:
+    """Convert a Markdown field in-place when present."""
+    if item.get(field):
+        item[field] = render_markdown(item[field])
+
+
+def inline_markdown(text: str) -> str:
+    """Render a small subset of inline Markdown for fallback builds."""
+    text = escape(text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
+    return text
+
+
+def fallback_markdown(text: str) -> str:
+    """Minimal Markdown renderer for paragraphs and simple lists."""
+    blocks = re.split(r"\n\s*\n", text.strip())
+    html_blocks = []
+
+    for block in blocks:
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        if not lines:
+            continue
+
+        if all(line.startswith(("- ", "* ")) for line in lines):
+            items = "".join(f"<li>{inline_markdown(line[2:].strip())}</li>" for line in lines)
+            html_blocks.append(f"<ul>{items}</ul>")
+            continue
+
+        paragraph = " ".join(lines)
+        html_blocks.append(f"<p>{inline_markdown(paragraph)}</p>")
+
+    return "\n".join(html_blocks)
+
+
+def render_markdown(text: str) -> str:
+    """Render Markdown with the dependency when available, otherwise fallback."""
+    if markdown:
+        return markdown.markdown(text)
+    return fallback_markdown(text)
+
+
+def slugify(value: str) -> str:
+    """Create a URL-safe slug from a title or filename stem."""
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or "post"
+
+
+def unique_slug(preferred: str, used: set[str]) -> str:
+    """Return a unique slug, preserving the preferred value when possible."""
+    slug = preferred
+    counter = 2
+    while slug in used:
+        slug = f"{preferred}-{counter}"
+        counter += 1
+    used.add(slug)
+    return slug
+
+
+def load_optional_yaml(rel_path: str, label: str) -> dict:
+    """Load an optional YAML file, warning instead of failing when absent."""
+    if not rel_path:
+        return {}
+
+    path = repo_path(rel_path, label)
+    if not path.exists():
+        print(f"  [warn] {label} file not found, skipping: {rel_path}")
+        return {}
+
+    return load_yaml(path)
+
+
+def render_page(env: Environment, template_name: str, output_rel: str, **context) -> None:
+    """Render one template into dist/."""
+    output_path = BUILD_DIR / output_rel
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    rendered = env.get_template(template_name).render(**context)
+    rendered = "\n".join(line.rstrip() for line in rendered.splitlines()) + "\n"
+    output_path.write_text(rendered, encoding="utf-8")
+    print(f"       rendered: {output_path.relative_to(ROOT)}")
+
+
+# ── Main build ─────────────────────────────────────────────────────────────
+
+def build(output_dir: str = "dist") -> None:
+    global BUILD_DIR
+    BUILD_DIR = output_path(output_dir)
+
+    print("=" * 55)
+    print(f"  Building portfolio site → {BUILD_DIR.relative_to(ROOT)}/")
+    print("=" * 55)
+
+    # ── 1. Load config ──────────────────────────────────────────────────
+    if not CONFIG_FILE.exists():
+        sys.exit(f"Error: {CONFIG_FILE} not found. Are you running from the repo root?")
+
+    config = load_yaml(CONFIG_FILE)
+    print(f"\n[1/6] Loaded config:  {CONFIG_FILE.name}")
+
+    theme       = config.get("theme", "light")
+    theme_toggle = config.get("theme_toggle", {})
+    site_title  = config.get("site_title", "My Portfolio")
+    google_site_verification = config.get("google_site_verification", "")
+    student_rel = config.get("student_file", "content/example_student.yaml")
+    project_rel = config.get("projects", [])
+    writing_rel = config.get("writing_posts", config.get("blog_posts", []))
+    scholarship_rel = config.get("scholarship_file", "content/scholarship.yaml")
+    cv_rel = config.get("cv_file", "content/cv.yaml")
+    about_rel = config.get("about_file", "content/about.yaml")
+
+    theme_path = STATIC_DIR / "css" / "themes" / f"{theme}.css"
+    if not theme_path.exists():
+        sys.exit(f"Error: theme '{theme}' not found at static/css/themes/{theme}.css")
+    asset_version = stylesheet_fingerprint(theme, theme_toggle)
+
+    # ── 2. Load student profile ─────────────────────────────────────────
+    student_path = repo_path(student_rel, "student")
+    if not student_path.exists():
+        sys.exit(f"Error: student file '{student_rel}' not found.")
+
+    student = load_yaml(student_path)
+    # Convert the about field from Markdown to HTML so students can use
+    # standard Markdown syntax: blank lines for paragraphs, *italic*, **bold**, etc.
+    markdown_field(student, "about")
+    if student.get("featured_video_url"):
+        student["featured_video_embed_url"] = youtube_embed_url(
+            student["featured_video_url"],
+            student.get("featured_video_start_seconds", 0),
+            student.get("featured_video_captions", False),
+            student.get("featured_video_captions_lang", "en"),
+        )
+    validate_student(student)
+    print(f"[2/6] Loaded student: {student_path.name}  ({student.get('name', '?')})")
+
+    # ── 3. Load project files ───────────────────────────────────────────
+    projects = []
+    for rel in project_rel:
+        p = repo_path(rel, "project")
+        if not p.exists():
+            print(f"  [warn] Project file not found, skipping: {rel}")
+            continue
+        projects.append(load_yaml(p))
+        print(f"       project: {p.name}")
+
+    validate_projects(projects)
+    print(f"[3/6] Loaded {len(projects)} project(s).")
+
+
+    # ── 4. Load writing files ───────────────────────────────────────────
+    writing_posts = []
+    used_post_slugs = set()
+    for rel in writing_rel:
+        p = repo_path(rel, "writing")
+        if not p.exists():
+            print(f"  [warn] Writing file not found, skipping: {rel}")
+            continue
+
+        post = load_yaml(p)
+        post["raw_content"] = post.get("content", "")
+        post["slug"] = unique_slug(post.get("slug") or slugify(p.stem), used_post_slugs)
+        post["source_path"] = rel
+        post["permalink"] = f"writing/{post['slug']}/"
+        if "has_original_post" not in post:
+            post["has_original_post"] = bool(post.get("post_url") or post.get("original_post_url"))
+        if not post.get("original_post_url") and post.get("post_url"):
+            post["original_post_url"] = post["post_url"]
+        validate_writing_post(post)
+
+        # convert markdown to HTML for content
+        markdown_field(post, "content")
+
+        writing_posts.append(post)
+        print(f"       writing: {p.name}")
+    print(f"[4/6] Loaded {len(writing_posts)} writing post(s).")
+
+    # ── 5. Load page content ────────────────────────────────────────────
+    scholarship = load_optional_yaml(scholarship_rel, "Scholarship")
+    cv = load_optional_yaml(cv_rel, "CV")
+    about_page = load_optional_yaml(about_rel, "About")
+
+    for field in ["summary", "abstract", "future_directions"]:
+        markdown_field(scholarship, field)
+    for project in scholarship.get("additional_projects", []):
+        for field in ["summary", "role", "abstract", "funding"]:
+            markdown_field(project, field)
+    for section in scholarship.get("sections", []):
+        markdown_field(section, "body")
+    for item in cv.get("timeline", []):
+        markdown_field(item, "description")
+    for award in cv.get("awards", []):
+        markdown_field(award, "description")
+    for section in about_page.get("sections", []):
+        markdown_field(section, "body")
+    print("[5/6] Loaded page content.")
+
+    # ── 6. Render HTML ──────────────────────────────────────────────────
+    clean_build_dir()
+
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATES_DIR)),
+        autoescape=select_autoescape(["html"]),
+    )
+
+    base_context = {
+        "site_title": site_title,
+        "theme": theme,
+        "asset_version": asset_version,
+        "theme_toggle": theme_toggle,
+        "google_site_verification": google_site_verification,
+        "student": student,
+        "projects": projects,
+        "writing_posts": writing_posts,
+        "scholarship": scholarship,
+        "cv": cv,
+        "about_page": about_page,
+    }
+
+    print("\n      Rendering pages …")
+    render_page(
+        env,
+        "index.html",
+        "index.html",
+        **base_context,
+        current_page="home",
+        site_root="",
+        show_hero=True,
+    )
+    render_page(
+        env,
+        "scholarship.html",
+        "scholarship/index.html",
+        **base_context,
+        current_page="scholarship",
+        site_root="../",
+        show_hero=False,
+    )
+    render_page(
+        env,
+        "cv.html",
+        "cv/index.html",
+        **base_context,
+        current_page="cv",
+        site_root="../",
+        show_hero=False,
+    )
+    render_page(
+        env,
+        "writing.html",
+        "writing/index.html",
+        **base_context,
+        current_page="writing",
+        site_root="../",
+        show_hero=False,
+    )
+    render_page(
+        env,
+        "about.html",
+        "about/index.html",
+        **base_context,
+        current_page="about",
+        site_root="../",
+        show_hero=False,
+    )
+    for post in writing_posts:
+        render_page(
+            env,
+            "post.html",
+            f"writing/{post['slug']}/index.html",
+            **base_context,
+            post=post,
+            current_page="writing",
+            site_root="../../",
+            show_hero=False,
+        )
+    print("[6/6] Rendered site pages.")
+
+    # ── 6. Copy static assets ───────────────────────────────────────────
+    print("\n      Writing static assets …")
+    copy_referenced_assets(student, projects, writing_posts, scholarship)
+    write_combined_styles(theme, theme_toggle)
+    (BUILD_DIR / ".nojekyll").write_text("", encoding="utf-8")
+    print("  wrote   .nojekyll")
+
+    print(f"\n✓  Build complete.  Open {BUILD_DIR.relative_to(ROOT)}/index.html or run: uv run python serve.py")
+    print("=" * 55)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Build the portfolio static site.")
+    parser.add_argument(
+        "--output",
+        default="dist",
+        help="Repo-relative output directory for generated site files. Defaults to dist.",
+    )
+    args = parser.parse_args()
+    build(args.output)

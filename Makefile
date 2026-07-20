@@ -1,13 +1,20 @@
-INSTALL_PATH = "/home/hrishirt/git/iscls/iscls.github.io/docs/"
+.PHONY: sync build serve clean consistency check
 
-setup:
-	bundle install
-
-serve:
-	bundle exec jekyll serve
+sync:
+	uv sync
 
 build:
-	export JEKYLL_ENV="production" && bundle exec jekyll build
+	uv run python build.py
 
-publish: build
-	rsync -avzc --delete _site/ ${INSTALL_PATH}
+serve:
+	uv run python serve.py
+
+clean:
+	rm -rf dist docs
+
+consistency:
+	uv run python tools/check_consistency.py
+
+check: consistency build
+	test -f dist/index.html
+	git status --short

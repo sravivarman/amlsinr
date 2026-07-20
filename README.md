@@ -1,61 +1,366 @@
-# Jekyll-based Conference Template
+# Arkesh Das Portfolio Website
 
-An academic conference website template built using Jekyll.
+This repository contains the source code and content for my personal portfolio website. It's a static site containing a home-page, blog/writing section, additional pages about research and projects, and a CV experience timeline.
 
-## Configuration
+The site started from Devin Silvia's [Professional Portfolio Template](https://github.com/devinsilvia/professional_portfolio_template), but I adapted it into a multi-page website.
 
-Data Files under `_data` to configure all conference related information.
+## Overview
 
-- `conference.yml`
-  - `full_title`: conference fullname e.g., First xxx conference on xxxx, 2017.
-  - `short_title`: conference shortname e.g., xxxx2017
-  - `description`: short description about the conference (< 160 char)
-  - `location`: conference location
-  - `logo_path`: conference logo
-  - `slideshow`: images slideshow
-  - `navbar`: navigation menu.
-  - `sponsors`: sponsor section.
-  - `deadlines`: important dates of deadlines, pass-due date will be automatically printed with del line.
-  - `social_media`: social media on the navbar. (current support facebook and twitter.)
-- `news.yml`: news section
-- `organization.yml`: committees
-  - `programm_chair`: program chair
-  - `organizing_committees`: organizing committees
-  - `steering_committees`: steering committees
-  - `technical_program_committees`: technical program committees
-- `venue.yml`: information about venue
-  - `address`: full address
-  - `accommodation`: accommodation details
-  - `direction`: path to image containing directions
-- `submission.yml`: submission instructions
-- `registration.yml`: registration information
+The site is source-driven. Most content lives in YAML files, the page layouts live in Jinja templates, and `build.py` turns everything into static HTML under `dist/`.
 
-- Google Analytics: in `_config.yml`
+The website has five main pages:
+
+- **Home**: hero section, featured video, projects, about preview, writing preview, and contact
+- **Scholarship**: research projects, paper/talk links, posters, and research context
+- **CV**: reverse-chronological experience timeline, category filters, coursework reveals, honors, and skills
+- **Writing**: self-hosted essays plus archival links to older posts
+- **About**: a more personal narrative page
+
+The goal of this codebase is to both generate my website and to act as a reproducable template to make a website without manually editing generated HTML. You can also use Google Search Console to generate a HTML tag to make the portfolio searchable on Google. 
+
+## Repository Structure
+
+```text
+.
+├── LICENSE
+├── Makefile
+├── README.md
+├── build.py
+├── content/
+│   ├── about.yaml
+│   ├── arkesh.yaml
+│   ├── blog/
+│   ├── cv.yaml
+│   ├── example_student.yaml
+│   ├── projects/
+│   └── scholarship.yaml
+├── portfolio_config.yaml
+├── pyproject.toml
+├── serve.py
+├── static/
+│   ├── css/
+│   ├── img/
+│   └── pdf/
+├── templates/
+│   ├── macros/
+│   ├── sections/
+│   └── *.html
+├── tools/
+│   └── check_consistency.py
+└── uv.lock
+```
+
+### Folder Guide
+
+#### [`content/`](content/)
+
+This is the main place where site content lives.
+
+- [`content/arkesh.yaml`](content/arkesh.yaml) controls profile data, homepage hero text, contact links, the headshot, and featured video metadata.
+- [`content/scholarship.yaml`](content/scholarship.yaml) controls the Scholarship page.
+- [`content/cv.yaml`](content/cv.yaml) controls the CV timeline, awards, coursework reveals, and skill list.
+- [`content/about.yaml`](content/about.yaml) controls the About page.
+- [`content/projects/`](content/projects/) contains project cards shown on the homepage.
+- [`content/blog/`](content/blog/) contains writing entries and self-hosted post bodies.
+- `content/drafts/` is for local drafts that should not be published.
+
+#### [`templates/`](templates/)
+
+Jinja templates define the actual page structure.
+
+- [`templates/base.html`](templates/base.html) is the shared page shell.
+- [`templates/index.html`](templates/index.html) assembles homepage sections.
+- [`templates/writing.html`](templates/writing.html) renders the Writing page.
+- [`templates/post.html`](templates/post.html) renders individual writing posts.
+- [`templates/cv.html`](templates/cv.html) renders the timeline, filters, awards, and skills.
+- [`templates/scholarship.html`](templates/scholarship.html) renders the Scholarship page.
+- [`templates/macros/media.html`](templates/macros/media.html) contains reusable blog media helpers.
+
+#### [`static/`](static/)
+
+Static source assets live here.
+
+- `static/css/base.css` contains layout, spacing, typography, responsiveness, and component structure.
+- `static/css/themes/` contains swappable color themes.
+- `static/img/` contains source images.
+- `static/pdf/` contains PDFs copied into the generated site when referenced.
+
+#### `dist/`
+
+`dist/` is generated by the build process and ignored by git. It is the local preview and deployment artifact (so you can preview the website before deploying to the remote repo).
+
+**Do not edit files in `dist/` directly**. Edit YAML, templates, or CSS, then rebuild.
+
+## Set-up
+
+This project uses [`uv`](https://docs.astral.sh/uv/) for Python dependency management.
+
+Install dependencies from the repository root:
+
+```bash
+uv sync
+```
+
+This creates a local `.venv/` and installs the packages defined in [`pyproject.toml`](pyproject.toml) and [`uv.lock`](uv.lock).
+
+## Quick Start
+
+To build the static site:
+
+```bash
+uv run python build.py
+```
+
+To preview it locally:
+
+```bash
+uv run python serve.py
+```
+
+By default, the preview server serves `dist/` at:
+
+```text
+http://localhost:8000
+```
+
+You can also use the Makefile shortcuts:
+
+```bash
+make sync
+make build
+make serve
+```
+
+Before committing changes, run:
+
+```bash
+make check
+```
+
+This runs the source consistency check, rebuilds the site, verifies `dist/index.html` exists, and prints git status.
+
+## Editing the Website
+
+### Main configuration
+
+[`portfolio_config.yaml`](portfolio_config.yaml) controls which content files are loaded and in what order.
+
+Important fields include:
+
+```yaml
+student_file: content/arkesh.yaml
+scholarship_file: content/scholarship.yaml
+cv_file: content/cv.yaml
+about_file: content/about.yaml
+
+projects:
+  - content/projects/MSU_Cirric.yaml
+
+writing_posts:
+  - content/blog/scared.yaml
+
+theme: clinical
+site_title: "Arkesh Das | Portfolio"
+google_site_verification: ""
+```
+
+The order of `projects` controls the homepage project order. The order of `writing_posts` controls the Writing page and homepage writing preview order.
+
+### Search verification
+
+Google Search Console verification can be added through `portfolio_config.yaml`:
+
+```yaml
+google_site_verification: "your-verification-token"
+```
+
+Paste only the `content` value from Google's meta tag. The build renders it into the shared `<head>` template, so it survives rebuilds and appears on every generated page.
+
+### Writing posts
+
+Each post in `content/blog/` follows the same basic schema:
+
+```yaml
+title:
+date:
+featured:
+show_on_home:
+slug:
+has_original_post:
+original_post_url:
+image_path:
+images:
+media:
+short_summary:
+content:
+```
+
+The `slug` controls the final URL:
+
+```text
+dist/writing/<slug>/index.html
+```
+
+Use `has_original_post: true` when a post has an external original version, such as an old blog post or PDF. Use `has_original_post: false` when the essay only lives on this site.
+
+Set `show_on_home: false` when a post should stay on the Writing page but not appear on the homepage.
+
+### Blog media
+
+Standard Markdown images work inside post content:
+
+```markdown
+![Alt text](img/example.png)
+```
+
+For more controlled placement, use the `media` list:
+
+```yaml
+media:
+  - path: "img/blog/example.png"
+    alt: "Descriptive alt text."
+    caption: "Optional caption."
+    size: large
+    align: center
+    placement: after_summary
+```
+
+Supported sizes are `small`, `medium`, `large`, and `full`.
+
+Supported alignments are `left`, `center`, and `right`.
+
+Supported placements are currently:
+
+- `after_summary` for individual post pages
+- `card` for Writing page cards
+
+### Projects
+
+Project cards live in `content/projects/`.
+
+Each project file includes fields for the title, summary, tech stack, problem statement, approach, impact, links, and image path. Example project files are still included as references, but the live project list is controlled only by `portfolio_config.yaml`.
+
+### CV timeline
+
+The CV page is driven by [`content/cv.yaml`](content/cv.yaml).
+
+Timeline items support:
+
+- `date`
+- `category`
+- `title`
+- `organization`
+- `description`
+- `relevant_coursework`
+
+Categories are used to generate the filter chips on the CV page. Education entries can optionally include `relevant_coursework`, which renders as a collapsible "Relevant coursework" section.
+
+### Themes
+
+The active theme is set in `portfolio_config.yaml`:
+
+```yaml
+theme: clinical
+```
+
+The light/dark toggle is also configured there. `light_theme` should usually match `theme`, so the site has the same default appearance when JavaScript is disabled.
+
+```yaml
+theme_toggle:
+  enabled: true
+  light_theme: clinical
+  dark_theme: clinical-dark
+  light_label: Light
+  dark_label: Dark
+```
+
+To change the toggle pairing, update only the `light_theme` and `dark_theme` values.
+
+Available themes:
+
+- `clinical`
+- `clinical-dark`
+- `light`
+- `dark`
+- `msu-light`
+- `msu-dark`
+
+The theme files are expected to have matching selector coverage. This is checked by `tools/check_consistency.py`.
+
+## Build and Validation
+
+The build process does the following:
+
+1. Reads [`portfolio_config.yaml`](portfolio_config.yaml).
+2. Loads profile, project, writing, scholarship, CV, and about YAML.
+3. Converts Markdown fields to HTML.
+4. Renders Jinja templates into `dist/`.
+5. Copies only referenced static assets.
+6. Combines `static/css/base.css`, the selected theme, and any configured toggle theme into `dist/css/site.css`.
+7. Writes `.nojekyll` for GitHub Pages.
+
+The consistency checker currently verifies:
+
+- all published blog posts follow the blog post template keys
+- all theme files expose matching CSS selectors in the same order
+
+Run the full local check with:
+
+```bash
+make check
+```
 
 ## Deployment
 
-### Manual
+The site deploys through GitHub Pages using GitHub Actions.
 
-* Setup Ruby, RVM, Jeykyll, Bundler.
-  - Check installation instructions at [INSTALL.md](INSTALL.md).
-* Remove `.github/workflows/`
-* Change target of the symbolic `Gemfile` to `Gemfile.local`
-  ```
-  rm Gemfile
-  ln -s Gemfile.local Gemfile
-  ```
-* Adjust release path in `Makefile`
-* Test locally, `make serve`
-* Build and copy to publish location, `make publish`
-* Commit changes to the publish location
+The deployment workflow:
 
-### GitHub Pages
+1. installs `uv`
+2. sets up Python from `.python-version`
+3. runs `uv sync --locked`
+4. runs `tools/check_consistency.py`
+5. builds the site into `dist/`
+6. uploads `dist/` as the Pages artifact
+7. deploys to GitHub Pages
 
-* Ensure that the repository is public and GitHub Pages are enabled and set to use GitHub Actions.
-* Create `.github/workflows`
-* Copy `workflows/release.yml` to `.github/workflows/release.yml`
-* Change target of the symbolic `Gemfile` to `Gemfile.github`
-  ```
-  rm Gemfile
-  ln -s Gemfile.github Gemfile
-  ```
+GitHub Pages should be configured as:
+
+```text
+Source: GitHub Actions
+```
+
+`dist/` is intentionally not tracked. The source files, not generated HTML, are what should be committed.
+
+## Reproducibility Notes
+
+This repository is meant to be reproducible from source.
+
+If you clone the repo and run:
+
+```bash
+uv sync
+make check
+```
+
+you should get a fresh `dist/` folder containing the same static site structure used for deployment.
+
+The current workflow is intentionally lightweight. There is no database, backend server, or external build service required beyond GitHub Actions for deployment.
+
+## Attribution
+
+This site began from Devin Silvia's [Professional Portfolio Template](https://github.com/devinsilvia/professional_portfolio_template) and has since been substantially modified for a multi-page personal portfolio, writing system, CV timeline, and broader media support.
+
+## Note About AI Assistance
+
+The original template was drafted and built with the help of Claude.
+
+This portfolio has also been developed and revised with AI assistance, including ChatGPT/Codex. Generated code and content changes have been reviewed, edited, and tested before use.
+
+## Author
+
+**Arkesh Das**
+
+## License
+
+This repository preserves the original MIT License. See [`LICENSE`](LICENSE) for details.

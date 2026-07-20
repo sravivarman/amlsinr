@@ -1,4 +1,36 @@
-_site
-.jekyll-metadata
-Gemfile.lock
-*.DS_Store
+# Python virtual environment (created by uv)
+.venv/
+
+# uv lock file cache
+.uv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Generated site output
+dist/
+docs/
+
+# macOS metadata
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Environment variable files (never commit secrets!)
+## Including the .env file in .gitignore is crucial
+## because it prevents sensitive information, such as
+## API keys and passwords, from being exposed in a
+## public repository. This practice helps maintain
+## security and protects your application's credentials
+## from unauthorized access.
+.env
+.env.*
+
+# Local writing drafts that should not be published until promoted.
+content/drafts/
+
+# Local planning notes.
+TODO.md
