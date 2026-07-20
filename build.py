@@ -522,6 +522,8 @@ def build(output_dir: str = "dist") -> None:
         ("committee", "committee/index.html"),
         ("speakers", "speakers/index.html"),
         ("submission", "submission/index.html"),
+        ("review_process", "review-process/index.html"),
+        ("ethics_and_malpractice_statement", "ethics-and-malpractice-statement/index.html"),
         ("registration", "registration/index.html"),
         ("contact", "contact/index.html"),
     ]

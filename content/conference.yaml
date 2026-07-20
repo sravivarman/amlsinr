@@ -143,35 +143,169 @@ pages:
     kicker: "Submission"
     title: "Submission"
     summary: |
-      Use this page to understand how to submit, how submissions are reviewed, and the standards expected of authors.
+      Paper submission requirements, template details, and portal information for ICAANS 2026.
     sections:
-      - title: "Submission overview"
+      - title: "Paper Submission & Guidelines"
         body: |
-          Authors should prepare their materials according to the conference guidelines and submit through the official submission process.
-
-          Please ensure the submission matches the conference scope and formatting requirements before uploading.
-      - title: "Review process"
+          Authors are invited to submit original, unpublished research papers related to Neuro-Symbolic AI, Machine Learning, Deep Learning, Swarm Intelligence, and their interdisciplinary applications. Each paper should clearly identify the research problem, highlight the novelty and significance of the work, describe the methodology and experimental/theoretical approach, present results with appropriate figures and tables, and conclude with key insights and future directions.
+        bullets:
+          - "Each paper can have a maximum of 4 authors."
+          - "Author names and affiliations must be entered during submission in the CMT portal and cannot be changed later."
+          - "The list of authors in the paper must exactly match the CMT submission."
+          - "Correspondence will be sent to all listed authors, so ensure that all email addresses in CMT are correct."
+          - "Each paper must include a minimum of 15 references."
+          - "Plagiarism should be less than 10% (excluding references). Keep the Plagiarism Report along with manuscript [TURNITIN]."
+          - "Use of AI-generated writing or ChatGPT is strictly prohibited. Keep the 0% AI Report along with manuscript."
+          - "Grammatical errors must not be present. The final manuscript should be reviewed by a language expert."
+          - "No figure or table should be copied from any other paper or the internet. Figures should be high resolution."
+          - "Page limit: minimum 08 pages and maximum 09 pages after compliance with Springer format."
+          - "Each paper must contain an abstract of 150-200 words and keywords (4-5)."
+          - "Writing format: Springer format strictly."
+          - "All table numbers and figure numbers should be mentioned inside the manuscript."
+          - "All reference numbers and citations must be properly cited inside the manuscript."
+          - "Make sure that all references are cited in the body of the paper."
+          - "Make sure that all figures and tables are numbered in proper order and cited in the body of the paper."
+          - "No table will be in image format."
+          - "All mathematical equations must be prepared using Math Editor; no equation image must be there."
+          - "Maintain good quality HD figures."
+      - title: "Template and Submission Portal"
         cards:
-          - title: "Initial screening"
-            meta: "Scope and format"
-            body: "Submissions are checked for relevance, completeness, and compliance with the required format."
-          - title: "Peer review"
-            meta: "Evaluation"
-            body: "Qualified reviewers assess the submission for originality, clarity, and contribution."
-          - title: "Decision and revisions"
-            meta: "Outcome"
-            body: "Authors receive a decision with any revision requests or acceptance details."
-      - title: "Ethics and Malpractice Statement"
+          - title: "Springer Template"
+            meta: "MS Word format"
+            body: |
+              Template available in MS Word format: <a href="https://icaans.com/assets/files/icaans-template.zip">Springer Template (MS Word)</a>
+          - title: "Submission Portal"
+            meta: "Microsoft CMT"
+            body: |
+              To submit your paper, please use the <a href="https://cmt3.research.microsoft.com/ICAANS2026">Microsoft CMT portal</a>.
+          - title: "CMT Account"
+            meta: "Submission access"
+            body: |
+              The authors will need to register their email with CMT to submit paper to ICAANS 2026. <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html">How to create a CMT account</a>
+          - title: "Submission Note"
+            meta: "CMT acknowledgment"
+            body: |
+              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+  review_process:
+    kicker: "Submission"
+    title: "Review process"
+    summary: |
+      The conference uses a double-blind peer-review process with screening, evaluation, revision, and final decision stages.
+    sections:
+      - title: "Overview"
+        body: |
+          All submissions to the conference undergo a rigorous, fair, and transparent peer-review process to ensure academic quality, originality, and technical soundness. The review process follows a double-blind review model, unless otherwise specified.
+      - title: "Submission and Initial Screening"
         cards:
-          - title: "Originality"
-            meta: "Author responsibility"
-            body: "Submitted work should be original and properly cite prior research and reused material."
-          - title: "Authorship"
-            meta: "Contribution"
-            body: "All listed authors should have made a meaningful contribution to the work."
-          - title: "Integrity"
-            meta: "Publication standards"
-            body: "Plagiarism, fabrication, falsification, and duplicate submission are not acceptable."
+          - title: "Manuscript Submission"
+            meta: "Template and originality"
+            body: |
+              Authors must submit full papers through the official conference submission system. Manuscripts must follow the prescribed template and formatting guidelines, and submissions must be original and not under consideration elsewhere.
+          - title: "Preliminary Editorial Check"
+            meta: "TPC screening"
+            body: |
+              Each submission is screened by the Technical Program Committee for scope relevance, formatting compliance, plagiarism using similarity detection software, and ethical compliance. Papers failing to meet minimum standards may be desk-rejected without external review.
+      - title: "Double-Blind Peer Review Process"
+        cards:
+          - title: "Reviewer Assignment"
+            meta: "At least two reviewers"
+            body: |
+              Each paper is assigned to at least two independent expert reviewers. Reviewers are selected based on subject expertise and conflicts of interest are strictly avoided.
+          - title: "Blind Review Policy"
+            meta: "Identity protection"
+            body: |
+              Authors do not know the reviewers' identities, reviewers do not know the authors' identities, and authors must remove identifying information from manuscripts.
+      - title: "Evaluation and Outcomes"
+        cards:
+          - title: "Evaluation Criteria"
+            meta: "Review rubric"
+            body: |
+              Reviewers evaluate originality and novelty, technical and scientific quality, methodological rigor, clarity of presentation, relevance to conference themes, significance of results, and references and literature review quality. Each criterion is scored according to the conference review rubric.
+          - title: "Review Outcomes"
+            meta: "Decision types"
+            body: |
+              Papers may receive Accept, Accept with Minor Revisions, Accept with Major Revisions, or Reject. The final decision is made by the Program Chair or Technical Program Committee, considering reviewer comments and scores.
+      - title: "Revision, Acceptance, and Confidentiality"
+        cards:
+          - title: "Revision Process"
+            meta: "Revised submissions"
+            body: |
+              Authors receiving revision decisions must submit a revised manuscript and a response-to-reviewers document. Revised papers may undergo re-review, and failure to address reviewer comments may result in rejection.
+          - title: "Final Acceptance and Registration"
+            meta: "Presentation requirement"
+            body: |
+              At least one author of each accepted paper must register and present the paper. Failure to present may result in exclusion from proceedings.
+          - title: "Confidentiality and Conflict of Interest"
+            meta: "Review integrity"
+            body: |
+              All submitted manuscripts are treated as confidential documents. Reviewers must not share, discuss, or use unpublished material, and review materials are not disclosed outside the review process. A conflict of interest exists when the reviewer and author are from the same institution, have recent collaboration, or have a personal, financial, or professional conflict. Reviewers must declare conflicts and recuse themselves.
+  ethics_and_malpractice_statement:
+    kicker: "Submission"
+    title: "Ethics and Malpractice Statement"
+    summary: |
+      Publication ethics policy, reviewer responsibilities, and misconduct handling for ICAANS 2026.
+    sections:
+      - title: "Publication Ethics Policy"
+        body: |
+          The conference is committed to maintaining high standards of publication ethics and academic integrity. All stakeholders, including authors, reviewers, editors, and organizers, must adhere to ethical best practices.
+      - title: "Duties of Authors"
+        cards:
+          - title: "Originality and Plagiarism"
+            meta: "Research integrity"
+            body: |
+              Authors must submit original work. Proper citation and acknowledgment are mandatory. Plagiarism, self-plagiarism, and duplicate publication are strictly prohibited, and similarity above the acceptable threshold may result in rejection.
+          - title: "Multiple Submissions"
+            meta: "Submission policy"
+            body: |
+              Simultaneous submission to multiple conferences or journals is prohibited. Previously published work cannot be submitted unless it is substantially extended and properly cited.
+          - title: "Data Integrity"
+            meta: "Evidence and records"
+            body: |
+              Data must be accurate and honestly presented. Fabrication, falsification, or manipulation of data is unethical, and authors must retain raw data if requested.
+          - title: "Authorship Criteria"
+            meta: "Contributor eligibility"
+            body: |
+              Authorship should be limited to individuals who made significant intellectual contributions, participated in drafting or revising the paper, and approved the final version. Gift authorship and ghost authorship are unethical.
+          - title: "Acknowledgment of Sources"
+            meta: "Citations and disclosure"
+            body: |
+              All sources must be appropriately cited. Use of AI tools must be disclosed where applicable.
+      - title: "Duties of Reviewers"
+        cards:
+          - title: "Confidentiality"
+            meta: "Reviewer conduct"
+            body: |
+              Reviewers must treat manuscripts as confidential documents and must not use unpublished material for personal advantage.
+          - title: "Objectivity"
+            meta: "Fair assessment"
+            body: |
+              Reviews must be constructive and unbiased. Personal criticism of authors is inappropriate.
+          - title: "Conflict of Interest"
+            meta: "Recusal"
+            body: |
+              Reviewers must disclose conflicts and decline review if a conflict exists.
+      - title: "Duties of Editors and Organizers"
+        body: |
+          Editors and organizers must ensure fair and unbiased review, maintain confidentiality, prevent conflicts of interest, and take corrective actions in case of ethical violations. Editorial decisions are based solely on academic merit.
+      - title: "Plagiarism and Misconduct Handling"
+        cards:
+          - title: "Investigation Steps"
+            meta: "Procedure"
+            body: |
+              If misconduct is suspected, the process includes initial investigation by the Program Chair, author clarification request, review of evidence, and a decision by the Ethics Committee.
+          - title: "Possible Actions"
+            meta: "Outcomes"
+            body: |
+              Possible actions include immediate rejection, paper withdrawal, notification to the authors' institutions, a ban from future submissions, or removal from proceedings.
+      - title: "Human and Animal Research Ethics"
+        body: |
+          For research involving human participants, clinical data, or animal experiments, authors must provide institutional ethics approval and informed consent statements where applicable.
+      - title: "Corrections and Retractions"
+        body: |
+          If significant errors or ethical issues are discovered post-publication, corrections may be issued and papers may be withdrawn or retracted.
+      - title: "Copyright and Licensing"
+        body: |
+          Authors retain responsibility for copyright compliance. Any copyrighted material must have proper permission.
   committee:
     kicker: "Committee"
     title: "Committee"
