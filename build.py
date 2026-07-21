@@ -518,12 +518,10 @@ def build(output_dir: str = "dist") -> None:
         show_hero=True,
     )
     page_routes = [
-        ("call_for_papers", "call-for-papers/index.html"),
         ("committee", "committee/index.html"),
         ("speakers", "speakers/index.html"),
         ("submission", "submission/index.html"),
-        ("review_process", "review-process/index.html"),
-        ("ethics_and_malpractice_statement", "ethics-and-malpractice-statement/index.html"),
+        ("author_guidelines", "author-guidelines/index.html"),
         ("registration", "registration/index.html"),
         ("contact", "contact/index.html"),
     ]

@@ -1,12 +1,14 @@
-site_name: "Conference Website"
-abbrev: "Conference 2026"
-hero_title: "Conference 2026"
+site_name: "International Conference on Applied Machine Learning, Sustainable Infrastructure, and Network Resilience"
+abbrev: "AML-SINR 2027"
+hero_title: "AML-SINR 2027"
 hero_tagline: "A conference space for research, collaboration, and applied innovation."
 hero_summary: |
-  The conference brings together researchers, practitioners, and collaborators to share ideas, present work, and build connections across the program.
+  The inaugural International Conference on Applied Machine Learning, Sustainable Infrastructure, and Network Resilience (AML-SINR 2027) is a prominent peer-reviewed global platform. The event brings together leading computer scientists, civil and electrical engineering experts, cybersecurity specialists, and industry innovators.
 
-  Across keynotes, technical sessions, and networking, the conference will focus on quality submissions, review integrity, and practical outcomes.
-dates: "2026"
+  Modern society is fully dependent on interconnected, essential infrastructure systems, which range from smart grids and transportation networks to high-speed communication pipes. As these systems grow, they face two systemic vulnerabilities: the urgent need to shift to sustainable, zero-emission operations, and the growing threat of sophisticated cyberphysical attacks.
+
+  AML-SINR 2027 links these domains by emphasising how Advanced Artificial Intelligence and Machine Learning may be successfully applied to construct next-generation Sustainable Infrastructure and provide unbreakable Network Resilience.
+dates: "2027"
 location: "Conference venue TBD"
 host: "Organizing Committee"
 hero_image_path: "img/placeholder_project_1.png"
@@ -15,8 +17,8 @@ primary_cta:
   label: "Register Now"
   url: "registration/"
 secondary_cta:
-  label: "Call for Papers"
-  url: "call-for-papers/"
+  label: "Submission"
+  url: "submission/"
 stats:
   - value: "48"
     label: "Sessions and presentations"
@@ -27,18 +29,43 @@ stats:
   - value: "3"
     label: "Core days"
 tracks:
-  - title: "Research and ideas"
-    body: "Topics, methods, and emerging directions shared through the conference program."
-  - title: "Applied work"
-    body: "Demonstrations, implementation lessons, and practical results from ongoing work."
-  - title: "Collaboration"
-    body: "Networking, discussions, and opportunities to build future partnerships."
+  - title: "Track 1: Applied Machine Learning & Intelligent Core Systems"
+    bullets:
+      - "Deep Learning Architectures, Neural Networks, and Large Foundation Models"
+      - "Computer Vision, Object Detection, and Video Analytics for Infrastructure Inspection"
+      - "Natural Language Processing (NLP) for Engineering Logs and Threat Intelligence"
+      - "Explainable AI (XAI), Model Interpretability, and Trustworthy AI Systems"
+      - "Reinforcement Learning for Real-Time Autonomous Control Loops"
+      - "Big Data Engineering: Distributed Analytics, Cloud, and Multi-Modal Data Fusion"
+  - title: "Track 2: Sustainable Systems & Smart Infrastructure Engineering"
+    bullets:
+      - "Smart Grids, Distributed Renewable Energy Systems, and Microgrid Control"
+      - "IoT-Driven Structural Health Monitoring (SHM) for Bridges, Dams, and Buildings"
+      - "Predictive Maintenance and Asset Lifecycle Management via Digital Twins"
+      - "AI Analytics for Intelligent Water Systems, Automated Waste Management, and Traffic Optimization"
+      - "Energy-Harvesting Micro-Sensors and Ultra-Low-Power Edge Networks"
+      - "Climate-Resilient Infrastructure Planning and Predictive Disaster Modeling"
+  - title: "Track 3: Network Resiliency, Edge Intelligence & Cybersecurity"
+    bullets:
+      - "Intrusion Detection and Prevention Systems (IDS/IPS) for Industrial Control Systems (ICS/SCADA)"
+      - "Decentralized Inference, Edge Computing, and TinyML for Remote Sensor Nodes"
+      - "Distributed Ledger Technologies (Blockchain) for Immutable Audit Trails and Smart Contracts"
+      - "Software-Defined Networking (SDN) and Resilient 5G/6G Network Slicing"
+      - "Adversarial Machine Learning: Defending AI Models from Data Poisoning and Evasion Attacks"
+      - "Zero-Trust Architecture and Cryptographic Protocols for Cyber-Physical Systems (CPS)"
+  - title: "Track 4: Cross-Disciplinary AI & Sustainable Development"
+    bullets:
+      - "Intelligent Transportation Systems (ITS) and Connected Autonomous Vehicles (CAVs)"
+      - "Green Computing: Optimizing the Computational and Carbon Footprint of Large AI Models"
+      - "Machine Learning for Macro-Level Environmental Forecasting and Emissions Tracking"
+      - "Smart Agriculture, Precision Farming Matrix, and Automated Supply Chain Logistics"
+      - "Data-Driven Policy Frameworks for Smart Cities and Circular Economy Operations"
 important_dates:
   - label: "Abstract submission opens"
     date: "Open now"
     note: "Submit your work through the conference submission page."
   - label: "Full paper deadline"
-    date: "See call for papers"
+    date: "See submission page"
     note: "Follow the official instructions and submission format."
   - label: "Author notification"
     date: "TBD"
@@ -47,7 +74,7 @@ important_dates:
     date: "TBD"
     note: "Register early once rates are published."
   - label: "Conference dates"
-    date: "2026"
+    date: "2027"
     note: "Conference schedule will be announced soon."
 program_preview:
   - day: "Day 1"
@@ -109,36 +136,6 @@ contact:
   press_email: "media@conference2026.example.org"
   address: "Conference organizing committee"
 pages:
-  call_for_papers:
-    kicker: "Call for Papers"
-    title: "Call for Papers"
-    summary: |
-      Submit your work through the conference submission page.
-
-      Review the call for papers, submission page, and review guidelines before uploading.
-    sections:
-      - title: "Conference focus"
-        body: |
-          The conference welcomes papers, presentations, and proposals that fit the program themes and submission instructions.
-
-          Please read the submission page, review process, and ethics statement before submitting.
-      - title: "Important dates"
-        cards:
-          - title: "Submission window"
-            meta: "Now open"
-            body: "Use the submission page to upload your material."
-          - title: "Review"
-            meta: "After submission"
-            body: "Papers will be reviewed according to the published review process."
-          - title: "Notification"
-            meta: "TBD"
-            body: "Author decisions will be announced after the review period."
-      - title: "Who should submit"
-        bullets:
-          - "Researchers presenting new findings or work-in-progress."
-          - "Practitioners sharing implementations, methods, or case studies."
-          - "Students preparing conference contributions and posters."
-          - "Teams proposing workshops, demos, or panel sessions."
   submission:
     kicker: "Submission"
     title: "Submission"
@@ -186,11 +183,11 @@ pages:
             meta: "CMT acknowledgment"
             body: |
               The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
-  review_process:
-    kicker: "Review process"
-    title: "Review process"
+  author_guidelines:
+    kicker: "Author Guidelines"
+    title: "Author Guidelines"
     summary: |
-      The conference uses a double-blind peer-review process with screening, evaluation, revision, and final decision stages.
+      Submission, peer-review, publication ethics, and malpractice guidelines for AML-SINR 2027.
     sections:
       - title: "Overview"
         body: |
@@ -239,12 +236,6 @@ pages:
             meta: "Review integrity"
             body: |
               All submitted manuscripts are treated as confidential documents. Reviewers must not share, discuss, or use unpublished material, and review materials are not disclosed outside the review process. A conflict of interest exists when the reviewer and author are from the same institution, have recent collaboration, or have a personal, financial, or professional conflict. Reviewers must declare conflicts and recuse themselves.
-  ethics_and_malpractice_statement:
-    kicker: "Ethics and Malpractice Statement"
-    title: "Ethics and Malpractice Statement"
-    summary: |
-      Publication ethics policy, reviewer responsibilities, and misconduct handling for ICAANS 2026.
-    sections:
       - title: "Publication Ethics Policy"
         body: |
           The conference is committed to maintaining high standards of publication ethics and academic integrity. All stakeholders, including authors, reviewers, editors, and organizers, must adhere to ethical best practices.

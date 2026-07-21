@@ -19,17 +19,10 @@
       <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav-links">Menu</button>
       <div id="site-nav-links" class="site-nav-links" data-site-nav-links>
         <a href="{{ site_root or './' }}">Home</a>
-        <a href="{{ site_root }}call-for-papers/">Call for Papers</a>
         <a href="{{ site_root }}committee/">Committee</a>
         <a href="{{ site_root }}speakers/">Speakers</a>
-        <details class="nav-dropdown">
-          <summary>Submission</summary>
-          <div class="nav-dropdown-menu" role="menu">
-            <a role="menuitem" href="{{ site_root }}submission/">Submission</a>
-            <a role="menuitem" href="{{ site_root }}review-process/">Review process</a>
-            <a role="menuitem" href="{{ site_root }}ethics-and-malpractice-statement/">Ethics and Malpractice Statement</a>
-          </div>
-        </details>
+        <a href="{{ site_root }}submission/">Submission</a>
+        <a href="{{ site_root }}author-guidelines/">Author Guidelines</a>
         <a href="{{ site_root }}registration/">Registration</a>
         <a href="{{ site_root }}contact/">Contact</a>
       </div>

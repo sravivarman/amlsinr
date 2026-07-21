@@ -13,7 +13,17 @@
 		{% for track in conference.tracks %}
 		<article class="info-card">
 			<h3>{{ track.title }}</h3>
-			<div class="article-content">{{ track.body }}</div>
+			<div class="article-content">
+				{% if track.bullets %}
+				<ul>
+					{% for bullet in track.bullets %}
+					<li>{{ bullet }}</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				{{ track.body }}
+				{% endif %}
+			</div>
 		</article>
 		{% endfor %}
 	</div>
