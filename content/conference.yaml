@@ -137,7 +137,7 @@ pages:
     kicker: "Author Guidelines"
     title: "Author Guidelines"
     summary: |
-      Submission, peer-review, publication ethics, and malpractice guidelines for AML-SINR 2027.
+      Follow the author guidelines to ensure your manuscript meets the AML-SINR 2027 conference submission standards.
     sections:
       - title: "Overview"
         body: |
@@ -251,7 +251,7 @@ pages:
     kicker: "Committee"
     title: "Committee"
     summary: |
-      Meet the organizing, review, and advisory groups for the conference.
+      Meet the Organizing, Advisory, and Review Committees guiding the conference's planning, technical quality, and successful execution.
     sections:
       - title: "Organizing committee"
         cards:
@@ -273,7 +273,7 @@ pages:
     kicker: "Speakers"
     title: "Speakers"
     summary: |
-      Featured talks and invited speakers will be listed here.
+      Meet the distinguished keynote and invited speakers who will share their expertise, research, and insights at the conference.
     sections:
       - title: "Featured speakers"
         cards:
@@ -305,7 +305,7 @@ pages:
     kicker: "Registration"
     title: "Registration"
     summary: |
-      Registration details, pricing, and deadlines will be posted here.
+      Register to participate in the conference and explore registration fees, payment details, and key dates.
     sections:
       - title: "Registration information"
         cards:
@@ -327,7 +327,7 @@ pages:
     kicker: "Contact"
     title: "Contact"
     summary: |
-      Reach the conference team for general questions, submissions, and registration support.
+      Reach the conference organizing team for general questions, submissions, and registration support.
     sections:
       - title: "Contact details"
         cards:
