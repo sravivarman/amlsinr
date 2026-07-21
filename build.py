@@ -94,6 +94,17 @@ def output_path(output_dir: str) -> Path:
     return path
 
 
+def read_cname(path: Path) -> str:
+    """Read and validate a CNAME file value from a path when it exists."""
+    if not path.exists():
+        return ""
+
+    value = path.read_text(encoding="utf-8").strip()
+    if not value or any(ch.isspace() for ch in value):
+        sys.exit(f"Error: invalid CNAME value in {path.relative_to(ROOT)}")
+    return value
+
+
 def clean_build_dir() -> None:
     """Remove generated output before rebuilding."""
     if BUILD_DIR.exists():
@@ -473,11 +484,20 @@ def build(output_dir: str = "dist") -> None:
     site_title  = config.get("site_title", "Conference website")
     google_site_verification = config.get("google_site_verification", "")
     conference_rel = config.get("conference_file", "content/conference.yaml")
+    custom_domain = str(config.get("custom_domain", "")).strip()
 
     theme_path = STATIC_DIR / "css" / "themes" / f"{theme}.css"
     if not theme_path.exists():
         sys.exit(f"Error: theme '{theme}' not found at static/css/themes/{theme}.css")
     asset_version = stylesheet_fingerprint(theme, theme_toggle)
+
+    # Prefer explicit config, then root CNAME, then existing output CNAME.
+    if custom_domain and any(ch.isspace() for ch in custom_domain):
+        sys.exit("Error: custom_domain must be a single hostname, not a spaced string.")
+    if not custom_domain:
+        custom_domain = read_cname(ROOT / "CNAME")
+    if not custom_domain:
+        custom_domain = read_cname(BUILD_DIR / "CNAME")
 
     # ── 2. Load conference content ─────────────────────────────────────
     conference_path = repo_path(conference_rel, "conference")
@@ -547,6 +567,9 @@ def build(output_dir: str = "dist") -> None:
     write_combined_styles(theme, theme_toggle)
     (BUILD_DIR / ".nojekyll").write_text("", encoding="utf-8")
     print("  wrote   .nojekyll")
+    if custom_domain:
+        (BUILD_DIR / "CNAME").write_text(f"{custom_domain}\n", encoding="utf-8")
+        print("  wrote   CNAME")
 
     print(f"\n✓  Build complete.  Open {BUILD_DIR.relative_to(ROOT)}/index.html or run: uv run python serve.py")
     print("=" * 55)
