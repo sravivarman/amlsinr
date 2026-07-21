@@ -1,46 +1,10 @@
-# International Conference on Electric Vehicles and Smart Grid
+# International Conference on Applied Machine Learning, Sustainable Infrastructure, and Network Resilience (AML-SINR 2027)
 
-This repository contains the source code and content for a static conference website for the International Conference on Electric Vehicles and Smart Grid.
+This repository contains the source code and content for a static conference website for the International Conference on Applied Machine Learning, Sustainable Infrastructure, and Network Resilience (AML-SINR 2027).
 
 ## Overview
 
 The site is source-driven. Most content lives in YAML files, the page layouts live in Jinja templates, and `build.py` turns everything into static HTML under `dist/`.
-
-The website has these main pages:
-
-- **Home**: conference highlights, tracks, dates, speakers, and sponsor snapshot
-- **About**: conference purpose and organizing structure
-- **Program**: three-day schedule and session outline
-- **Speakers**: featured keynote and invited speakers
-- **Venue**: travel, accessibility, and sustainability information
-- **Registration**: fee schedule and registration details
-- **Contact**: organizer contact details
-
-## Repository Structure
-
-```text
-.
-├── LICENSE
-├── Makefile
-├── README.md
-├── build.py
-├── content/
-│   └── conference.yaml
-├── portfolio_config.yaml
-├── pyproject.toml
-├── serve.py
-├── static/
-│   ├── css/
-│   ├── img/
-│   └── pdf/
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   └── page.html
-├── tools/
-│   └── check_consistency.py
-└── uv.lock
-```
 
 ### Folder Guide
 
@@ -152,94 +116,6 @@ Or switch Pages source to **GitHub Actions** to deploy from workflow artifacts i
 
 This runs the source consistency check, rebuilds the site, verifies `dist/index.html` exists, and prints git status.
 
-## Editing the Website
-
-### Main configuration
-
-[`portfolio_config.yaml`](portfolio_config.yaml) controls which content file is loaded and what theme is used.
-
-Important fields include:
-
-```yaml
-conference_file: content/conference.yaml
-
-theme: clinical
-site_title: "ICEVSG 2026 | International Conference on Electric Vehicles and Smart Grid"
-google_site_verification: ""
-```
-
-Each project file includes fields for the title, summary, tech stack, problem statement, approach, impact, links, and image path. Example project files are still included as references, but the live project list is controlled only by `portfolio_config.yaml`.
-
-### CV timeline
-
-The CV page is driven by [`content/cv.yaml`](content/cv.yaml).
-
-Timeline items support:
-
-- `date`
-- `category`
-- `title`
-- `organization`
-- `description`
-- `relevant_coursework`
-
-Categories are used to generate the filter chips on the CV page. Education entries can optionally include `relevant_coursework`, which renders as a collapsible "Relevant coursework" section.
-
-### Themes
-
-The active theme is set in `portfolio_config.yaml`:
-
-```yaml
-theme: clinical
-```
-
-The light/dark toggle is also configured there. `light_theme` should usually match `theme`, so the site has the same default appearance when JavaScript is disabled.
-
-```yaml
-theme_toggle:
-  enabled: true
-  light_theme: clinical
-  dark_theme: clinical-dark
-  light_label: Light
-  dark_label: Dark
-```
-
-To change the toggle pairing, update only the `light_theme` and `dark_theme` values.
-
-Available themes:
-
-- `clinical`
-- `clinical-dark`
-- `light`
-- `dark`
-- `msu-light`
-- `msu-dark`
-
-The theme files are expected to have matching selector coverage. This is checked by `tools/check_consistency.py`.
-
-## Build and Validation
-
-The build process does the following:
-
-1. Reads [`portfolio_config.yaml`](portfolio_config.yaml).
-2. Loads profile, project, writing, scholarship, CV, and about YAML.
-3. Converts Markdown fields to HTML.
-4. Renders Jinja templates into `dist/`.
-5. Copies only referenced static assets.
-6. Combines `static/css/base.css`, the selected theme, and any configured toggle theme into `dist/css/site.css`.
-7. Writes `.nojekyll` for GitHub Pages.
-
-The consistency checker currently verifies:
-
-- all published blog posts follow the blog post template keys
-- all theme files expose matching CSS selectors in the same order
-
-Run the full local check with:
-
-```bash
-make check
-```
-
 ## Deployment
 
 The site deploys through GitHub Pages using GitHub Actions.
@@ -276,21 +152,3 @@ make check
 you should get a fresh `dist/` folder containing the same static site structure used for deployment.
 
 The current workflow is intentionally lightweight. There is no database, backend server, or external build service required beyond GitHub Actions for deployment.
-
-## Attribution
-
-This site began from Devin Silvia's [Professional Portfolio Template](https://github.com/devinsilvia/professional_portfolio_template) and has since been substantially modified for a multi-page personal portfolio, writing system, CV timeline, and broader media support.
-
-## Note About AI Assistance
-
-The original template was drafted and built with the help of Claude.
-
-This portfolio has also been developed and revised with AI assistance, including ChatGPT/Codex. Generated code and content changes have been reviewed, edited, and tested before use.
-
-## Author
-
-**Arkesh Das**
-
-## License
-
-This repository preserves the original MIT License. See [`LICENSE`](LICENSE) for details.
