@@ -34,13 +34,10 @@
         <p class="hero-role">{{ conference.abbrev }}</p>
         <h1>{{ conference.hero_title }}</h1>
         <p class="conference-hero-tagline">{{ conference.hero_tagline }}</p>
-        {% if conference.hero_summary %}
-        <div class="conference-summary">{{ conference.hero_summary | safe }}</div>
-        {% endif %}
         <div class="conference-meta">
-          <span class="conference-chip">{{ conference.dates }}</span>
-          <span class="conference-chip">{{ conference.location }}</span>
-          <span class="conference-chip">{{ conference.host }}</span>
+          <span class="conference-chip"><strong>Date:</strong> {{ conference.dates }}</span>
+          <span class="conference-chip"><strong>Venue:</strong> {{ conference.location }}</span>
+          <span class="conference-chip"><strong>Organized by:</strong> {{ conference.host }}</span>
         </div>
         <div class="hero-actions">
           <a href="{{ site_root }}{{ conference.primary_cta.url }}" class="btn btn-primary">{{ conference.primary_cta.label }}</a>
