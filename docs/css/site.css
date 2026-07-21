@@ -153,7 +153,7 @@ img {
   margin-bottom: 1.1rem;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  font-size: 2rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1450,8 +1450,8 @@ body.conference-site .page-intro h1 {
 
 body.conference-site .conference-hero-copy h1 {
   max-width: 12ch;
-  font-size: clamp(3rem, 7vw, 5.6rem);
-  line-height: 0.95;
+  font-size: clamp(2.1rem, 4.8vw, 3.7rem);
+  line-height: 1.02;
 }
 
 body.conference-site .conference-hero-tagline {
@@ -1502,7 +1502,8 @@ body.conference-site .site-main {
 body.conference-site .section h2 {
   color: #043344;
   border-color: rgba(13, 26, 43, 0.12);
-  letter-spacing: 0.14em;
+  font-size: clamp(1.18rem, 2.1vw, 1.48rem);
+  letter-spacing: 0.08em;
 }
 
 body.conference-site .about-card,
@@ -1766,7 +1767,7 @@ body.conference-site .site-footer a {
   }
 
   body.conference-site .conference-hero-copy h1 {
-    font-size: clamp(2.25rem, 10vw, 3rem);
+    font-size: clamp(1.72rem, 8.2vw, 2.3rem);
   }
 }
 
