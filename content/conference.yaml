@@ -120,15 +120,15 @@ pages:
           - title: "Springer Template"
             meta: "MS Word format"
             body: |
-              Template available in MS Word format: <a href="https://icaans.com/assets/files/icaans-template.zip">Springer Template (MS Word)</a>
+              Template available in MS Word format: <a href="https://amlsinr.com/">Springer Template (MS Word)</a>
           - title: "Submission Portal"
             meta: "Microsoft CMT"
             body: |
-              To submit your paper, please use the <a href="https://cmt3.research.microsoft.com/ICAANS2026">Microsoft CMT portal</a>.
+              To submit your paper, please use the <a href="https://cmt3.research.microsoft.com/amlsinr2027">Microsoft CMT portal</a>.
           - title: "CMT Account"
             meta: "Submission access"
             body: |
-              The authors will need to register their email with CMT to submit paper to ICAANS 2026. <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html">How to create a CMT account</a>
+              The authors will need to register their email with CMT to submit paper to AML-SINR 2027. <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html">How to create a CMT account</a>
           - title: "Submission Note"
             meta: "CMT acknowledgment"
             body: |
@@ -333,13 +333,13 @@ pages:
         cards:
           - title: "General inquiries"
             meta: "Conference team"
-            body: "Email <a href=\"mailto:conference2026@example.org\">conference2026@example.org</a>"
+            body: 'Email <a href="mailto:conference2026@example.org">conference2026@example.org</a>'
           - title: "Sponsorship"
             meta: "Partnerships"
-            body: "Email <a href=\"mailto:partners@conference2026.example.org\">partners@conference2026.example.org</a>"
+            body: 'Email <a href="mailto:partners@conference2026.example.org">partners@conference2026.example.org</a>'
           - title: "Press and media"
             meta: "Communications"
-            body: "Email <a href=\"mailto:media@conference2026.example.org\">media@conference2026.example.org</a>"
+            body: 'Email <a href="mailto:media@conference2026.example.org">media@conference2026.example.org</a>'
       - title: "Office details"
         bullets:
           - "Address: Conference organizing committee"
