@@ -1668,7 +1668,7 @@ body.conference-site .article-content ol {
 }
 
 body.conference-site .page-summary {
-  max-width: 46rem;
+  max-width: 100%;
 }
 
 body.conference-site .page-intro {
