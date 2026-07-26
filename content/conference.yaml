@@ -9,8 +9,18 @@ hero_summary: |
 
   AML-SINR 2027 links these domains by emphasising how Advanced Artificial Intelligence and Machine Learning may be successfully applied to construct next-generation Sustainable Infrastructure and provide unbreakable Network Resilience.
 dates: "14 -15 July, 2027"
-location: "Conference venue TBD"
-host: "Organizing Committee"
+location: "Radisson Blu Hotel, Greater Noida"
+location_url: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-greater-noida"
+venue:
+  name: "Radisson Blu Hotel, Greater Noida"
+  address_lines:
+    - "C-8, Site-IV, 2nd Cross Avenue Road"
+    - "Kasna Industrial Area"
+    - "Greater Noida, Uttar Pradesh 201308, India"
+  map_url: "https://maps.google.com/?q=Radisson+Blu+Hotel+Greater+Noida"
+  website_url: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-greater-noida"
+  directions_note: "Please arrive at least 30 minutes before your first session for smooth check-in."
+host: "University"
 hero_image_path: "img/banner.png"
 hero_image_alt: "AML-SINR 2027 Conference Banner"
 primary_cta:
@@ -253,22 +263,43 @@ pages:
     summary: |
       Meet the Organizing, Advisory, and Review Committees guiding the conference's planning, technical quality, and successful execution.
     sections:
-      - title: "Organizing committee"
+      - title: "Conference Leadership"
         cards:
+          - title: "Advisory Committee"
+            body: "Long-term governance, strategic oversight, and appointment of event chairs."
           - title: "General Chair"
             body: "Conference leadership and overall coordination."
           - title: "Program Chair"
             body: "Session planning, speaker coordination, and review oversight."
-          - title: "Local Arrangements"
-            body: "Venue, onsite support, and attendee experience."
-      - title: "Program and review committee"
+          - title: "Finance Chair / Treasurer"
+            body: "Budget planning, registration revenue oversight, and final financial auditing."
+          - title: "Publications Chair"
+            body: "Formatting accepted papers, metadata compilation, and publisher coordination."
+          - title: "Publicity & Marketing Chair"
+            body: "Managing the conference website, social media outreach, and Call for Papers promotion."
+      - title: "Technical Program Committee"
         cards:
-          - title: "Technical review team"
-            body: "Responsible for reviewing submissions and recommending acceptance."
-          - title: "Session chairs"
-            body: "Moderate sessions and coordinate presenters."
-          - title: "Advisory members"
-            body: "Support the conference direction and quality."
+          - title: "Dr Vishnu Sharma"
+            subtitle: "Professor, ITS Engineering College, India"
+            body: "Email: vishnusharma97@gmail.com"
+          - title: "Dr Manjeet Singh"
+            subtitle: "Professor, Govt College Bhainswal Kalan, India"
+            body: "Email: er.manjeet106@gmail.com"
+          - title: "Dr Sanjay Chauhan"
+            subtitle: "Professor, Greater Noida Institute of Technology, India"
+            body: "Email: spschauhan75@gmail.com"
+          - title: "Dr Sanjeev Kumar Pippal"
+            subtitle: "Dean, Noida Institute of Engineering and Technology, India"
+            body: "Email: sanpippalin@gmail.com"
+          - title: "Dr Sansar Singh Chauhan"
+            subtitle: "Professor and Head, G L Bajaj Institute of Management and Technology, India"
+            body: "Email: sansar@gmail.com"
+          - title: "Dr Jaya Sinha"
+            subtitle: "Professor, ITS Engineering College, India"
+            body: "Email: jsjoysinha@gmail.com"
+          - title: "Dr Aditya Dev Mishra"
+            subtitle: "Professor, Bennett University, India"
+            body: "Email: aditya2aug@gmail.com"
   speakers:
     kicker: "Speakers"
     title: "Speakers"
@@ -345,3 +376,22 @@ pages:
           - "Address: Conference organizing committee"
           - "Conference email: conference2026@example.org"
           - "Please include your name and topic in the subject line."
+      - title: "Venue and Directions"
+        body: |
+          The conference will be held at <strong>Radisson Blu Hotel, Greater Noida</strong>. Use the details below for navigation, hotel information, and planning your arrival.
+        cards:
+          - title: "Complete Address"
+            meta: "Conference venue"
+            body: |
+              C-8, Site-IV, 2nd Cross Avenue Road,<br>
+              Kasna Industrial Area,<br>
+              Greater Noida, Uttar Pradesh 201308, India.
+          - title: "Map and Navigation"
+            meta: "Directions"
+            body: |
+              <a href="https://maps.google.com/?q=Radisson+Blu+Hotel+Greater+Noida" target="_blank" rel="noopener noreferrer">Open in Google Maps</a><br>
+              <a href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-greater-noida" target="_blank" rel="noopener noreferrer">Visit Hotel Website</a>
+          - title: "Arrival Guidance"
+            meta: "On-site check-in"
+            body: |
+              Please arrive at least 30 minutes before your first session for smooth check-in and badge collection.

@@ -55,4 +55,33 @@
 	</div>
 	</div>
 </section>
+
+{% if conference.venue %}
+<section class="section" id="venue-details">
+	<h2>Venue Details</h2>
+	<article class="feature-card">
+		<h3>{{ conference.venue.name|default(conference.location) }}</h3>
+		<div class="article-content">
+			{% if conference.venue.address_lines %}
+			<p>
+				{% for line in conference.venue.address_lines %}
+				{{ line }}{% if not loop.last %}<br>{% endif %}
+				{% endfor %}
+			</p>
+			{% endif %}
+			{% if conference.venue.directions_note %}
+			<p>{{ conference.venue.directions_note }}</p>
+			{% endif %}
+		</div>
+		<div class="hero-actions">
+			{% if conference.venue.website_url %}
+			<a href="{{ conference.venue.website_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Hotel Website</a>
+			{% endif %}
+			{% if conference.venue.map_url %}
+			<a href="{{ conference.venue.map_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open Map</a>
+			{% endif %}
+		</div>
+	</article>
+</section>
+{% endif %}
 {% endblock %}

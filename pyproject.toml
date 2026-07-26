@@ -1,10 +1,6 @@
 [project]
-name = "arkeshdas-portfolio"
+name = "sravivarman-conference"
 version = "0.1.0"
-description = "Arkesh Das's static personal portfolio website"
+description = "Sravivarman's static conference website"
 requires-python = ">=3.10"
-dependencies = [
-    "jinja2>=3.1",
-    "markdown>=3.5",
-    "pyyaml>=6.0",
-]
+dependencies = ["jinja2>=3.1", "markdown>=3.5", "pyyaml>=6.0"]

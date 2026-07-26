@@ -1595,6 +1595,32 @@ body.conference-site .conference-chip strong {
   color: #043344;
 }
 
+body.conference-site .conference-chip a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.conference-site .conference-chip-cta {
+  background: linear-gradient(135deg, #0a5f74, #043344);
+  border-color: #043344;
+  color: #f8f7f2;
+  box-shadow: 0 10px 24px rgba(13, 26, 43, 0.08);
+}
+
+body.conference-site .conference-chip-cta:hover {
+  background: linear-gradient(135deg, #0d748d, #043344);
+}
+
+body.conference-site .conference-chip-cta strong {
+  color: inherit;
+}
+
+body.conference-site .conference-chip-cta a {
+  color: inherit;
+  text-decoration: none;
+}
+
 body.conference-site .hero-actions {
   margin-top: 1rem;
 }

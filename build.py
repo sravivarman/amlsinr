@@ -1,5 +1,5 @@
 """
-build.py  —  Static site builder for Arkesh Das's portfolio website.
+build.py  —  Static site builder for Sravivarman's static conference website.
 
 Usage:
     uv run python build.py

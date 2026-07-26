@@ -45,7 +45,15 @@
         <!--p class="conference-hero-tagline">{{ conference.hero_tagline }}</p-->
         <div class="conference-meta">
           <span class="conference-chip"><strong>Date:</strong> {{ conference.dates }}</span>
-          <span class="conference-chip"><strong>Venue:</strong> {{ conference.location }}</span>
+          <span class="conference-chip conference-chip-cta"><strong>Venue:</strong>
+            {% if conference.venue and conference.venue.map_url %}
+            <a href="{{ conference.venue.map_url }}" target="_blank" rel="noopener noreferrer">{{ conference.location }}</a>
+            {% elif conference.location_url %}
+            <a href="{{ conference.location_url }}" target="_blank" rel="noopener noreferrer">{{ conference.location }}</a>
+            {% else %}
+            {{ conference.location }}
+            {% endif %}
+          </span>
           <span class="conference-chip"><strong>Organized by:</strong> {{ conference.host }}</span>
         </div>
         <div class="hero-actions">
