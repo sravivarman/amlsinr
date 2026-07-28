@@ -271,7 +271,8 @@ pages:
             body: "Conference leadership and overall coordination."
           - title: "Program Chair"
             subtitle: "Dr Vishnu Sharma"
-            body: "Professor, ITS Engineering College, India<br>Email: vishnusharma97@gmail.com"
+            body: "Professor, ITS Engineering College, India"
+            # Email: vishnusharma97@gmail.com
           - title: "Finance Chair / Treasurer"
             body: "Budget planning, registration revenue oversight, and final financial auditing."
           - title: "Publications Chair"
@@ -282,22 +283,28 @@ pages:
         cards:
           - title: "Dr Manjeet Singh"
             subtitle: "Professor, Govt College Bhainswal Kalan, India"
-            body: "Email: er.manjeet106@gmail.com"
+            body: ""
+            # Email: er.manjeet106@gmail.com
           - title: "Dr Sanjay Chauhan"
             subtitle: "Professor, Greater Noida Institute of Technology, India"
-            body: "Email: spschauhan75@gmail.com"
+            body: ""
+            # Email: spschauhan75@gmail.com
           - title: "Dr Sanjeev Kumar Pippal"
             subtitle: "Dean, Noida Institute of Engineering and Technology, India"
-            body: "Email: sanpippalin@gmail.com"
+            body: ""
+            # Email: sanpippalin@gmail.com
           - title: "Dr Sansar Singh Chauhan"
             subtitle: "Professor and Head, G L Bajaj Institute of Management and Technology, India"
-            body: "Email: sansar@gmail.com"
+            body: ""
+            # Email: sansar@gmail.com
           - title: "Dr Jaya Sinha"
             subtitle: "Professor, ITS Engineering College, India"
-            body: "Email: jsjoysinha@gmail.com"
+            body: ""
+            # Email: jsjoysinha@gmail.com
           - title: "Dr Aditya Dev Mishra"
             subtitle: "Professor, Bennett University, India"
-            body: "Email: aditya2aug@gmail.com"
+            body: ""
+            # Email: aditya2aug@gmail.com
           - title: "B. Sundaravadivazhagan"
             subtitle: "University of Technology and Applied Sciences, Oman"
             body: ""
