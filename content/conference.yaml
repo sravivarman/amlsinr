@@ -263,22 +263,22 @@ pages:
     summary: |
       Meet the Organizing, Advisory, and Review Committees guiding the conference's planning, technical quality, and successful execution.
     sections:
-      - title: "Conference Leadership"
+      - title: "Advisory Committee"
+        body: "Long-term governance, strategic oversight, and appointment of event chairs."
+      - title: "General Chair"
+        body: "Conference leadership and overall coordination."
+      - title: "Program Chair"
         cards:
-          - title: "Advisory Committee"
-            body: "Long-term governance, strategic oversight, and appointment of event chairs."
-          - title: "General Chair"
-            body: "Conference leadership and overall coordination."
-          - title: "Program Chair"
-            subtitle: "Dr Vishnu Sharma"
-            body: "Professor, ITS Engineering College, India"
+          - title: "Dr Vishnu Sharma"
+            subtitle: "Professor, ITS Engineering College, India"
+            body: ""
             # Email: vishnusharma97@gmail.com
-          - title: "Finance Chair / Treasurer"
-            body: "Budget planning, registration revenue oversight, and final financial auditing."
-          - title: "Publications Chair"
-            body: "Formatting accepted papers, metadata compilation, and publisher coordination."
-          - title: "Publicity & Marketing Chair"
-            body: "Managing the conference website, social media outreach, and Call for Papers promotion."
+      - title: "Finance Chair / Treasurer"
+        body: "Budget planning, registration revenue oversight, and final financial auditing."
+      - title: "Publications Chair"
+        body: "Formatting accepted papers, metadata compilation, and publisher coordination."
+      - title: "Publicity & Marketing Chair"
+        body: "Managing the conference website, social media outreach, and Call for Papers promotion."
       - title: "Technical Program Committee"
         cards:
           - title: "Dr Manjeet Singh"

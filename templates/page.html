@@ -58,7 +58,19 @@
       {% if card.subtitle %}
       <p class="timeline-organization">{{ card.subtitle }}</p>
       {% endif %}
-      {% if card.body %}
+      {% if card.get('items') %}
+      <div class="article-content">
+        <ul class="committee-item-list">
+          {% for item in card.get('items') %}
+          <li>
+            {% if item.title %}<strong>{{ item.title }}</strong>{% endif %}
+            {% if item.subtitle %}<br>{{ item.subtitle }}{% endif %}
+            {% if item.body %}<br>{{ item.body }}{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% elif card.body %}
       <div class="article-content">{{ card.body | safe }}</div>
       {% endif %}
     </article>

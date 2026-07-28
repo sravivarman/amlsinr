@@ -1785,6 +1785,26 @@ body.conference-site .article-content ol {
   margin-left: 1.15rem;
 }
 
+body.conference-site .committee-item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+body.conference-site .committee-item-list li {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(13, 26, 43, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+body.conference-site .committee-item-list strong {
+  display: inline-block;
+  margin-bottom: 0.15rem;
+}
+
 body.conference-site .page-summary {
   max-width: 100%;
 }
