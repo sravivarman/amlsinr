@@ -11,7 +11,7 @@
 
 :root {
   --page-max: 1120px;
-  --section-gap: 5rem;
+  --section-gap: 1rem;
   --card-radius: 8px;
 }
 
