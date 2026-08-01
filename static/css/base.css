@@ -1579,6 +1579,76 @@ body.conference-site .conference-meta {
   justify-content: center;
 }
 
+body.conference-site .conference-hero-copy .conference-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 0.65rem;
+  flex-wrap: nowrap;
+}
+
+body.conference-site .conference-hero-copy .conference-hero-row .conference-meta,
+body.conference-site .conference-hero-copy .conference-hero-row .hero-actions {
+  margin-top: 0;
+}
+
+body.conference-site .conference-hero-copy .conference-hero-row .conference-meta,
+body.conference-site .conference-hero-copy .conference-hero-row .hero-actions {
+  flex-wrap: nowrap;
+}
+
+body.conference-site .conference-hero-copy .conference-hero-row .conference-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+body.conference-site .conference-hero-copy .conference-hero-row .hero-actions .btn {
+  min-height: 3rem;
+}
+
+body.conference-site .conference-context-compact .conference-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.65rem;
+  flex-wrap: nowrap;
+}
+
+body.conference-site .conference-context-compact .conference-meta,
+body.conference-site .conference-context-compact .hero-actions {
+  margin-top: 0;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+body.conference-site .conference-context-compact .hero-actions {
+  width: auto;
+}
+
+body.conference-site .conference-context-compact .conference-chip,
+body.conference-site .conference-context-compact .hero-actions .btn {
+  min-height: 2.6rem;
+}
+
+body.conference-site .conference-context-compact .hero-actions .btn-primary,
+body.conference-site .conference-context-compact .hero-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgb(24 86 107);
+  color: #043344;
+}
+
+body.conference-site .conference-context-compact .hero-actions .btn-primary:hover,
+body.conference-site .conference-context-compact .hero-actions .btn-secondary:hover {
+  background: rgba(240, 248, 252, 0.96);
+  color: #043344;
+}
+
 body.conference-site .conference-chip {
   padding: 0.42rem 0.78rem;
   border: 1px solid rgb(24 86 107);
@@ -1840,6 +1910,24 @@ body.conference-site .site-footer a {
 
   body.conference-site .hero-actions {
     width: 100%;
+    justify-content: center;
+  }
+
+  body.conference-site .conference-hero-copy .conference-hero-row {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  body.conference-site .conference-hero-copy .conference-hero-row .conference-meta,
+  body.conference-site .conference-hero-copy .conference-hero-row .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  body.conference-site .conference-context-compact .conference-hero-row,
+  body.conference-site .conference-context-compact .conference-meta,
+  body.conference-site .conference-context-compact .hero-actions {
+    flex-wrap: wrap;
     justify-content: center;
   }
 
