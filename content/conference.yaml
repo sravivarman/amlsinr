@@ -370,6 +370,26 @@ pages:
           - title: "Akhtar Kalam"
             subtitle: "Victoria University, Melbourne, Australia"
             body: ""
+          - title: "Dr K Sangeetha"
+            subtitle: "Kebri Dehar University, Kebri Dehar, Ethiopia"
+            body: ""
+            # Email: sangeethak@kdu.edu.et
+          - title: "Dr Mohamed Sirajudeen Yoosuf"
+            subtitle: "Modern College of Business and Science, Bowshar, Muscat, Oman"
+            body: ""
+            # Email: mohamed.yoosuf@mcbs.edu.om
+          - title: "Dr Farrukh Saleem"
+            subtitle: "Leeds Beckett University, Leeds, United Kingdom"
+            body: ""
+            # Email: f.saleem@leedsbeckett.ac.uk
+          - title: "Dr. Shaheer Ansari"
+            subtitle: "School of Engineering and Technology, Sunway University, Malaysia"
+            body: ""
+            # Email: shaheera@sunway.edu.my
+          - title: "Dr. Suganthi Ramasamy"
+            subtitle: "University of Cagliari, Italy"
+            body: ""
+            # Email: suganthi.ramasamy@unica.it
           - title: "Dr Manjeet Singh"
             subtitle: "Professor, Govt College Bhainswal Kalan, India"
             body: ""
@@ -394,6 +414,7 @@ pages:
             subtitle: "Professor, Bennett University, India"
             body: ""
             # Email: aditya2aug@gmail.com
+
 
   speakers:
     kicker: "Speakers"
