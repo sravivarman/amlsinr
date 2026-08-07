@@ -267,8 +267,11 @@ pages:
       #        body: "Long-term governance, strategic oversight, and appointment of event chairs."
       - title: "General Chair"
         cards:
-          - title: "Dr Mukesh Mishrra"
+          - title: "Dr Mukesh Mishra"
             subtitle: "Yoobee Colleges of Creative Innovation, Auckland, New Zealand"
+            body: ""
+          - title: "Dr Milan Simic"
+            subtitle: "Senior Lecturer, RMIT University, STEM, School of Engineering, Melbourne, Australia"
             body: ""
       - title: "Program Chair"
         cards:
@@ -280,6 +283,19 @@ pages:
             subtitle: "Associate Professor, Vardhaman College of Engineering, India"
             body: ""
             # Email:
+          - title: "Dr Shitharth Selvarajan"
+            subtitle: "Lecturer, Leeds Beckett University, Leeds, United Kingdom"
+            body: ""
+      - title: "Track Chair"
+        cards:
+          - meta: "Track 1"
+            title: "Dr R Karthikeyan"
+            subtitle: "Professor, Vardhaman College of Engineering, India"
+            body: ""
+          - meta: "Track 2"
+            title: "Dr Thanikanti Sudhakar Babu"
+            subtitle: "CCP-FEWS, University of Johannesburg, South Africa"
+            body: ""
       #      - title: "Finance Chair / Treasurer"
       #        body: "Budget planning, registration revenue oversight, and final financial auditing."
       #      - title: "Publications Chair"
