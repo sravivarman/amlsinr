@@ -300,6 +300,11 @@ pages:
             title: "Dr Arshad Khan"
             subtitle: "Yoobee Colleges of Creative Innovation, Auckland, New Zealand"
             body: ""
+          - meta: "Track 4"
+          - title: "Dr Mohamed Sirajudeen Yoosuf"
+            subtitle: "Modern College of Business and Science, Bowshar, Muscat, Oman"
+            body: ""
+            # Email: mohamed.yoosuf@mcbs.edu.om
 
       #      - title: "Finance Chair / Treasurer"
       #        body: "Budget planning, registration revenue oversight, and final financial auditing."
@@ -379,10 +384,6 @@ pages:
             subtitle: "Kebri Dehar University, Kebri Dehar, Ethiopia"
             body: ""
             # Email: sangeethak@kdu.edu.et
-          - title: "Dr Mohamed Sirajudeen Yoosuf"
-            subtitle: "Modern College of Business and Science, Bowshar, Muscat, Oman"
-            body: ""
-            # Email: mohamed.yoosuf@mcbs.edu.om
           - title: "Dr Farrukh Saleem"
             subtitle: "Leeds Beckett University, Leeds, United Kingdom"
             body: ""
@@ -464,6 +465,15 @@ pages:
           - title: "Dr. Parmand Astya"
             subtitle: "Professor, Sharda University, India"
             body: ""
+          - title: "Dr. Arun Kumar Ray"
+            subtitle: "Director, Professor, Kalinga Institute of Industrial Technology (KIIT), India"
+            body: ""
+          - title: "Dr Nguyen Van"
+            subtitle: "Thanh Do University, Vietnam"
+            body: ""
+          - title: "Dr Rafea Naffa"
+            subtitle: "Scientific Advisor at AIDP"
+            body: ""
           - title: "Dr. Arun Kumar Rana"
             subtitle: "Professor, Galgotias University, India"
             body: ""
@@ -479,6 +489,16 @@ pages:
           - title: "Dr. Puspendra"
             subtitle: "Professor, SRM University-AP, India"
             body: ""
+          - title: "Dr. Natarajan Karuppiah"
+            subtitle: "Professor, Vardhaman College of Engineering, India"
+            body: ""
+          - title: "Dr. K Muruga Perumal"
+            subtitle: "Professor, Vardhaman College of Engineering, India"
+            body: ""
+          - title: "Dr. Ravivarman Shanmugasundaram"
+            subtitle: "Professor, Vardhaman College of Engineering, India"
+            body: ""
+
 
   speakers:
     kicker: "Speakers"
