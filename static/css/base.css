@@ -499,6 +499,25 @@ details[open] summary::before {
   margin: 1rem 0 0 1.25rem;
 }
 
+.article-content ol.track-topics {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  counter-reset: track-topic;
+}
+
+.track-topics li {
+  counter-increment: track-topic;
+  padding-left: 2.25rem;
+  position: relative;
+}
+
+.track-topics li::before {
+  content: attr(data-track-number) "." counter(track-topic);
+  left: 0;
+  position: absolute;
+}
+
 .article-content li+li {
   margin-top: 0.35rem;
 }

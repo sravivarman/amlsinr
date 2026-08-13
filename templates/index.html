@@ -18,9 +18,10 @@
 			<h3>{{ track.title }}</h3>
 			<div class="article-content">
 				{% if track.bullets %}
-				<ol>
+				{% set track_number = loop.index %}
+				<ol class="track-topics">
 					{% for bullet in track.bullets %}
-					<li>{{ bullet }}</li>
+					<li data-track-number="{{ track_number }}">{{ bullet.split(': ', 1)[1] }}</li>
 					{% endfor %}
 				</ol>
 				{% else %}
