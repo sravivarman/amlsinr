@@ -21,7 +21,9 @@
 				{% set track_number = loop.index %}
 				<ol class="track-topics">
 					{% for bullet in track.bullets %}
-					<li data-track-number="{{ track_number }}">{{ bullet.split(': ', 1)[1] }}</li>
+					{% set topic_parts = bullet.split(': ', 1) %}
+					{% set topic_title = topic_parts[0].split(' ', 1)[1] %}
+					<li data-track-number="{{ track_number }}"><strong>{{ topic_title }}:</strong> {{ topic_parts[1] }}</li>
 					{% endfor %}
 				</ol>
 				{% else %}

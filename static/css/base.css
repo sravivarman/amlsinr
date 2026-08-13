@@ -513,7 +513,7 @@ details[open] summary::before {
 }
 
 .track-topics li::before {
-  content: attr(data-track-number) "." counter(track-topic);
+  content: attr(data-track-number) "." counter(track-topic) ".";
   left: 0;
   position: absolute;
 }
