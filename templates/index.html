@@ -18,11 +18,11 @@
 			<h3>{{ track.title }}</h3>
 			<div class="article-content">
 				{% if track.bullets %}
-				<ul>
+				<ol>
 					{% for bullet in track.bullets %}
 					<li>{{ bullet }}</li>
 					{% endfor %}
-				</ul>
+				</ol>
 				{% else %}
 				{{ track.body }}
 				{% endif %}
