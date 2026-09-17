@@ -84,11 +84,10 @@
 		<h3>{{ conference.venue.name|default(conference.location) }}</h3>
 		<div class="article-content">
 			{% if conference.venue.address_lines %}
-			<p>
-				{% for line in conference.venue.address_lines %}
-				{{ line }}{% if not loop.last %}<br>{% endif %}
-				{% endfor %}
-			</p>
+			<p>{{ conference.venue.address_lines|join(", ") }}</p>
+			{% endif %}
+			{% if conference.venue.image_path %}
+			<img src="{{ conference.venue.image_path }}" alt="KG Reddy College of Engineering and Technology campus" class="venue-banner" />
 			{% endif %}
 			{% if conference.venue.directions_note %}
 			<p>{{ conference.venue.directions_note }}</p>
@@ -96,7 +95,7 @@
 		</div>
 		<div class="hero-actions">
 			{% if conference.venue.website_url %}
-			<a href="{{ conference.venue.website_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Hotel Website</a>
+			<a href="{{ conference.venue.website_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit College Website</a>
 			{% endif %}
 			{% if conference.venue.map_url %}
 			<a href="{{ conference.venue.map_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open Map</a>

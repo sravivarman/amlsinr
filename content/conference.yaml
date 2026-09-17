@@ -32,11 +32,12 @@ venue:
   - Beside Moinabad Police Station
   - Chilkur Village, Moinabad Mandal
   - Hyderabad, 500075, Telangana, India
+  image_path: img/kgreddy.png
   map_url: https://maps.google.com/?q=KG+Reddy+College+of+Engineering+and+Technology+Beside+Moinabad+Police+Station+Chilkur+Village+Moinabad+Mandal+Hyderabad+500075+Telangana+India
   website_url: https://www.kgr.ac.in/
   directions_note: Please arrive at least 30 minutes before your first session for
     smooth check-in.
-host: University
+host: KG Reddy College of Engineering and Technology
 college_logo_path: img/kg_reddy_college_logo.png
 research_center_logo_path: img/research_centre_logo.png
 hero_image_path: img/banner.png

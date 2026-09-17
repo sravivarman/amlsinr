@@ -724,6 +724,15 @@ details[open] summary::before {
   padding: 1.35rem;
 }
 
+.venue-banner {
+  display: block;
+  width: calc(100% + 2.7rem);
+  height: auto;
+  max-width: none;
+  margin: 1.25rem -1.35rem;
+  border-radius: 0;
+}
+
 .feature-card-header {
   margin-bottom: 1rem;
 }
@@ -1538,6 +1547,13 @@ body.conference-site .conference-summary,
 body.conference-site .page-summary,
 body.conference-site .article-content {
   color: rgba(13, 26, 43, 0.82);
+}
+
+body.conference-site .feature-card .venue-banner {
+  width: calc(100% + 2.7rem);
+  max-width: none;
+  margin: 1.25rem -1.35rem;
+  border-radius: 0;
 }
 
 body.conference-site .page-summary-wide {
