@@ -83,30 +83,80 @@
   <footer class="site-footer">
     <p>&copy; 2026 {{ conference.abbrev }}.</p>
   </footer>
+
+  <div class="speaker-modal" data-speaker-modal hidden>
+    <div class="speaker-modal-panel" role="dialog" aria-modal="true" aria-labelledby="speaker-modal-title">
+      <div class="speaker-modal-header">
+        <h3 class="speaker-modal-title" id="speaker-modal-title">Speaker bio</h3>
+        <button type="button" class="speaker-modal-close" aria-label="Close speaker bio" data-speaker-close>&times;</button>
+      </div>
+      <div class="speaker-modal-body" data-speaker-body></div>
+    </div>
+  </div>
+
   <script>
     (() => {
       const nav = document.querySelector(".site-nav");
       const toggle = document.querySelector("[data-menu-toggle]");
       const links = document.querySelector("[data-site-nav-links]");
-      if (!nav || !toggle || !links) return;
+      if (nav && toggle && links) {
+        const closeMenu = () => {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        };
 
-      const closeMenu = () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      };
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
 
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-      });
+        links.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
 
-      links.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
-      });
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 820) closeMenu();
+        });
+      }
 
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 820) closeMenu();
-      });
+      const modal = document.querySelector("[data-speaker-modal]");
+      const modalTitle = document.getElementById("speaker-modal-title");
+      const modalBody = document.querySelector("[data-speaker-body]");
+      const closeButton = document.querySelector("[data-speaker-close]");
+      const triggers = document.querySelectorAll("[data-speaker-open]");
+
+      if (modal && modalTitle && modalBody && closeButton) {
+        const openModal = (title, templateId) => {
+          const template = document.getElementById(templateId);
+          modalTitle.textContent = title;
+          modalBody.innerHTML = template ? template.innerHTML : "";
+          modal.hidden = false;
+          document.body.style.overflow = "hidden";
+        };
+
+        const closeModal = () => {
+          modal.hidden = true;
+          document.body.style.overflow = "";
+        };
+
+        triggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const { speakerTitle, speakerTemplate } = trigger.dataset;
+            openModal(speakerTitle || "Speaker bio", speakerTemplate || "");
+          });
+        });
+
+        closeButton.addEventListener("click", closeModal);
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+          }
+        });
+      }
     })();
   </script>
 </body>
