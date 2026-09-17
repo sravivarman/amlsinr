@@ -413,9 +413,6 @@ pages:
         body: ''
     - title: Program Chair
       cards:
-      - title: Dr Milan Simic
-        subtitle: Senior Lecturer, RMIT University, STEM, School of Engineering, Australia
-        body: ''
       - title: Dr B Praveen Kumar
         subtitle: Associate Professor, Vardhaman College of Engineering, India
         body: ''
@@ -423,10 +420,10 @@ pages:
         subtitle: Lecturer, Leeds Beckett University, Leeds, United Kingdom
         body: ''
       - title: Dr. S. Sai Satyanarayana Reddy
-        subtitle: Principal, KGRCET
+        subtitle: Principal, KG Reddy College of Engineering & Technology, India
         body: ''
       - title: Dr. Soumya Sucharita Singha
-        subtitle: Dean R&D, CRID, KGRCET
+        subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
         body: ''
     - title: Track Chair
       cards:
@@ -684,6 +681,36 @@ pages:
     sections:
     - title: Featured speakers
       cards:
+      - title: Dr. Milan Simic
+        meta: Keynote Speaker
+        subtitle: RMIT University, STEM, School of Engineering, Melbourne, Australia
+        image_path: img/speaker_milan.png
+        body: '<p>Dr. Milan Simic holds PhD, Masters, Bachelor of Electronics Engineering degrees, and Graduate Diploma in Education. </p>
+
+          <p>He has extensive international experience spanning industry and academia, including roles with Honeywell Information Systems, CISCO Networking Academy, research institutes, and universities. His research focuses on applying AI and advanced analytical methods to complex engineering and infrastructure challenges, with an emphasis on real-world impact and industry collaboration.</p>
+
+          <p>Dr. Simic contributes to international conferences, scholarly publishing, and collaborative research initiatives. His work promotes responsible AI adoption, interdisciplinary engagement, and innovation that aligns technological advancement with societal needs.</p>'
+      - title: Dr. N.C. Mondal
+        meta: Keynote Speaker
+        subtitle: Scientist F, CSIR-National Geophysical Research Institute, Hyderabad
+        image_path: img/speaker1_mondal.png
+        body: '<p>Dr. N.C. Mondal received B.Sc. Physics (Hons.) degree from The University of Burwan, West Bengal and M.Sc. Tech. Geophysics from Banaras Hindu University, Varanasi. He obtained his Ph.D. in Geophysics from Osmania University, Hyderabad and also pursued Advance Groundwater Modelling Study at Texas A&M University, USA under the BOYSCAST Programme (funded by DST, Govt. of India).</p>
+
+          <p>Presently Dr. Mondal is working as a Scientist F at CSIR-National Geophysical Research Institute, Hyderabad, India & holding Associate Professor of Physical Sciences, Academy of Scientific & Innovative Research (AcSIR), Ghaziabad, India.</p>
+
+          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
+
+          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
+
+          <p>Dr. Mondal has actively contributed to the Pilot Project on Aquifer Mapping (AQUIM)-India using combined ground and heliborne geophysical surveys and proved that a combination of electrical and electromagnetic investigations delineates the aquifer in the sedimentary basin of the Ganga River basin with certainty.</p>
+
+          <p>He has credited more than 125-Research Articles in International & Indian Journals (Google Scholar Citations: 4966, h-index: 35 & i10-Index: 77); 21-Chapters in Books and 51-Technical Reports. He has already guided two Ph.D. Students of AcSIR, 02 PhD students presently pursuing, 10 M.E./M.Tech. Theses, and 13-Summer/Winter Trainees.</p>
+
+          <p>He is member(s) of the European Water Resources Association (EWRA), International Association of Hydrogeologists (IAH), International Association of Hydrological Sciences (IAHS), International Society for Development & Sustainability (ISDA-Japan), Association of Hydrologists of India (AHI), Indian Association of Hydrologists (IAH), Indian Society for Hydraulics (ISH) & Association of Global Groundwater Scientists (AGGS).</p>
+
+          <p>He is the recipient (s) of the BOYSCAST Fellow-2009 (DST, GoI), The National Geoscience Award-2017 (Ministry of Mines, GoI), Bharat Jyoti Award-2019 (IIFS, New Delhi), Outstanding Scientist Award-2020 & Best Researcher Award-2021 (VDGOOD, Chennai), and Distinguished Scientist Award-2026 (Scientific Laurels). Elected as Joint Secretary of AGGS & Executive Member of AHI. Honoured as “Fellow (s)" of Telangana Academy of Sciences (FTAS) and Geological Society (India), and “Distinguished Fellow” of Global Groundwater Scientists (AGGS).</p>
+
+          <p>He also visited the USA, Singapore & Mauritius to present his research findings.</p>'
       - title: Prof. Rajanikanth Aluvalu
         meta: Keynote Speaker
         subtitle: Professor and Director, Symbiosis Institute of Technology, Hyderabad
@@ -708,27 +735,6 @@ pages:
           <p>He is a recipient of the IEEE Hyderabad Section Best Advisor Award and
           the IUCEE Faculty Fellow Award (2018). He is also a Life Member of ISTE
           and a member of ACM.</p>'
-      - title: Dr. N.C. Mondal
-        meta: Keynote Speaker
-        subtitle: Scientist F, CSIR-National Geophysical Research Institute, Hyderabad
-        image_path: img/speaker1_mondal.png
-        body: '<p>Dr. N.C. Mondal received B.Sc. Physics (Hons.) degree from The University of Burwan, West Bengal and M.Sc. Tech. Geophysics from Banaras Hindu University, Varanasi. He obtained his Ph.D. in Geophysics from Osmania University, Hyderabad and also pursued Advance Groundwater Modelling Study at Texas A&M University, USA under the BOYSCAST Programme (funded by DST, Govt. of India).</p>
-
-          <p>Presently Dr. Mondal is working as a Scientist F at CSIR-National Geophysical Research Institute, Hyderabad, India & holding Associate Professor of Physical Sciences, Academy of Scientific & Innovative Research (AcSIR), Ghaziabad, India.</p>
-
-          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
-
-          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
-
-          <p>Dr. Mondal has actively contributed to the Pilot Project on Aquifer Mapping (AQUIM)-India using combined ground and heliborne geophysical surveys and proved that a combination of electrical and electromagnetic investigations delineates the aquifer in the sedimentary basin of the Ganga River basin with certainty.</p>
-
-          <p>He has credited more than 125-Research Articles in International & Indian Journals (Google Scholar Citations: 4966, h-index: 35 & i10-Index: 77); 21-Chapters in Books and 51-Technical Reports. He has already guided two Ph.D. Students of AcSIR, 02 PhD students presently pursuing, 10 M.E./M.Tech. Theses, and 13-Summer/Winter Trainees.</p>
-
-          <p>He is member(s) of the European Water Resources Association (EWRA), International Association of Hydrogeologists (IAH), International Association of Hydrological Sciences (IAHS), International Society for Development & Sustainability (ISDA-Japan), Association of Hydrologists of India (AHI), Indian Association of Hydrologists (IAH), Indian Society for Hydraulics (ISH) & Association of Global Groundwater Scientists (AGGS).</p>
-
-          <p>He is the recipient (s) of the BOYSCAST Fellow-2009 (DST, GoI), The National Geoscience Award-2017 (Ministry of Mines, GoI), Bharat Jyoti Award-2019 (IIFS, New Delhi), Outstanding Scientist Award-2020 & Best Researcher Award-2021 (VDGOOD, Chennai), and Distinguished Scientist Award-2026 (Scientific Laurels). Elected as Joint Secretary of AGGS & Executive Member of AHI. Honoured as “Fellow (s)" of Telangana Academy of Sciences (FTAS) and Geological Society (India), and “Distinguished Fellow” of Global Groundwater Scientists (AGGS).</p>
-
-          <p>He also visited the USA, Singapore & Mauritius to present his research findings.</p>'
   registration:
     kicker: Registration
     title: Registration
