@@ -10,6 +10,24 @@
 	</div>
 </section>
 
+{% if conference.college_logo_path or conference.research_center_logo_path %}
+<section class="section">
+	<h2>Hosted by</h2>
+	<div class="institution-logo-row">
+		{% if conference.college_logo_path %}
+		<div class="institution-logo-card">
+			<img src="{{ site_root }}{{ conference.college_logo_path }}" alt="KG Reddy College of Engineering and Technology logo" class="institution-logo" />
+		</div>
+		{% endif %}
+		{% if conference.research_center_logo_path %}
+		<div class="institution-logo-card">
+			<img src="{{ site_root }}{{ conference.research_center_logo_path }}" alt="Research centre logo" class="institution-logo" />
+		</div>
+		{% endif %}
+	</div>
+</section>
+{% endif %}
+
 <section class="section">
 	<h2>Call for Papers (Technical Tracks)</h2>
 	<div class="info-grid tracks-grid">

@@ -37,6 +37,8 @@ venue:
   directions_note: Please arrive at least 30 minutes before your first session for
     smooth check-in.
 host: University
+college_logo_path: img/kg_reddy_college_logo.png
+research_center_logo_path: img/research_centre_logo.png
 hero_image_path: img/banner.png
 hero_image_alt: AML-SINR 2027 Conference Banner
 primary_cta:
