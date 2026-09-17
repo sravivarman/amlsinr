@@ -730,6 +730,14 @@ details[open] summary::before {
   border-radius: 0;
 }
 
+.section-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.25rem auto 1.5rem;
+  border-radius: var(--card-radius);
+}
+
 .feature-card-header {
   margin-bottom: 1rem;
 }

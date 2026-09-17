@@ -41,6 +41,9 @@
   {% if section.body %}
   <div class="feature-card">
     <div class="article-content">{{ section.body | safe }}</div>
+    {% if section.image_path %}
+    <img src="{{ site_root }}{{ section.image_path }}" alt="KG Reddy College of Engineering and Technology" class="section-image" />
+    {% endif %}
   </div>
   {% endif %}
 

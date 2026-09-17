@@ -783,6 +783,7 @@ pages:
         your arrival.
 
         '
+      image_path: img/kgreddy.png
       cards:
       - title: Complete Address
         meta: Conference venue
