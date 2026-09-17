@@ -17,7 +17,13 @@
 
   <header class="site-header">
     <nav class="site-nav">
-      <a class="site-brand" href="{{ site_root or './' }}">{{ conference.abbrev }}</a>
+      <a class="site-brand" href="{{ site_root or './' }}">
+        {% if conference.logo_path %}
+        <img src="{{ site_root }}{{ conference.logo_path }}" alt="{{ conference.site_name|default(conference.abbrev) }} logo" class="site-brand-logo" />
+        {% else %}
+        {{ conference.abbrev }}
+        {% endif %}
+      </a>
       <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false"
         aria-controls="site-nav-links">Menu</button>
       <div id="site-nav-links" class="site-nav-links" data-site-nav-links>

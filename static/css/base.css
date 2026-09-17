@@ -77,6 +77,15 @@ img {
   line-height: 1;
 }
 
+.site-brand-logo {
+  display: block;
+  max-height: 2.4rem;
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
 .site-nav .site-brand:hover {
   text-decoration: none;
 }
@@ -1137,6 +1146,10 @@ body.conference-site .tracks-grid {
   .coursework-list {
     grid-template-columns: 1fr;
   }
+
+  body.conference-site .committee-row-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1889,6 +1902,39 @@ body.conference-site .committee-item-list li {
 body.conference-site .committee-item-list strong {
   display: inline-block;
   margin-bottom: 0.15rem;
+}
+
+body.conference-site .committee-row-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+body.conference-site .committee-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.12rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgba(13, 26, 43, 0.12);
+  border-radius: 12px;
+  background: #ffffff;
+  min-height: 100%;
+  line-height: 1.35;
+}
+
+body.conference-site .committee-row strong {
+  display: block;
+  font-weight: 800;
+  color: #0d1a2b;
+  line-height: 1.35;
+}
+
+body.conference-site .committee-row span {
+  display: block;
+  color: rgba(13, 26, 43, 0.8);
+  line-height: 1.35;
 }
 
 body.conference-site .page-summary {
