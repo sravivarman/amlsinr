@@ -711,6 +711,26 @@ pages:
           <p>He is the recipient (s) of the BOYSCAST Fellow-2009 (DST, GoI), The National Geoscience Award-2017 (Ministry of Mines, GoI), Bharat Jyoti Award-2019 (IIFS, New Delhi), Outstanding Scientist Award-2020 & Best Researcher Award-2021 (VDGOOD, Chennai), and Distinguished Scientist Award-2026 (Scientific Laurels). Elected as Joint Secretary of AGGS & Executive Member of AHI. Honoured as “Fellow (s)" of Telangana Academy of Sciences (FTAS) and Geological Society (India), and “Distinguished Fellow” of Global Groundwater Scientists (AGGS).</p>
 
           <p>He also visited the USA, Singapore & Mauritius to present his research findings.</p>'
+      - title: Dr Muhammad Ammirrul Atiqi Mohd Zainuri
+        meta: Keynote Speaker
+        subtitle: Senior Lecturer, Department of Electrical, Electronics and System, Universiti Kebangsaan Malaysia
+        body: '<p>Dr Muhammad Ammirrul Atiqi Mohd Zainuri received the B.Eng. in Electrical and Electronic Engineering from Universiti Putra Malaysia, in 2011, the M.Sc. of electrical power engineering from Universiti Putra Malaysia, in 2013, and In August 2017, he was awarded his Ph.D degree from Department of Electrical and Electronic Engineering, Faculty of Engineering, Universiti Putra Malaysia. He is a member of IEEE, and a registered graduate engineers Malaysia (BEM) in the electrical track. Currently, he is a Senior Lecturer at Department of Electrical, Electronic and System Engineering, Universiti Kebangsaan Malaysia (UKM). He has authored and co-authored number of well recognized journals and conference papers. His research interests are in power electronics, power quality, renewable energy systems and applied artificial intelligent in electrical systems. He is an active research member at UMPEDAC and ALPER (UPM).</p>'
+      - title: Prof. K. V. Jayakumar
+        meta: Keynote Speaker
+        subtitle: Senior Adjunct Professor and Outreach Advisor, IIT Dharwad; Member, Governing Body, Wetlands International South Asia
+        body: '<p>Prof. K. V. Jayakumar is a distinguished academic, administrator, and policy advisor in the field of Civil Engineering and Water Resources, with over three decades of experience in teaching, research, institutional leadership, and national–international advisory roles. He is currently serving as Senior Adjunct Professor and Outreach Advisor at the Indian Institute of Technology (IIT) Dharwad and is a Member of the Governing Body of Wetlands International South Asia (WISA).</p>
+
+          <p>Prior to this, Prof. Jayakumar served for over 30 years at the National Institute of Technology (NIT) Warangal, where he held several key leadership positions, including Dean (Planning & Development), Dean (International Relations & Alumni Affairs), Advisor to the Director (Special Programmes), Head of the Department, and Coordinator of national flagship programs such as GIAN and SPARC. He was also a nominated member of the Board of Governors and Finance Committee of NIT Warangal.</p>
+
+          <p>He served on deputation as Executive Director, Centre for Water Resources Development and Management (CWRDM), Kozhikode, one of the countrys premier R&D centres on water resources. He concurrently held additional charges as Director, C-STED (Government of Kerala), and as Director, Kerala School of Mathematics, demonstrating his ability to bridge academia, research, entrepreneurship, and governance.</p>
+
+          <p>Prof. Jayakumar holds a BTech in Civil Engineering from the National Institute of Technology Karnataka (NITK Surathkal), MTech in Water Resources Engineering, and a PhD from IIT Kanpur. His areas of expertise include Hydrology and Water Resources Engineering, Urban Stormwater Management, Irrigation Engineering, Wetland Hydrology, Remote Sensing & GIS Applications, Environmental Management, Climate Change Adaptation, and Environmental Flows. In addition, he has strong expertise in executive skills, communication, teaching–learning processes, time and stress management, contributing significantly to leadership development and faculty training.</p>
+
+          <p>He has guided 12 PhD scholars, over 120 MTech dissertations, several BTech projects, and a UGC postdoctoral fellow, and continues to mentor PhD scholars and postdoctoral researchers at IIT Dharwad. Internationally, he has held visiting assignments at University of Essen (Germany), Griffith University (Australia), and the University of Peradeniya (Sri Lanka), and was a member of the UNESCO Working Group on Urban Hydrology. He played a pioneering role in introducing the International Course on Urban Drainage in Developing Countries (UDDC) in India.</p>
+
+          <p>Prof. Jayakumar is a recipient of several prestigious recognitions, including the Distinguished Alumnus Award during the Diamond Jubilee celebrations of NITK Surathkal, the Prof. Rangaraju Award for Excellence in Water Resources Research, and state-level honours for contributions to community development in water management. He has delivered numerous keynote addresses, including the 18th International Hydrological Decade Endowment Lecture. Very recently, one of his works, “Artificial Intelligence-based Sea Water and Groundwater Desalination Device,” was granted an Indian patent.</p>
+
+          <p>He has served extensively in national policy, accreditation, and advisory roles, including NBA, DST, NIH, UNESCO working groups, UPSC, Pollution Control Boards, International Council for Circular Economy, Dam Safety Authorities, and multiple state and national committees. With over 150 publications and multilingual proficiency - proficient in English, Malayalam, Tamil, Telugu, Kannada, and Hindi, and with elementary working knowledge of German, French, and Russian - Prof. Jayakumar continues to make significant contributions to sustainable water management, environmental governance, and academic leadership.</p>'
       - title: Prof. Rajanikanth Aluvalu
         meta: Keynote Speaker
         subtitle: Professor and Director, Symbiosis Institute of Technology, Hyderabad
@@ -735,6 +755,7 @@ pages:
           <p>He is a recipient of the IEEE Hyderabad Section Best Advisor Award and
           the IUCEE Faculty Fellow Award (2018). He is also a Life Member of ISTE
           and a member of ACM.</p>'
+
   registration:
     kicker: Registration
     title: Registration
