@@ -422,9 +422,6 @@ pages:
       - title: Dr. S. Sai Satyanarayana Reddy
         subtitle: Principal, KG Reddy College of Engineering & Technology, India
         body: ''
-      - title: Dr. Soumya Sucharita Singha
-        subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
-        body: ''
     - title: Track Chair
       cards:
       - meta: Track 1
@@ -615,6 +612,10 @@ pages:
       - title: Dr. Chennarapu Hari Prasad
         subtitle: Mahindra University, Telangana, India
         body: ''
+      - title: Dr. Soumya Sucharita Singha
+        subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
+        body: ''
+
     - title: Organizing Committee
       items:
       - title: Dr. M N Narsaiah
@@ -714,10 +715,12 @@ pages:
       - title: Dr Muhammad Ammirrul Atiqi Mohd Zainuri
         meta: Keynote Speaker
         subtitle: Senior Lecturer, Department of Electrical, Electronics and System, Universiti Kebangsaan Malaysia
+        image_path: img/speaker_muhammad.png
         body: '<p>Dr Muhammad Ammirrul Atiqi Mohd Zainuri received the B.Eng. in Electrical and Electronic Engineering from Universiti Putra Malaysia, in 2011, the M.Sc. of electrical power engineering from Universiti Putra Malaysia, in 2013, and In August 2017, he was awarded his Ph.D degree from Department of Electrical and Electronic Engineering, Faculty of Engineering, Universiti Putra Malaysia. He is a member of IEEE, and a registered graduate engineers Malaysia (BEM) in the electrical track. Currently, he is a Senior Lecturer at Department of Electrical, Electronic and System Engineering, Universiti Kebangsaan Malaysia (UKM). He has authored and co-authored number of well recognized journals and conference papers. His research interests are in power electronics, power quality, renewable energy systems and applied artificial intelligent in electrical systems. He is an active research member at UMPEDAC and ALPER (UPM).</p>'
       - title: Prof. K. V. Jayakumar
         meta: Keynote Speaker
         subtitle: Senior Adjunct Professor and Outreach Advisor, IIT Dharwad; Member, Governing Body, Wetlands International South Asia
+        image_path: img/speaker_jayakumar.png
         body: '<p>Prof. K. V. Jayakumar is a distinguished academic, administrator, and policy advisor in the field of Civil Engineering and Water Resources, with over three decades of experience in teaching, research, institutional leadership, and national–international advisory roles. He is currently serving as Senior Adjunct Professor and Outreach Advisor at the Indian Institute of Technology (IIT) Dharwad and is a Member of the Governing Body of Wetlands International South Asia (WISA).</p>
 
           <p>Prior to this, Prof. Jayakumar served for over 30 years at the National Institute of Technology (NIT) Warangal, where he held several key leadership positions, including Dean (Planning & Development), Dean (International Relations & Alumni Affairs), Advisor to the Director (Special Programmes), Head of the Department, and Coordinator of national flagship programs such as GIAN and SPARC. He was also a nominated member of the Board of Governors and Finance Committee of NIT Warangal.</p>
