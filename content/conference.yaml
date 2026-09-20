@@ -1,10 +1,13 @@
-site_name: International Conference on Applied Machine Learning, Sustainable Infrastructure,
+site_name:
+  International Conference on Applied Machine Learning, Sustainable Infrastructure,
   and Network Resilience
 abbrev: AML-SINR 2027
-hero_title: International Conference on Applied Machine Learning, Sustainable Infrastructure,
+hero_title:
+  International Conference on Applied Machine Learning, Sustainable Infrastructure,
   and Network Resilience
 hero_tagline: A conference space for research, collaboration, and applied innovation.
-hero_summary: 'The inaugural International Conference on Applied Machine Learning,
+hero_summary:
+  "The inaugural International Conference on Applied Machine Learning,
   Sustainable Infrastructure, and Network Resilience (AML-SINR 2027) is a prominent
   peer-reviewed global platform. The event brings together leading computer scientists,
   civil and electrical engineering experts, cybersecurity specialists, and industry
@@ -22,20 +25,21 @@ hero_summary: 'The inaugural International Conference on Applied Machine Learnin
   and Machine Learning may be successfully applied to construct next-generation Sustainable
   Infrastructure and provide unbreakable Network Resilience.
 
-  '
+  "
 dates: 14 -15 July, 2027
 location: KG Reddy College of Engineering and Technology
 location_url: https://maps.google.com/?q=KG+Reddy+College+of+Engineering+and+Technology+Beside+Moinabad+Police+Station+Chilkur+Village+Moinabad+Mandal+Hyderabad+500075+Telangana+India
 venue:
   name: KG Reddy College of Engineering and Technology
   address_lines:
-  - Beside Moinabad Police Station
-  - Chilkur Village, Moinabad Mandal
-  - Hyderabad, 500075, Telangana, India
+    - Beside Moinabad Police Station
+    - Chilkur Village, Moinabad Mandal
+    - Hyderabad, 500075, Telangana, India
   image_path: img/kgreddy.png
   map_url: https://maps.google.com/?q=KG+Reddy+College+of+Engineering+and+Technology+Beside+Moinabad+Police+Station+Chilkur+Village+Moinabad+Mandal+Hyderabad+500075+Telangana+India
   website_url: https://www.kgr.ac.in/
-  directions_note: Please arrive at least 30 minutes before your first session for
+  directions_note:
+    Please arrive at least 30 minutes before your first session for
     smooth check-in.
 host: KG Reddy College of Engineering and Technology
 college_logo_path: img/kg_reddy_college_logo.png
@@ -49,72 +53,72 @@ secondary_cta:
   label: Register Now
   url: registration/
 tracks:
-- title: 'Track 1: Applied Machine Learning and Edge Intelligence (AML)'
-  bullets:
-  - '1.1 Foundation Models and Deep Learning Architectures: Deep learning, neural
-    networks, foundation models, transfer learning, multimodal learning, and intelligent
-    computational architectures for complex infrastructure and networked systems.'
-  - '1.2 Computer Vision, Language Intelligence, and Explainable AI: Object detection,
-    vision-based infrastructure inspection, video analytics, natural language processing
-    for engineering logs and threat intelligence, explainable AI, model interpretability,
-    and AI-supported system diagnostics.'
-  - '1.3 Edge Intelligence, TinyML, and Real-Time Autonomous Control: Edge computing,
-    TinyML, resource-constrained machine learning, real-time autonomous control loops,
-    reinforcement learning, and intelligent decision-making for cyber-physical systems.'
-  - '1.4 Big Data Engineering and Multimodal Analytics: Distributed analytics, cloud
-    and edge infrastructure, large-scale data processing, multimodal data fusion,
-    scalable machine-learning pipelines, and energy-efficient, carbon-aware AI computing
-    including model compression and training/inference optimization.'
-- title: 'Track 2: Sustainable Infrastructure and Smart Engineering (SI)'
-  bullets:
-  - '2.1 Smart Grids and Renewable Energy Systems: Smart grids, distributed renewable-energy
-    systems, microgrid control, energy forecasting, energy storage, demand response,
-    energy management, and energy-harvesting sensor networks.'
-  - '2.2 Structural Health Monitoring and Digital Twins: IoT-driven structural health
-    monitoring for bridges, dams, buildings, tunnels, and other infrastructure assets;
-    predictive maintenance; digital twins; infrastructure inspection, and asset lifecycle
-    management.'
-  - '2.3 Climate-Resilient Infrastructure and Disaster Modeling: Climate-resilient
-    infrastructure planning, vulnerability assessment, extreme-event forecasting,
-    disaster risk prediction, climate-impact modeling, AI-supported emergency management,
-    macro-level environmental forecasting, emissions tracking, and precision agriculture.'
-  - '2.4 Intelligent Water, Waste, and Transportation Systems: AI for smart water
-    systems, water-quality monitoring, wastewater and waste management, intelligent
-    transportation systems, connected and autonomous vehicles, traffic and mobility
-    optimization, and data-driven policy for smart cities and circular-economy operations.'
-- title: 'Track 3: Network Resilience and Cyber-Physical Security (NR)'
-  bullets:
-  - '3.1 Industrial Control and Critical Infrastructure Security: Intrusion detection
-    and prevention systems, ICS and SCADA security, operational technology protection,
-    industrial protocol security, cyber-physical attack detection, and critical infrastructure
-    defense.'
-  - '3.2 Adversarial AI and Secure Model Defense: Protection of AI models against
-    data poisoning, evasion attacks, backdoor attacks, model extraction, adversarial
-    examples, model manipulation, and other threats targeting machine-learning systems.'
-  - '3.3 Software-Defined Networks and Resilient 5G/6G Systems: SDN security, programmable
-    networks, resilient 5G/6G network slicing, adaptive routing, network telemetry,
-    distributed network defense, communication reliability, and self-healing network
-    architectures.'
-  - '3.4 Zero-Trust, Cryptography, and Distributed Ledger Technologies: Cryptographic
-    protocols, identity-aware access control, zero-trust architectures, privacy-preserving
-    communication, blockchain-based distributed ledgers, immutable audit trails, smart
-    contracts, and secure coordination for cyber-physical systems.'
+  - title: "Track 1: Applied Machine Learning and Edge Intelligence (AML)"
+    bullets:
+      - "1.1 Foundation Models and Deep Learning Architectures: Deep learning, neural
+        networks, foundation models, transfer learning, multimodal learning, and intelligent
+        computational architectures for complex infrastructure and networked systems."
+      - "1.2 Computer Vision, Language Intelligence, and Explainable AI: Object detection,
+        vision-based infrastructure inspection, video analytics, natural language processing
+        for engineering logs and threat intelligence, explainable AI, model interpretability,
+        and AI-supported system diagnostics."
+      - "1.3 Edge Intelligence, TinyML, and Real-Time Autonomous Control: Edge computing,
+        TinyML, resource-constrained machine learning, real-time autonomous control loops,
+        reinforcement learning, and intelligent decision-making for cyber-physical systems."
+      - "1.4 Big Data Engineering and Multimodal Analytics: Distributed analytics, cloud
+        and edge infrastructure, large-scale data processing, multimodal data fusion,
+        scalable machine-learning pipelines, and energy-efficient, carbon-aware AI computing
+        including model compression and training/inference optimization."
+  - title: "Track 2: Sustainable Infrastructure and Smart Engineering (SI)"
+    bullets:
+      - "2.1 Smart Grids and Renewable Energy Systems: Smart grids, distributed renewable-energy
+        systems, microgrid control, energy forecasting, energy storage, demand response,
+        energy management, and energy-harvesting sensor networks."
+      - "2.2 Structural Health Monitoring and Digital Twins: IoT-driven structural health
+        monitoring for bridges, dams, buildings, tunnels, and other infrastructure assets;
+        predictive maintenance; digital twins; infrastructure inspection, and asset lifecycle
+        management."
+      - "2.3 Climate-Resilient Infrastructure and Disaster Modeling: Climate-resilient
+        infrastructure planning, vulnerability assessment, extreme-event forecasting,
+        disaster risk prediction, climate-impact modeling, AI-supported emergency management,
+        macro-level environmental forecasting, emissions tracking, and precision agriculture."
+      - "2.4 Intelligent Water, Waste, and Transportation Systems: AI for smart water
+        systems, water-quality monitoring, wastewater and waste management, intelligent
+        transportation systems, connected and autonomous vehicles, traffic and mobility
+        optimization, and data-driven policy for smart cities and circular-economy operations."
+  - title: "Track 3: Network Resilience and Cyber-Physical Security (NR)"
+    bullets:
+      - "3.1 Industrial Control and Critical Infrastructure Security: Intrusion detection
+        and prevention systems, ICS and SCADA security, operational technology protection,
+        industrial protocol security, cyber-physical attack detection, and critical infrastructure
+        defense."
+      - "3.2 Adversarial AI and Secure Model Defense: Protection of AI models against
+        data poisoning, evasion attacks, backdoor attacks, model extraction, adversarial
+        examples, model manipulation, and other threats targeting machine-learning systems."
+      - "3.3 Software-Defined Networks and Resilient 5G/6G Systems: SDN security, programmable
+        networks, resilient 5G/6G network slicing, adaptive routing, network telemetry,
+        distributed network defense, communication reliability, and self-healing network
+        architectures."
+      - "3.4 Zero-Trust, Cryptography, and Distributed Ledger Technologies: Cryptographic
+        protocols, identity-aware access control, zero-trust architectures, privacy-preserving
+        communication, blockchain-based distributed ledgers, immutable audit trails, smart
+        contracts, and secure coordination for cyber-physical systems."
 important_dates:
-- label: Submission opens
-  date: 15.01.2027
-  note: Submit your work through the conference submission page.
-- label: Author notification
-  date: 01.03.2027
-  note: Notifications will be shared after review.
-- label: Final paper deadline
-  date: 15.05.2027
-  note: Follow the official instructions and submission format.
-- label: Early registration closes
-  date: TBD
-  note: Register early once rates are published.
-- label: Conference dates
-  date: 14 -15 July, 2027
-  note: Join us for two days of research, collaboration, and applied innovation.
+  - label: Submission opens
+    date: 15.01.2027
+    note: Submit your work through the conference submission page.
+  - label: Author notification
+    date: 01.03.2027
+    note: Notifications will be shared after review.
+  - label: Final paper deadline
+    date: 15.05.2027
+    note: Follow the official instructions and submission format.
+  - label: Early registration closes
+    date: TBD
+    note: Register early once rates are published.
+  - label: Conference dates
+    date: 14 -15 July, 2027
+    note: Join us for two days of research, collaboration, and applied innovation.
 contact:
   email: conference2026@example.org
   sponsorship_email: partners@conference2026.example.org
@@ -124,718 +128,743 @@ pages:
   submission:
     kicker: Submission
     title: Submission
-    summary: 'Paper submission requirements, template details, and portal information
+    summary:
+      "Paper submission requirements, template details, and portal information
       for AML-SINR 2027.
 
-      '
+      "
     sections:
-    - title: Paper Submission and Guidelines
-      body: 'Authors are invited to submit original, unpublished research papers related
-        to Applied Machine Learning, Sustainable Infrastructure, Network Resilience,
-        and their interdisciplinary applications. Each paper should clearly identify
-        the research problem, highlight the novelty and significance of the work,
-        describe the methodology and experimental/theoretical approach, present results
-        with appropriate figures and tables, and conclude with key insights and future
-        directions.
+      - title: Paper Submission and Guidelines
+        body:
+          "Authors are invited to submit original, unpublished research papers related
+          to Applied Machine Learning, Sustainable Infrastructure, Network Resilience,
+          and their interdisciplinary applications. Each paper should clearly identify
+          the research problem, highlight the novelty and significance of the work,
+          describe the methodology and experimental/theoretical approach, present results
+          with appropriate figures and tables, and conclude with key insights and future
+          directions.
 
-        '
-      bullets:
-      - Each paper can have a maximum of 4 authors.
-      - Author names and affiliations must be entered during submission in the CMT
-        portal and cannot be changed later.
-      - The list of authors in the paper must exactly match the CMT submission.
-      - Correspondence will be sent to all listed authors, so ensure that all email
-        addresses in CMT are correct.
-      - Each paper must include a minimum of 15 references.
-      - Plagiarism should be less than 10% (excluding references). Keep the Plagiarism
-        Report along with manuscript [TURNITIN].
-      - Use of AI-generated writing or ChatGPT is strictly prohibited. Keep the 0%
-        AI Report along with manuscript.
-      - Grammatical errors must not be present. The final manuscript should be reviewed
-        by a language expert.
-      - No figure or table should be copied from any other paper or the internet.
-        Figures should be high resolution.
-      - 'Page limit: minimum 08 pages and maximum 09 pages after compliance with Springer
-        format.'
-      - Each paper must contain an abstract of 150-200 words and keywords (4-5).
-      - 'Writing format: Springer format strictly.'
-      - All table numbers and figure numbers should be mentioned inside the manuscript.
-      - All reference numbers and citations must be properly cited inside the manuscript.
-      - Make sure that all references are cited in the body of the paper.
-      - Make sure that all figures and tables are numbered in proper order and cited
-        in the body of the paper.
-      - No table will be in image format.
-      - All mathematical equations must be prepared using Math Editor; no equation
-        image must be there.
-      - Maintain good quality HD figures.
-    - title: Template and Submission Portal
-      cards:
-      - title: Springer Template
-        meta: MS Word format
-        body: 'Template available in MS Word format: <a href="https://amlsinr.com/">Springer
-          Template (MS Word)</a>
+          "
+        bullets:
+          - Each paper can have a maximum of 4 authors.
+          - Author names and affiliations must be entered during submission in the CMT
+            portal and cannot be changed later.
+          - The list of authors in the paper must exactly match the CMT submission.
+          - Correspondence will be sent to all listed authors, so ensure that all email
+            addresses in CMT are correct.
+          - Each paper must include a minimum of 15 references.
+          - Plagiarism should be less than 10% (excluding references). Keep the Plagiarism
+            Report along with manuscript [TURNITIN].
+          - Use of AI-generated writing or ChatGPT is strictly prohibited. Keep the 0%
+            AI Report along with manuscript.
+          - Grammatical errors must not be present. The final manuscript should be reviewed
+            by a language expert.
+          - No figure or table should be copied from any other paper or the internet.
+            Figures should be high resolution.
+          - "Page limit: minimum 08 pages and maximum 09 pages after compliance with Springer
+            format."
+          - Each paper must contain an abstract of 150-200 words and keywords (4-5).
+          - "Writing format: Springer format strictly."
+          - All table numbers and figure numbers should be mentioned inside the manuscript.
+          - All reference numbers and citations must be properly cited inside the manuscript.
+          - Make sure that all references are cited in the body of the paper.
+          - Make sure that all figures and tables are numbered in proper order and cited
+            in the body of the paper.
+          - No table will be in image format.
+          - All mathematical equations must be prepared using Math Editor; no equation
+            image must be there.
+          - Maintain good quality HD figures.
+      - title: Template and Submission Portal
+        cards:
+          - title: Springer Template
+            meta: MS Word format
+            body:
+              'Template available in MS Word format: <a href="https://amlsinr.com/">Springer
+              Template (MS Word)</a>
 
-          '
-      - title: Submission Portal
-        meta: Microsoft CMT
-        body: 'To submit your paper, please use the <a href="https://cmt3.research.microsoft.com/amlsinr2027">Microsoft
-          CMT portal</a>.
+              '
+          - title: Submission Portal
+            meta: Microsoft CMT
+            body:
+              'To submit your paper, please use the <a href="https://cmt3.research.microsoft.com/amlsinr2027">Microsoft
+              CMT portal</a>.
 
-          '
-      - title: CMT Account
-        meta: Submission access
-        body: 'The authors will need to register their email with CMT to submit paper
-          to AML-SINR 2027. <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html">How
-          to create a CMT account</a>
+              '
+          - title: CMT Account
+            meta: Submission access
+            body:
+              'The authors will need to register their email with CMT to submit paper
+              to AML-SINR 2027. <a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html">How
+              to create a CMT account</a>
 
-          '
-      - title: Submission Note
-        meta: CMT acknowledgment
-        body: 'The Microsoft CMT service was used for managing the peer-reviewing
-          process for this conference. This service was provided for free by Microsoft
-          and they bore all expenses, including costs for Azure cloud services as
-          well as for software development and support.
+              '
+          - title: Submission Note
+            meta: CMT acknowledgment
+            body:
+              "The Microsoft CMT service was used for managing the peer-reviewing
+              process for this conference. This service was provided for free by Microsoft
+              and they bore all expenses, including costs for Azure cloud services as
+              well as for software development and support.
 
-          '
+              "
   author_guidelines:
     kicker: Author Guidelines
     title: Author Guidelines
-    summary: 'Follow the author guidelines to ensure your manuscript meets the AML-SINR
+    summary:
+      "Follow the author guidelines to ensure your manuscript meets the AML-SINR
       2027 conference submission standards.
 
-      '
+      "
     sections:
-    - title: Overview
-      body: 'All submissions to the conference undergo a rigorous, fair, and transparent
-        peer-review process to ensure academic quality, originality, and technical
-        soundness. The review process follows a double-blind review model, unless
-        otherwise specified.
+      - title: Overview
+        body:
+          "All submissions to the conference undergo a rigorous, fair, and transparent
+          peer-review process to ensure academic quality, originality, and technical
+          soundness. The review process follows a double-blind review model, unless
+          otherwise specified.
 
-        '
-    - title: Submission and Initial Screening
-      cards:
-      - title: Manuscript Submission
-        meta: Template and originality
-        body: 'Authors must submit full papers through the official conference submission
-          system. Manuscripts must follow the prescribed template and formatting guidelines,
-          and submissions must be original and not under consideration elsewhere.
+          "
+      - title: Submission and Initial Screening
+        cards:
+          - title: Manuscript Submission
+            meta: Template and originality
+            body:
+              "Authors must submit full papers through the official conference submission
+              system. Manuscripts must follow the prescribed template and formatting guidelines,
+              and submissions must be original and not under consideration elsewhere.
 
-          '
-      - title: Preliminary Editorial Check
-        meta: TPC screening
-        body: 'Each submission is screened by the Technical Program Committee for
-          scope relevance, formatting compliance, plagiarism using similarity detection
-          software, and ethical compliance. Papers failing to meet minimum standards
-          may be desk-rejected without external review.
+              "
+          - title: Preliminary Editorial Check
+            meta: TPC screening
+            body:
+              "Each submission is screened by the Technical Program Committee for
+              scope relevance, formatting compliance, plagiarism using similarity detection
+              software, and ethical compliance. Papers failing to meet minimum standards
+              may be desk-rejected without external review.
 
-          '
-    - title: Double-Blind Peer Review Process
-      cards:
-      - title: Reviewer Assignment
-        meta: At least two reviewers
-        body: 'Each paper is assigned to at least two independent expert reviewers.
-          Reviewers are selected based on subject expertise and conflicts of interest
-          are strictly avoided.
+              "
+      - title: Double-Blind Peer Review Process
+        cards:
+          - title: Reviewer Assignment
+            meta: At least two reviewers
+            body:
+              "Each paper is assigned to at least two independent expert reviewers.
+              Reviewers are selected based on subject expertise and conflicts of interest
+              are strictly avoided.
 
-          '
-      - title: Blind Review Policy
-        meta: Identity protection
-        body: 'Authors do not know the reviewers'' identities, reviewers do not know
-          the authors'' identities, and authors must remove identifying information
-          from manuscripts.
+              "
+          - title: Blind Review Policy
+            meta: Identity protection
+            body:
+              "Authors do not know the reviewers' identities, reviewers do not know
+              the authors' identities, and authors must remove identifying information
+              from manuscripts.
 
-          '
-    - title: Evaluation and Outcomes
-      cards:
-      - title: Evaluation Criteria
-        meta: Review rubric
-        body: 'Reviewers evaluate originality and novelty, technical and scientific
-          quality, methodological rigor, clarity of presentation, relevance to conference
-          themes, significance of results, and references and literature review quality.
-          Each criterion is scored according to the conference review rubric.
+              "
+      - title: Evaluation and Outcomes
+        cards:
+          - title: Evaluation Criteria
+            meta: Review rubric
+            body:
+              "Reviewers evaluate originality and novelty, technical and scientific
+              quality, methodological rigor, clarity of presentation, relevance to conference
+              themes, significance of results, and references and literature review quality.
+              Each criterion is scored according to the conference review rubric.
 
-          '
-      - title: Review Outcomes
-        meta: Decision types
-        body: 'Papers may receive Accept, Accept with Minor Revisions, Accept with
-          Major Revisions, or Reject. The final decision is made by the Program Chair
-          or Technical Program Committee, considering reviewer comments and scores.
+              "
+          - title: Review Outcomes
+            meta: Decision types
+            body:
+              "Papers may receive Accept, Accept with Minor Revisions, Accept with
+              Major Revisions, or Reject. The final decision is made by the Program Chair
+              or Technical Program Committee, considering reviewer comments and scores.
 
-          '
-    - title: Revision, Acceptance, and Confidentiality
-      cards:
-      - title: Revision Process
-        meta: Revised submissions
-        body: 'Authors receiving revision decisions must submit a revised manuscript
-          and a response-to-reviewers document. Revised papers may undergo re-review,
-          and failure to address reviewer comments may result in rejection.
+              "
+      - title: Revision, Acceptance, and Confidentiality
+        cards:
+          - title: Revision Process
+            meta: Revised submissions
+            body:
+              "Authors receiving revision decisions must submit a revised manuscript
+              and a response-to-reviewers document. Revised papers may undergo re-review,
+              and failure to address reviewer comments may result in rejection.
 
-          '
-      - title: Final Acceptance and Registration
-        meta: Presentation requirement
-        body: 'At least one author of each accepted paper must register and present
-          the paper. Failure to present may result in exclusion from proceedings.
+              "
+          - title: Final Acceptance and Registration
+            meta: Presentation requirement
+            body:
+              "At least one author of each accepted paper must register and present
+              the paper. Failure to present may result in exclusion from proceedings.
 
-          '
-      - title: Confidentiality and Conflict of Interest
-        meta: Review integrity
-        body: 'All submitted manuscripts are treated as confidential documents. Reviewers
-          must not share, discuss, or use unpublished material, and review materials
-          are not disclosed outside the review process. A conflict of interest exists
-          when the reviewer and author are from the same institution, have recent
-          collaboration, or have a personal, financial, or professional conflict.
-          Reviewers must declare conflicts and recuse themselves.
+              "
+          - title: Confidentiality and Conflict of Interest
+            meta: Review integrity
+            body:
+              "All submitted manuscripts are treated as confidential documents. Reviewers
+              must not share, discuss, or use unpublished material, and review materials
+              are not disclosed outside the review process. A conflict of interest exists
+              when the reviewer and author are from the same institution, have recent
+              collaboration, or have a personal, financial, or professional conflict.
+              Reviewers must declare conflicts and recuse themselves.
 
-          '
-    - title: Publication Ethics Policy
-      body: 'The conference is committed to maintaining high standards of publication
-        ethics and academic integrity. All stakeholders, including authors, reviewers,
-        editors, and organizers, must adhere to ethical best practices.
+              "
+      - title: Publication Ethics Policy
+        body:
+          "The conference is committed to maintaining high standards of publication
+          ethics and academic integrity. All stakeholders, including authors, reviewers,
+          editors, and organizers, must adhere to ethical best practices.
 
-        '
-    - title: Duties of Authors
-      cards:
-      - title: Originality and Plagiarism
-        meta: Research integrity
-        body: 'Authors must submit original work. Proper citation and acknowledgment
-          are mandatory. Plagiarism, self-plagiarism, and duplicate publication are
-          strictly prohibited, and similarity above the acceptable threshold may result
-          in rejection.
+          "
+      - title: Duties of Authors
+        cards:
+          - title: Originality and Plagiarism
+            meta: Research integrity
+            body:
+              "Authors must submit original work. Proper citation and acknowledgment
+              are mandatory. Plagiarism, self-plagiarism, and duplicate publication are
+              strictly prohibited, and similarity above the acceptable threshold may result
+              in rejection.
 
-          '
-      - title: Multiple Submissions
-        meta: Submission policy
-        body: 'Simultaneous submission to multiple conferences or journals is prohibited.
-          Previously published work cannot be submitted unless it is substantially
-          extended and properly cited.
+              "
+          - title: Multiple Submissions
+            meta: Submission policy
+            body:
+              "Simultaneous submission to multiple conferences or journals is prohibited.
+              Previously published work cannot be submitted unless it is substantially
+              extended and properly cited.
 
-          '
-      - title: Data Integrity
-        meta: Evidence and records
-        body: 'Data must be accurate and honestly presented. Fabrication, falsification,
-          or manipulation of data is unethical, and authors must retain raw data if
-          requested.
+              "
+          - title: Data Integrity
+            meta: Evidence and records
+            body:
+              "Data must be accurate and honestly presented. Fabrication, falsification,
+              or manipulation of data is unethical, and authors must retain raw data if
+              requested.
 
-          '
-      - title: Authorship Criteria
-        meta: Contributor eligibility
-        body: 'Authorship should be limited to individuals who made significant intellectual
-          contributions, participated in drafting or revising the paper, and approved
-          the final version. Gift authorship and ghost authorship are unethical.
+              "
+          - title: Authorship Criteria
+            meta: Contributor eligibility
+            body:
+              "Authorship should be limited to individuals who made significant intellectual
+              contributions, participated in drafting or revising the paper, and approved
+              the final version. Gift authorship and ghost authorship are unethical.
 
-          '
-      - title: Acknowledgment of Sources
-        meta: Citations and disclosure
-        body: 'All sources must be appropriately cited. Use of AI tools must be disclosed
+              "
+          - title: Acknowledgment of Sources
+            meta: Citations and disclosure
+            body:
+              "All sources must be appropriately cited. Use of AI tools must be disclosed
+              where applicable.
+
+              "
+      - title: Duties of Reviewers
+        cards:
+          - title: Confidentiality
+            meta: Reviewer conduct
+            body:
+              "Reviewers must treat manuscripts as confidential documents and must
+              not use unpublished material for personal advantage.
+
+              "
+          - title: Objectivity
+            meta: Fair assessment
+            body:
+              "Reviews must be constructive and unbiased. Personal criticism of authors
+              is inappropriate.
+
+              "
+          - title: Conflict of Interest
+            meta: Recusal
+            body:
+              "Reviewers must disclose conflicts and decline review if a conflict
+              exists.
+
+              "
+      - title: Duties of Editors and Organizers
+        body:
+          "Editors and organizers must ensure fair and unbiased review, maintain
+          confidentiality, prevent conflicts of interest, and take corrective actions
+          in case of ethical violations. Editorial decisions are based solely on academic
+          merit.
+
+          "
+      - title: Plagiarism and Misconduct Handling
+        cards:
+          - title: Investigation Steps
+            meta: Procedure
+            body:
+              "If misconduct is suspected, the process includes initial investigation
+              by the Program Chair, author clarification request, review of evidence,
+              and a decision by the Ethics Committee.
+
+              "
+          - title: Possible Actions
+            meta: Outcomes
+            body:
+              "Possible actions include immediate rejection, paper withdrawal, notification
+              to the authors' institutions, a ban from future submissions, or removal
+              from proceedings.
+
+              "
+      - title: Human and Animal Research Ethics
+        body:
+          "For research involving human participants, clinical data, or animal experiments,
+          authors must provide institutional ethics approval and informed consent statements
           where applicable.
 
-          '
-    - title: Duties of Reviewers
-      cards:
-      - title: Confidentiality
-        meta: Reviewer conduct
-        body: 'Reviewers must treat manuscripts as confidential documents and must
-          not use unpublished material for personal advantage.
+          "
+      - title: Corrections and Retractions
+        body:
+          "If significant errors or ethical issues are discovered post-publication,
+          corrections may be issued and papers may be withdrawn or retracted.
 
-          '
-      - title: Objectivity
-        meta: Fair assessment
-        body: 'Reviews must be constructive and unbiased. Personal criticism of authors
-          is inappropriate.
+          "
+      - title: Copyright and Licensing
+        body:
+          "Authors retain responsibility for copyright compliance. Any copyrighted
+          material must have proper permission.
 
-          '
-      - title: Conflict of Interest
-        meta: Recusal
-        body: 'Reviewers must disclose conflicts and decline review if a conflict
-          exists.
-
-          '
-    - title: Duties of Editors and Organizers
-      body: 'Editors and organizers must ensure fair and unbiased review, maintain
-        confidentiality, prevent conflicts of interest, and take corrective actions
-        in case of ethical violations. Editorial decisions are based solely on academic
-        merit.
-
-        '
-    - title: Plagiarism and Misconduct Handling
-      cards:
-      - title: Investigation Steps
-        meta: Procedure
-        body: 'If misconduct is suspected, the process includes initial investigation
-          by the Program Chair, author clarification request, review of evidence,
-          and a decision by the Ethics Committee.
-
-          '
-      - title: Possible Actions
-        meta: Outcomes
-        body: 'Possible actions include immediate rejection, paper withdrawal, notification
-          to the authors'' institutions, a ban from future submissions, or removal
-          from proceedings.
-
-          '
-    - title: Human and Animal Research Ethics
-      body: 'For research involving human participants, clinical data, or animal experiments,
-        authors must provide institutional ethics approval and informed consent statements
-        where applicable.
-
-        '
-    - title: Corrections and Retractions
-      body: 'If significant errors or ethical issues are discovered post-publication,
-        corrections may be issued and papers may be withdrawn or retracted.
-
-        '
-    - title: Copyright and Licensing
-      body: 'Authors retain responsibility for copyright compliance. Any copyrighted
-        material must have proper permission.
-
-        '
+          "
   committee:
     kicker: Committee
     title: Committee
-    summary: 'Meet the Organizing, Advisory, and Review Committees guiding the conference''s
+    summary:
+      "Meet the Organizing, Advisory, and Review Committees guiding the conference's
       planning, technical quality, and successful execution.
 
-      '
+      "
     sections:
-    - title: Chief Patrons/ Patrons
-      cards:
-      - title: Ln. K. Krishna Reddy
-        subtitle: Chairman, KG Reddy College of Engineering & Technology
-        body: ''
-      - title: Dr. Rohit Kandakatla
-        subtitle: Chief Executive Officer ( CEO), KG Reddy College of Engineering
-          & Technology
-        body: ''
-    - title: General Chair
-      cards:
-      - title: Dr Mukesh Mishra
-        subtitle: Yoobee Colleges of Creative Innovation, Auckland, New Zealand
-        body: ''
-    - title: Program Chair
-      cards:
-      - title: Dr B Praveen Kumar
-        subtitle: Associate Professor, Vardhaman College of Engineering, India
-        body: ''
-      - title: Dr Shitharth Selvarajan
-        subtitle: Lecturer, Leeds Beckett University, Leeds, United Kingdom
-        body: ''
-      - title: Dr. S. Sai Satyanarayana Reddy
-        subtitle: Principal, KG Reddy College of Engineering & Technology, India
-        body: ''
-    - title: Track Chair
-      cards:
-      - meta: Track 1
-        title: Dr R Karthikeyan
-        subtitle: Professor, Vardhaman College of Engineering, India
-        body: ''
-      - meta: Track 2
-        title: Dr Thanikanti Sudhakar Babu
-        subtitle: CCP-FEWS, University of Johannesburg, South Africa
-        body: ''
-      - meta: Track 3
-        title: Dr Arshad Khan
-        subtitle: Yoobee Colleges of Creative Innovation, Auckland, New Zealand
-        body: ''
-    - title: Publicity and Marketing Chair
-      cards:
-      - title: Dr Gouse Baig Mohammad
-        subtitle: Associate Professor, Vardhaman College of Engineering, India
-        body: ''
-    - title: Technical Program Committee
-      cards:
-      - title: Arshad Md.
-        subtitle: Morgan & Stanley, USA
-        body: ''
-      - title: Chris Williams
-        subtitle: School of Informatics University, Edinburgh
-        body: ''
-      - title: Jin-Woo Ahn
-        subtitle: Shenyang University of Technology, China
-        body: ''
-      - title: Nicolaos Antonio Cutululis
-        subtitle: Technical University, Denmark
-        body: ''
-      - title: Po-tai Cheng
-        subtitle: National Tsing Hua University, Taiwan
-        body: ''
-      - title: Rock Keey Liew
-        subtitle: Environ Chem Let., Penang, Malaysia
-        body: ''
-      - title: Ronghai Qu
-        subtitle: Huazhong University, Wuhan, China
-        body: ''
-      - title: Dr Mohamed Sirajudeen Yoosuf
-        subtitle: Modern College of Business and Science, Bowshar, Muscat, Oman
-        body: ''
-      - title: Dr Sagar Shankarrao Dake
-        subtitle: Auckland University of Technology, Auckland, New Zealand
-        body: ''
-      - title: Sergio Canazza
-        subtitle: University of Padova, Padova
-        body: ''
-      - title: Tobias Geyer
-        subtitle: ABB Medium-Voltage Drives, Switzerland
-        body: ''
-      - title: Wang Lipo
-        subtitle: Nanyang Technological University, Singapore
-        body: ''
-      - title: Luis Ochoa
-        subtitle: University of Melbourne, Australia
-        body: ''
-      - title: M Rezwan Khan
-        subtitle: United International University, Bangladesh
-        body: ''
-      - title: Mahajan Sagar Bhaskar
-        subtitle: Prince Sultan University, Saudi Arabia
-        body: ''
-      - title: Fahd Alghasham
-        subtitle: Qassim University, Saudi Arabia
-        body: ''
-      - title: Fernando Ruiz Pérez
-        subtitle: Instituto Politécnico Nacional, Mexico
-        body: ''
-      - title: G M Shafiullah
-        subtitle: Murdoch University, Australia
-        body: ''
-      - title: Giacomo Oliveri
-        subtitle: Presso Università, Trento, Italy
-        body: ''
-      - title: B. Sundaravadivazhagan
-        subtitle: University of Technology and Applied Sciences, Oman
-        body: ''
-      - title: Meshaal Alyahya
-        subtitle: King Abdulaziz City for Science and Technology, Saudi Arabia
-        body: ''
-      - title: Xiao-Zhi Gao
-        subtitle: University of Eastern Finland, Finland
-        body: ''
-      - title: Akhtar Kalam
-        subtitle: Victoria University, Melbourne, Australia
-        body: ''
-      - title: Dr K Sangeetha
-        subtitle: Kebri Dehar University, Kebri Dehar, Ethiopia
-        body: ''
-      - title: Dr Farrukh Saleem
-        subtitle: Leeds Beckett University, Leeds, United Kingdom
-        body: ''
-      - title: Dr. Shaheer Ansari
-        subtitle: School of Engineering and Technology, Sunway University, Malaysia
-        body: ''
-      - title: Dr. Suganthi Ramasamy
-        subtitle: University of Cagliari, Italy
-        body: ''
-      - title: Dr Manjeet Singh
-        subtitle: Professor, Govt College Bhainswal Kalan, India
-        body: ''
-      - title: Dr Sanjay Chauhan
-        subtitle: Professor, Greater Noida Institute of Technology, India
-        body: ''
-      - title: Dr Sanjeev Kumar Pippal
-        subtitle: Dean, Noida Institute of Engineering and Technology, India
-        body: ''
-      - title: Dr Sansar Singh Chauhan
-        subtitle: Professor and Head, G L Bajaj Institute of Management and Technology,
-          India
-        body: ''
-      - title: Dr Jaya Sinha
-        subtitle: Professor, ITS Engineering College, India
-        body: ''
-      - title: Dr Aditya Dev Mishra
-        subtitle: Professor, Bennett University, India
-        body: ''
-      - title: Dr. Arun Kumar Ray
-        subtitle: Director, Professor, Kalinga Institute of Industrial Technology
-          (KIIT), India
-        body: ''
-      - title: Dr Nguyen Van
-        subtitle: Thanh Do University, Vietnam
-        body: ''
-      - title: Dr Rafea Naffa
-        subtitle: Scientific Advisor at AIDP
-        body: ''
-      - title: Dr. Natarajan Karuppiah
-        subtitle: Professor, Vardhaman College of Engineering, India
-        body: ''
-      - title: Dr. K Muruga Perumal
-        subtitle: Professor, Vardhaman College of Engineering, India
-        body: ''
-      - title: Dr. Ravivarman Shanmugasundaram
-        subtitle: Professor, Vardhaman College of Engineering, India
-        body: ''
-      - title: Prof. Sarat Kumar Das
-        subtitle: Indian Institute of Technology (Indian School of Mines), Dhanbad,
-          India
-        body: ''
-      - title: Prof. K. V. Jayakumar
-        subtitle: Indian Institute of Technology, Dharwad, India
-        body: ''
-      - title: Dr. Bibhuti Bhushan Das
-        subtitle: National Institute of Technology Karnataka, Surathkal, India
-        body: ''
-      - title: Dr. Rambabu Singh
-        subtitle: Indian Institute of Technology, Bombay, India
-        body: ''
-      - title: Dr. Indramani Dhada
-        subtitle: Indian Institute of Technology, Ropar, India
-        body: ''
-      - title: Dr. Amit Yadav
-        subtitle: National Institute of Technology, Mizoram, India
-        body: ''
-      - title: Prof. A S Venkatesh
-        subtitle: Adjunct Faculty, Indian Institute of Technology (Indian School of
-          Mines), Dhanbad, India
-        body: ''
-      - title: Dr. U K Dewangan
-        subtitle: National Institute of Technology, Raipur, India
-        body: ''
-      - title: Dr. Abhilasha Chaudhuri
-        subtitle: National Institute of Technology, Surat, India
-        body: ''
-      - title: Dr. Satya Verma
-        subtitle: Siksha 'O' Anusandhan, Odisha, India
-        body: ''
-      - title: Dr. Sudhakar Singha
-        subtitle: GITAM Deemed to be University, Telangana, India
-        body: ''
-      - title: Dr. Bhumika Das
-        subtitle: Lakshmi Chand Institute of Technology, Chhattisgarh, India
-        body: ''
-      - title: Dr. Ashwani Kumar
-        subtitle: Bennett University, India
-        body: ''
-      - title: Dr. Budati Anil Kumar
-        subtitle: KL University, Telangana, India
-        body: ''
-      - title: Dr. Sreedhar Madichetty
-        subtitle: Mahindra University, Telangana, India
-        body: ''
-      - title: Dr. Chennarapu Hari Prasad
-        subtitle: Mahindra University, Telangana, India
-        body: ''
-      - title: Dr. Soumya Sucharita Singha
-        subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
-        body: ''
+      - title: Chief Patrons/ Patrons
+        cards:
+          - title: Ln. K. Krishna Reddy
+            subtitle: Chairman, KG Reddy College of Engineering & Technology
+            body: ""
+          - title: Dr. Rohit Kandakatla
+            subtitle:
+              Chief Executive Officer ( CEO), KG Reddy College of Engineering
+              & Technology
+            body: ""
+      - title: General Chair
+        cards:
+          - title: Dr Mukesh Mishra
+            subtitle: Yoobee Colleges of Creative Innovation, Auckland, New Zealand
+            body: ""
+      - title: Program Chair
+        cards:
+          - title: Dr B Praveen Kumar
+            subtitle: Associate Professor, Vardhaman College of Engineering, India
+            body: ""
+          - title: Dr Shitharth Selvarajan
+            subtitle: Lecturer, Leeds Beckett University, Leeds, United Kingdom
+            body: ""
+          - title: Dr. S. Sai Satyanarayana Reddy
+            subtitle: Principal, KG Reddy College of Engineering & Technology, India
+            body: ""
+      - title: Track Chair
+        cards:
+          - meta: Track 1
+            title: Dr R Karthikeyan
+            subtitle: Professor, Vardhaman College of Engineering, India
+            body: ""
+          - meta: Track 2
+            title: Dr Thanikanti Sudhakar Babu
+            subtitle: CCP-FEWS, University of Johannesburg, South Africa
+            body: ""
+          - meta: Track 3
+            title: Dr Arshad Khan
+            subtitle: Yoobee Colleges of Creative Innovation, Auckland, New Zealand
+            body: ""
+      - title: Publicity and Marketing Chair
+        cards:
+          - title: Dr Gouse Baig Mohammad
+            subtitle: Associate Professor, Vardhaman College of Engineering, India
+            body: ""
+      - title: Technical Program Committee
+        cards:
+          - title: Arshad Md.
+            subtitle: Morgan & Stanley, USA
+            body: ""
+          - title: Chris Williams
+            subtitle: School of Informatics University, Edinburgh
+            body: ""
+          - title: Jin-Woo Ahn
+            subtitle: Shenyang University of Technology, China
+            body: ""
+          - title: Nicolaos Antonio Cutululis
+            subtitle: Technical University, Denmark
+            body: ""
+          - title: Po-tai Cheng
+            subtitle: National Tsing Hua University, Taiwan
+            body: ""
+          - title: Rock Keey Liew
+            subtitle: Environ Chem Let., Penang, Malaysia
+            body: ""
+          - title: Ronghai Qu
+            subtitle: Huazhong University, Wuhan, China
+            body: ""
+          - title: Dr Mohamed Sirajudeen Yoosuf
+            subtitle: Modern College of Business and Science, Bowshar, Muscat, Oman
+            body: ""
+          - title: Dr Sagar Shankarrao Dake
+            subtitle: Auckland University of Technology, Auckland, New Zealand
+            body: ""
+          - title: Sergio Canazza
+            subtitle: University of Padova, Padova
+            body: ""
+          - title: Tobias Geyer
+            subtitle: ABB Medium-Voltage Drives, Switzerland
+            body: ""
+          - title: Wang Lipo
+            subtitle: Nanyang Technological University, Singapore
+            body: ""
+          - title: Luis Ochoa
+            subtitle: University of Melbourne, Australia
+            body: ""
+          - title: M Rezwan Khan
+            subtitle: United International University, Bangladesh
+            body: ""
+          - title: Mahajan Sagar Bhaskar
+            subtitle: Prince Sultan University, Saudi Arabia
+            body: ""
+          - title: Fahd Alghasham
+            subtitle: Qassim University, Saudi Arabia
+            body: ""
+          - title: Fernando Ruiz Pérez
+            subtitle: Instituto Politécnico Nacional, Mexico
+            body: ""
+          - title: G M Shafiullah
+            subtitle: Murdoch University, Australia
+            body: ""
+          - title: Giacomo Oliveri
+            subtitle: Presso Università, Trento, Italy
+            body: ""
+          - title: B. Sundaravadivazhagan
+            subtitle: University of Technology and Applied Sciences, Oman
+            body: ""
+          - title: Meshaal Alyahya
+            subtitle: King Abdulaziz City for Science and Technology, Saudi Arabia
+            body: ""
+          - title: Xiao-Zhi Gao
+            subtitle: University of Eastern Finland, Finland
+            body: ""
+          - title: Akhtar Kalam
+            subtitle: Victoria University, Melbourne, Australia
+            body: ""
+          - title: Dr K Sangeetha
+            subtitle: Kebri Dehar University, Kebri Dehar, Ethiopia
+            body: ""
+          - title: Dr Farrukh Saleem
+            subtitle: Leeds Beckett University, Leeds, United Kingdom
+            body: ""
+          - title: Dr. Shaheer Ansari
+            subtitle: School of Engineering and Technology, Sunway University, Malaysia
+            body: ""
+          - title: Dr. Suganthi Ramasamy
+            subtitle: University of Cagliari, Italy
+            body: ""
+          - title: Dr. Arun Kumar Ray
+            subtitle:
+              Director, Professor, Kalinga Institute of Industrial Technology
+              (KIIT), India
+            body: ""
+          - title: Dr Nguyen Van
+            subtitle: Thanh Do University, Vietnam
+            body: ""
+          - title: Dr Rafea Naffa
+            subtitle: Scientific Advisor at AIDP
+            body: ""
+          - title: Dr. Natarajan Karuppiah
+            subtitle: Professor, Vardhaman College of Engineering, India
+            body: ""
+          - title: Dr. K Muruga Perumal
+            subtitle: Professor, Vardhaman College of Engineering, India
+            body: ""
+          - title: Dr. Ravivarman Shanmugasundaram
+            subtitle: Professor, Vardhaman College of Engineering, India
+            body: ""
+          - title: Prof. Sarat Kumar Das
+            subtitle:
+              Indian Institute of Technology (Indian School of Mines), Dhanbad,
+              India
+            body: ""
+          - title: Dr. Bibhuti Bhushan Das
+            subtitle: National Institute of Technology Karnataka, Surathkal, India
+            body: ""
+          - title: Dr. Rambabu Singh
+            subtitle: Indian Institute of Technology, Bombay, India
+            body: ""
+          - title: Dr. Indramani Dhada
+            subtitle: Indian Institute of Technology, Ropar, India
+            body: ""
+          - title: Dr. Amit Yadav
+            subtitle: National Institute of Technology, Mizoram, India
+            body: ""
+          - title: Prof. A S Venkatesh
+            subtitle:
+              Adjunct Faculty, Indian Institute of Technology (Indian School of
+              Mines), Dhanbad, India
+            body: ""
+          - title: Dr. U K Dewangan
+            subtitle: National Institute of Technology, Raipur, India
+            body: ""
+          - title: Dr. Abhilasha Chaudhuri
+            subtitle: National Institute of Technology, Surat, India
+            body: ""
+          - title: Dr. Satya Verma
+            subtitle: Siksha 'O' Anusandhan, Odisha, India
+            body: ""
+          - title: Dr. Sudhakar Singha
+            subtitle: GITAM Deemed to be University, Telangana, India
+            body: ""
+          - title: Dr. Bhumika Das
+            subtitle: Lakshmi Chand Institute of Technology, Chhattisgarh, India
+            body: ""
+          - title: Dr. Ashwani Kumar
+            subtitle: Bennett University, India
+            body: ""
+          - title: Dr. Budati Anil Kumar
+            subtitle: KL University, Telangana, India
+            body: ""
+          - title: Dr. Sreedhar Madichetty
+            subtitle: Mahindra University, Telangana, India
+            body: ""
+          - title: Dr. Chennarapu Hari Prasad
+            subtitle: Mahindra University, Telangana, India
+            body: ""
+          - title: Dr. Soumya Sucharita Singha
+            subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
+            body: ""
 
-    - title: Organizing Committee
-      items:
-      - title: Dr. M N Narsaiah
-        subtitle: Dean Academics & Strategic Planning, KGRCET
-      - title: Dr. L. Jayahari
-        subtitle: Dean IQAC, KGRCET
-      - title: Prof. Daniel Prabhakar
-        subtitle: Dean T&P, KGRCET
-      - title: Dr. P. Samyuktha
-        subtitle: Dean I&E, KGRCET
-      - title: Dr. B Vandana
-        subtitle: Associate Dean, R&D, CRID, KGRCET
-      - title: Mr. Abhinay Rakam
-        subtitle: Assistant Professor, Civil Engineering, KGRCET
-      - title: Dr. D Baloji
-        subtitle: Associate Professor, Mechanical Engineering, KGRCET
-      - title: Dr. D Yadaiaha
-        subtitle: Associate Professor, Computer Science & Engineering, KGRCET
-      - title: Dr. M Sandeep Kumar
-        subtitle: Associate Professor, CSE-AIML, KGRCET
-      - title: Dr. B Harika
-        subtitle: Associate Professor, CSE-DS, KGRCET
-      - title: Dr. D. Chenna Kesavaiah
-        subtitle: Associate Professor, H&S, KGRCET
-      - title: Mrs. Ch. Chandana
-        subtitle: Associate Dean, T&P, KGRCET
-      - title: Mr. D Srinivas
-        subtitle: Associate Dean, Academics, KGRCET
-      - title: Mr. K Thangamani
-        subtitle: Associate Dean, IQAC, KGRCET
-      - title: Dr. Sarika K
-        subtitle: HoD, MBA, KGRCET
-      - title: Mr. M. Vijaya Kumar
-        subtitle: HoD, Civil Engineering, KGRCET
-      - title: Dr. A. Seshappa
-        subtitle: HoD, Mechanical Engineering, KGRCET
-      - title: Mrs. P Usha
-        subtitle: HoD, Electronics & Communication Engineering, KGRCET
-      - title: Mrs. M. Manasa
-        subtitle: HoD, Computer Science & Engineering, KGRCET
-      - title: Dr. Devender Nayak N
-        subtitle: HoD, CSE-AIML, KGRCET
-      - title: Mr. L. Govardhan
-        subtitle: HoD, CSE-DS, KGRCET
-      - title: Mr. Rajendra Prasad
-        subtitle: HoD, H&S, KGRCET
-      - title: Dr. K Sai Kumar Chary
-        subtitle: Associate Professor, KGRCET
-      - title: Dr. K Udayashree
-        subtitle: Head, IIC, KGRCET
-      - title: Mr. M Rathanchary
-        subtitle: Head-DSA, KGRCET
-      - title: Mr. K Syed
-        subtitle: Head, CEED, KGRCET
-      - title: Mr. B Lingam
-        subtitle: Head, CIST, KGRCET
+      - title: Organizing Committee
+        items:
+          - title: Dr. M N Narsaiah
+            subtitle: Dean Academics & Strategic Planning, KGRCET
+          - title: Dr. L. Jayahari
+            subtitle: Dean IQAC, KGRCET
+          - title: Prof. Daniel Prabhakar
+            subtitle: Dean T&P, KGRCET
+          - title: Dr. P. Samyuktha
+            subtitle: Dean I&E, KGRCET
+          - title: Dr. B Vandana
+            subtitle: Associate Dean, R&D, CRID, KGRCET
+          - title: Mr. Abhinay Rakam
+            subtitle: Assistant Professor, Civil Engineering, KGRCET
+          - title: Dr. D Baloji
+            subtitle: Associate Professor, Mechanical Engineering, KGRCET
+          - title: Dr. D Yadaiaha
+            subtitle: Associate Professor, Computer Science & Engineering, KGRCET
+          - title: Dr. M Sandeep Kumar
+            subtitle: Associate Professor, CSE-AIML, KGRCET
+          - title: Dr. B Harika
+            subtitle: Associate Professor, CSE-DS, KGRCET
+          - title: Dr. D. Chenna Kesavaiah
+            subtitle: Associate Professor, H&S, KGRCET
+          - title: Mrs. Ch. Chandana
+            subtitle: Associate Dean, T&P, KGRCET
+          - title: Mr. D Srinivas
+            subtitle: Associate Dean, Academics, KGRCET
+          - title: Mr. K Thangamani
+            subtitle: Associate Dean, IQAC, KGRCET
+          - title: Dr. Sarika K
+            subtitle: HoD, MBA, KGRCET
+          - title: Mr. M. Vijaya Kumar
+            subtitle: HoD, Civil Engineering, KGRCET
+          - title: Dr. A. Seshappa
+            subtitle: HoD, Mechanical Engineering, KGRCET
+          - title: Mrs. P Usha
+            subtitle: HoD, Electronics & Communication Engineering, KGRCET
+          - title: Mrs. M. Manasa
+            subtitle: HoD, Computer Science & Engineering, KGRCET
+          - title: Dr. Devender Nayak N
+            subtitle: HoD, CSE-AIML, KGRCET
+          - title: Mr. L. Govardhan
+            subtitle: HoD, CSE-DS, KGRCET
+          - title: Mr. Rajendra Prasad
+            subtitle: HoD, H&S, KGRCET
+          - title: Dr. K Sai Kumar Chary
+            subtitle: Associate Professor, KGRCET
+          - title: Dr. K Udayashree
+            subtitle: Head, IIC, KGRCET
+          - title: Mr. M Rathanchary
+            subtitle: Head-DSA, KGRCET
+          - title: Mr. K Syed
+            subtitle: Head, CEED, KGRCET
+          - title: Mr. B Lingam
+            subtitle: Head, CIST, KGRCET
   speakers:
     kicker: Speakers
     title: Speakers
-    summary: 'Meet the distinguished keynote and invited speakers who will share their
+    summary:
+      "Meet the distinguished keynote and invited speakers who will share their
       expertise, research, and insights at the conference.
 
-      '
+      "
     sections:
-    - title: Featured speakers
-      cards:
-      - title: Dr. Milan Simic
-        meta: Keynote Speaker
-        subtitle: RMIT University, STEM, School of Engineering, Melbourne, Australia
-        image_path: img/speaker_milan.png
-        body: '<p>Dr. Milan Simic holds PhD, Masters, Bachelor of Electronics Engineering degrees, and Graduate Diploma in Education. </p>
+      - title: Featured speakers
+        cards:
+          - title: Dr. Milan Simic
+            meta: Keynote Speaker
+            subtitle: RMIT University, STEM, School of Engineering, Melbourne, Australia
+            image_path: img/speaker_milan.png
+            body:
+              "<p>Dr. Milan Simic holds PhD, Masters, Bachelor of Electronics Engineering degrees, and Graduate Diploma in Education. </p>
 
-          <p>He has extensive international experience spanning industry and academia, including roles with Honeywell Information Systems, CISCO Networking Academy, research institutes, and universities. His research focuses on applying AI and advanced analytical methods to complex engineering and infrastructure challenges, with an emphasis on real-world impact and industry collaboration.</p>
+              <p>He has extensive international experience spanning industry and academia, including roles with Honeywell Information Systems, CISCO Networking Academy, research institutes, and universities. His research focuses on applying AI and advanced analytical methods to complex engineering and infrastructure challenges, with an emphasis on real-world impact and industry collaboration.</p>
 
-          <p>Dr. Simic contributes to international conferences, scholarly publishing, and collaborative research initiatives. His work promotes responsible AI adoption, interdisciplinary engagement, and innovation that aligns technological advancement with societal needs.</p>'
-      - title: Dr. N.C. Mondal
-        meta: Keynote Speaker
-        subtitle: Scientist F, CSIR-National Geophysical Research Institute, Hyderabad
-        image_path: img/speaker1_mondal.png
-        body: '<p>Dr. N.C. Mondal received B.Sc. Physics (Hons.) degree from The University of Burwan, West Bengal and M.Sc. Tech. Geophysics from Banaras Hindu University, Varanasi. He obtained his Ph.D. in Geophysics from Osmania University, Hyderabad and also pursued Advance Groundwater Modelling Study at Texas A&M University, USA under the BOYSCAST Programme (funded by DST, Govt. of India).</p>
+              <p>Dr. Simic contributes to international conferences, scholarly publishing, and collaborative research initiatives. His work promotes responsible AI adoption, interdisciplinary engagement, and innovation that aligns technological advancement with societal needs.</p>"
+          - title: Dr. N.C. Mondal
+            meta: Keynote Speaker
+            subtitle: Scientist F, CSIR-National Geophysical Research Institute, Hyderabad
+            image_path: img/speaker1_mondal.png
+            body:
+              '<p>Dr. N.C. Mondal received B.Sc. Physics (Hons.) degree from The University of Burwan, West Bengal and M.Sc. Tech. Geophysics from Banaras Hindu University, Varanasi. He obtained his Ph.D. in Geophysics from Osmania University, Hyderabad and also pursued Advance Groundwater Modelling Study at Texas A&M University, USA under the BOYSCAST Programme (funded by DST, Govt. of India).</p>
 
-          <p>Presently Dr. Mondal is working as a Scientist F at CSIR-National Geophysical Research Institute, Hyderabad, India & holding Associate Professor of Physical Sciences, Academy of Scientific & Innovative Research (AcSIR), Ghaziabad, India.</p>
+              <p>Presently Dr. Mondal is working as a Scientist F at CSIR-National Geophysical Research Institute, Hyderabad, India & holding Associate Professor of Physical Sciences, Academy of Scientific & Innovative Research (AcSIR), Ghaziabad, India.</p>
 
-          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
+              <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
 
-          <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
+              <p>His principal research topics encompass groundwater exploration, hydrochemistry, aquifer modelling, and entropy theory in water resources. He has developed (1) an efficient & versatile technique for estimation of groundwater potential zones, (2) an Index called Saline Water Mixing Index (SWMI) for evaluating the relative degrees of saline water mixing, (3) a novel technique developed for estimating the natural backgrounds of groundwater pollution, (4) a new innovative entropy-based model for assessing natural groundwater reserve, and (5) also an interaction-based model for assessing the degrees of hydrogeological vulnerability.</p>
 
-          <p>Dr. Mondal has actively contributed to the Pilot Project on Aquifer Mapping (AQUIM)-India using combined ground and heliborne geophysical surveys and proved that a combination of electrical and electromagnetic investigations delineates the aquifer in the sedimentary basin of the Ganga River basin with certainty.</p>
+              <p>Dr. Mondal has actively contributed to the Pilot Project on Aquifer Mapping (AQUIM)-India using combined ground and heliborne geophysical surveys and proved that a combination of electrical and electromagnetic investigations delineates the aquifer in the sedimentary basin of the Ganga River basin with certainty.</p>
 
-          <p>He has credited more than 125-Research Articles in International & Indian Journals (Google Scholar Citations: 4966, h-index: 35 & i10-Index: 77); 21-Chapters in Books and 51-Technical Reports. He has already guided two Ph.D. Students of AcSIR, 02 PhD students presently pursuing, 10 M.E./M.Tech. Theses, and 13-Summer/Winter Trainees.</p>
+              <p>He has credited more than 125-Research Articles in International & Indian Journals (Google Scholar Citations: 4966, h-index: 35 & i10-Index: 77); 21-Chapters in Books and 51-Technical Reports. He has already guided two Ph.D. Students of AcSIR, 02 PhD students presently pursuing, 10 M.E./M.Tech. Theses, and 13-Summer/Winter Trainees.</p>
 
-          <p>He is member(s) of the European Water Resources Association (EWRA), International Association of Hydrogeologists (IAH), International Association of Hydrological Sciences (IAHS), International Society for Development & Sustainability (ISDA-Japan), Association of Hydrologists of India (AHI), Indian Association of Hydrologists (IAH), Indian Society for Hydraulics (ISH) & Association of Global Groundwater Scientists (AGGS).</p>
+              <p>He is member(s) of the European Water Resources Association (EWRA), International Association of Hydrogeologists (IAH), International Association of Hydrological Sciences (IAHS), International Society for Development & Sustainability (ISDA-Japan), Association of Hydrologists of India (AHI), Indian Association of Hydrologists (IAH), Indian Society for Hydraulics (ISH) & Association of Global Groundwater Scientists (AGGS).</p>
 
-          <p>He is the recipient (s) of the BOYSCAST Fellow-2009 (DST, GoI), The National Geoscience Award-2017 (Ministry of Mines, GoI), Bharat Jyoti Award-2019 (IIFS, New Delhi), Outstanding Scientist Award-2020 & Best Researcher Award-2021 (VDGOOD, Chennai), and Distinguished Scientist Award-2026 (Scientific Laurels). Elected as Joint Secretary of AGGS & Executive Member of AHI. Honoured as “Fellow (s)" of Telangana Academy of Sciences (FTAS) and Geological Society (India), and “Distinguished Fellow” of Global Groundwater Scientists (AGGS).</p>
+              <p>He is the recipient (s) of the BOYSCAST Fellow-2009 (DST, GoI), The National Geoscience Award-2017 (Ministry of Mines, GoI), Bharat Jyoti Award-2019 (IIFS, New Delhi), Outstanding Scientist Award-2020 & Best Researcher Award-2021 (VDGOOD, Chennai), and Distinguished Scientist Award-2026 (Scientific Laurels). Elected as Joint Secretary of AGGS & Executive Member of AHI. Honoured as “Fellow (s)" of Telangana Academy of Sciences (FTAS) and Geological Society (India), and “Distinguished Fellow” of Global Groundwater Scientists (AGGS).</p>
 
-          <p>He also visited the USA, Singapore & Mauritius to present his research findings.</p>'
-      - title: Dr Muhammad Ammirrul Atiqi Mohd Zainuri
-        meta: Keynote Speaker
-        subtitle: Senior Lecturer, Department of Electrical, Electronics and System, Universiti Kebangsaan Malaysia
-        image_path: img/speaker_muhammad.png
-        body: '<p>Dr Muhammad Ammirrul Atiqi Mohd Zainuri received the B.Eng. in Electrical and Electronic Engineering from Universiti Putra Malaysia, in 2011, the M.Sc. of electrical power engineering from Universiti Putra Malaysia, in 2013, and In August 2017, he was awarded his Ph.D degree from Department of Electrical and Electronic Engineering, Faculty of Engineering, Universiti Putra Malaysia. He is a member of IEEE, and a registered graduate engineers Malaysia (BEM) in the electrical track. Currently, he is a Senior Lecturer at Department of Electrical, Electronic and System Engineering, Universiti Kebangsaan Malaysia (UKM). He has authored and co-authored number of well recognized journals and conference papers. His research interests are in power electronics, power quality, renewable energy systems and applied artificial intelligent in electrical systems. He is an active research member at UMPEDAC and ALPER (UPM).</p>'
-      - title: Prof. K. V. Jayakumar
-        meta: Keynote Speaker
-        subtitle: Senior Adjunct Professor and Outreach Advisor, IIT Dharwad; Member, Governing Body, Wetlands International South Asia
-        image_path: img/speaker_jayakumar.png
-        body: '<p>Prof. K. V. Jayakumar is a distinguished academic, administrator, and policy advisor in the field of Civil Engineering and Water Resources, with over three decades of experience in teaching, research, institutional leadership, and national–international advisory roles. He is currently serving as Senior Adjunct Professor and Outreach Advisor at the Indian Institute of Technology (IIT) Dharwad and is a Member of the Governing Body of Wetlands International South Asia (WISA).</p>
+              <p>He also visited the USA, Singapore & Mauritius to present his research findings.</p>'
+          - title: Dr Muhammad Ammirrul Atiqi Mohd Zainuri
+            meta: Keynote Speaker
+            subtitle: Senior Lecturer, Department of Electrical, Electronics and System, Universiti Kebangsaan Malaysia
+            image_path: img/speaker_muhammad.png
+            body: "<p>Dr Muhammad Ammirrul Atiqi Mohd Zainuri received the B.Eng. in Electrical and Electronic Engineering from Universiti Putra Malaysia, in 2011, the M.Sc. of electrical power engineering from Universiti Putra Malaysia, in 2013, and In August 2017, he was awarded his Ph.D degree from Department of Electrical and Electronic Engineering, Faculty of Engineering, Universiti Putra Malaysia. He is a member of IEEE, and a registered graduate engineers Malaysia (BEM) in the electrical track. Currently, he is a Senior Lecturer at Department of Electrical, Electronic and System Engineering, Universiti Kebangsaan Malaysia (UKM). He has authored and co-authored number of well recognized journals and conference papers. His research interests are in power electronics, power quality, renewable energy systems and applied artificial intelligent in electrical systems. He is an active research member at UMPEDAC and ALPER (UPM).</p>"
+          - title: Prof. K. V. Jayakumar
+            meta: Keynote Speaker
+            subtitle: Senior Adjunct Professor and Outreach Advisor, IIT Dharwad; Member, Governing Body, Wetlands International South Asia
+            image_path: img/speaker_jayakumar.png
+            body:
+              "<p>Prof. K. V. Jayakumar is a distinguished academic, administrator, and policy advisor in the field of Civil Engineering and Water Resources, with over three decades of experience in teaching, research, institutional leadership, and national–international advisory roles. He is currently serving as Senior Adjunct Professor and Outreach Advisor at the Indian Institute of Technology (IIT) Dharwad and is a Member of the Governing Body of Wetlands International South Asia (WISA).</p>
 
-          <p>Prior to this, Prof. Jayakumar served for over 30 years at the National Institute of Technology (NIT) Warangal, where he held several key leadership positions, including Dean (Planning & Development), Dean (International Relations & Alumni Affairs), Advisor to the Director (Special Programmes), Head of the Department, and Coordinator of national flagship programs such as GIAN and SPARC. He was also a nominated member of the Board of Governors and Finance Committee of NIT Warangal.</p>
+              <p>Prior to this, Prof. Jayakumar served for over 30 years at the National Institute of Technology (NIT) Warangal, where he held several key leadership positions, including Dean (Planning & Development), Dean (International Relations & Alumni Affairs), Advisor to the Director (Special Programmes), Head of the Department, and Coordinator of national flagship programs such as GIAN and SPARC. He was also a nominated member of the Board of Governors and Finance Committee of NIT Warangal.</p>
 
-          <p>He served on deputation as Executive Director, Centre for Water Resources Development and Management (CWRDM), Kozhikode, one of the countrys premier R&D centres on water resources. He concurrently held additional charges as Director, C-STED (Government of Kerala), and as Director, Kerala School of Mathematics, demonstrating his ability to bridge academia, research, entrepreneurship, and governance.</p>
+              <p>He served on deputation as Executive Director, Centre for Water Resources Development and Management (CWRDM), Kozhikode, one of the countrys premier R&D centres on water resources. He concurrently held additional charges as Director, C-STED (Government of Kerala), and as Director, Kerala School of Mathematics, demonstrating his ability to bridge academia, research, entrepreneurship, and governance.</p>
 
-          <p>Prof. Jayakumar holds a BTech in Civil Engineering from the National Institute of Technology Karnataka (NITK Surathkal), MTech in Water Resources Engineering, and a PhD from IIT Kanpur. His areas of expertise include Hydrology and Water Resources Engineering, Urban Stormwater Management, Irrigation Engineering, Wetland Hydrology, Remote Sensing & GIS Applications, Environmental Management, Climate Change Adaptation, and Environmental Flows. In addition, he has strong expertise in executive skills, communication, teaching–learning processes, time and stress management, contributing significantly to leadership development and faculty training.</p>
+              <p>Prof. Jayakumar holds a BTech in Civil Engineering from the National Institute of Technology Karnataka (NITK Surathkal), MTech in Water Resources Engineering, and a PhD from IIT Kanpur. His areas of expertise include Hydrology and Water Resources Engineering, Urban Stormwater Management, Irrigation Engineering, Wetland Hydrology, Remote Sensing & GIS Applications, Environmental Management, Climate Change Adaptation, and Environmental Flows. In addition, he has strong expertise in executive skills, communication, teaching–learning processes, time and stress management, contributing significantly to leadership development and faculty training.</p>
 
-          <p>He has guided 12 PhD scholars, over 120 MTech dissertations, several BTech projects, and a UGC postdoctoral fellow, and continues to mentor PhD scholars and postdoctoral researchers at IIT Dharwad. Internationally, he has held visiting assignments at University of Essen (Germany), Griffith University (Australia), and the University of Peradeniya (Sri Lanka), and was a member of the UNESCO Working Group on Urban Hydrology. He played a pioneering role in introducing the International Course on Urban Drainage in Developing Countries (UDDC) in India.</p>
+              <p>He has guided 12 PhD scholars, over 120 MTech dissertations, several BTech projects, and a UGC postdoctoral fellow, and continues to mentor PhD scholars and postdoctoral researchers at IIT Dharwad. Internationally, he has held visiting assignments at University of Essen (Germany), Griffith University (Australia), and the University of Peradeniya (Sri Lanka), and was a member of the UNESCO Working Group on Urban Hydrology. He played a pioneering role in introducing the International Course on Urban Drainage in Developing Countries (UDDC) in India.</p>
 
-          <p>Prof. Jayakumar is a recipient of several prestigious recognitions, including the Distinguished Alumnus Award during the Diamond Jubilee celebrations of NITK Surathkal, the Prof. Rangaraju Award for Excellence in Water Resources Research, and state-level honours for contributions to community development in water management. He has delivered numerous keynote addresses, including the 18th International Hydrological Decade Endowment Lecture. Very recently, one of his works, “Artificial Intelligence-based Sea Water and Groundwater Desalination Device,” was granted an Indian patent.</p>
+              <p>Prof. Jayakumar is a recipient of several prestigious recognitions, including the Distinguished Alumnus Award during the Diamond Jubilee celebrations of NITK Surathkal, the Prof. Rangaraju Award for Excellence in Water Resources Research, and state-level honours for contributions to community development in water management. He has delivered numerous keynote addresses, including the 18th International Hydrological Decade Endowment Lecture. Very recently, one of his works, “Artificial Intelligence-based Sea Water and Groundwater Desalination Device,” was granted an Indian patent.</p>
 
-          <p>He has served extensively in national policy, accreditation, and advisory roles, including NBA, DST, NIH, UNESCO working groups, UPSC, Pollution Control Boards, International Council for Circular Economy, Dam Safety Authorities, and multiple state and national committees. With over 150 publications and multilingual proficiency - proficient in English, Malayalam, Tamil, Telugu, Kannada, and Hindi, and with elementary working knowledge of German, French, and Russian - Prof. Jayakumar continues to make significant contributions to sustainable water management, environmental governance, and academic leadership.</p>'
-      - title: Prof. Rajanikanth Aluvalu
-        meta: Keynote Speaker
-        subtitle: Professor and Director, Symbiosis Institute of Technology, Hyderabad
-        image_path: img/speaker2_rajanikanth.png
-        body: '<p>Prof. Rajanikanth Aluvalu is a Senior Member of IEEE and serves
-          as Professor and Director at Symbiosis Institute of Technology, Hyderabad,
-          Symbiosis International (Deemed University), Pune, India.</p>
+              <p>He has served extensively in national policy, accreditation, and advisory roles, including NBA, DST, NIH, UNESCO working groups, UPSC, Pollution Control Boards, International Council for Circular Economy, Dam Safety Authorities, and multiple state and national committees. With over 150 publications and multilingual proficiency - proficient in English, Malayalam, Tamil, Telugu, Kannada, and Hindi, and with elementary working knowledge of German, French, and Russian - Prof. Jayakumar continues to make significant contributions to sustainable water management, environmental governance, and academic leadership.</p>"
+          - title: Prof. Rajanikanth Aluvalu
+            meta: Keynote Speaker
+            subtitle: Professor and Director, Symbiosis Institute of Technology, Hyderabad
+            image_path: img/speaker2_rajanikanth.png
+            body:
+              "<p>Prof. Rajanikanth Aluvalu is a Senior Member of IEEE and serves
+              as Professor and Director at Symbiosis Institute of Technology, Hyderabad,
+              Symbiosis International (Deemed University), Pune, India.</p>
 
-          <p>He has over 23 years of teaching, research, and academic leadership experience
-          and holds a Ph.D. with specialization in High Performance Computing. He
-          has served as Secretary and Treasurer of the IEEE Computer Society, Hyderabad
-          Section, and is associated with several reputed international journals as
-          an editorial board member and academic editor.</p>
+              <p>He has over 23 years of teaching, research, and academic leadership experience
+              and holds a Ph.D. with specialization in High Performance Computing. He
+              has served as Secretary and Treasurer of the IEEE Computer Society, Hyderabad
+              Section, and is associated with several reputed international journals as
+              an editorial board member and academic editor.</p>
 
-          <p>He has published extensively in peer-reviewed journals and international
-          conferences and has authored or edited multiple books with leading international
-          publishers, including Springer, Wiley, De Gruyter, and Apple Academic Press.
-          His research interests include Artificial Intelligence, Generative AI, Federated
-          Learning, Cloud Computing, High Performance Computing, Explainable AI, and
-          AI for Healthcare.</p>
+              <p>He has published extensively in peer-reviewed journals and international
+              conferences and has authored or edited multiple books with leading international
+              publishers, including Springer, Wiley, De Gruyter, and Apple Academic Press.
+              His research interests include Artificial Intelligence, Generative AI, Federated
+              Learning, Cloud Computing, High Performance Computing, Explainable AI, and
+              AI for Healthcare.</p>
 
-          <p>He is a recipient of the IEEE Hyderabad Section Best Advisor Award and
-          the IUCEE Faculty Fellow Award (2018). He is also a Life Member of ISTE
-          and a member of ACM.</p>'
+              <p>He is a recipient of the IEEE Hyderabad Section Best Advisor Award and
+              the IUCEE Faculty Fellow Award (2018). He is also a Life Member of ISTE
+              and a member of ACM.</p>"
 
   registration:
     kicker: Registration
     title: Registration
-    summary: 'Register to participate in the conference and explore registration fees,
+    summary:
+      "Register to participate in the conference and explore registration fees,
       payment details, and key dates.
 
-      '
+      "
     sections:
-    - title: Registration information
-      cards:
-      - title: Standard registration
-        meta: Details coming soon
-        body: Registration pricing will be announced with the full program.
-      - title: Student registration
-        meta: Details coming soon
-        body: Reduced pricing will be available for eligible students.
-      - title: Workshop registration
-        meta: Details coming soon
-        body: Separate workshop access options may be offered.
-    - title: What to expect
-      bullets:
-      - Registration opening and early-bird deadlines will be announced later.
-      - Payment and invoice instructions will be shared when registration opens.
-      - Contact the organizing committee for questions.
+      - title: Registration information
+        cards:
+          - title: Standard registration
+            meta: Details coming soon
+            body: Registration pricing will be announced with the full program.
+          - title: Student registration
+            meta: Details coming soon
+            body: Reduced pricing will be available for eligible students.
+          - title: Workshop registration
+            meta: Details coming soon
+            body: Separate workshop access options may be offered.
+      - title: What to expect
+        bullets:
+          - Registration opening and early-bird deadlines will be announced later.
+          - Payment and invoice instructions will be shared when registration opens.
+          - Contact the organizing committee for questions.
   contact:
     kicker: Contact
     title: Contact
-    summary: 'Reach the conference organizing team for general questions, submissions,
+    summary:
+      "Reach the conference organizing team for general questions, submissions,
       and registration support.
 
-      '
+      "
     sections:
-    - title: Contact details
-      cards:
-      - title: General inquiries
-        meta: Conference team
-        body: Email <a href="mailto:#">TBA</a>
-      - title: Sponsorship
-        meta: Partnerships
-        body: Email <a href="mailto:#">TBA</a>
-      - title: Press and media
-        meta: Communications
-        body: Email <a href="mailto:#">TBA</a>
-    - title: Office details
-      bullets:
-      - 'Address: Conference organizing committee'
-      - 'Conference email: TBA'
-      - Please include your name and topic in the subject line.
-    - title: Venue and Directions
-      body: 'The conference will be held at <strong>KG Reddy College of Engineering
-        and Technology</strong>. Use the details below for navigation and planning
-        your arrival.
+      - title: Contact details
+        cards:
+          - title: General inquiries
+            meta: Conference team
+            body: Email <a href="mailto:#">TBA</a>
+          - title: Sponsorship
+            meta: Partnerships
+            body: Email <a href="mailto:#">TBA</a>
+          - title: Press and media
+            meta: Communications
+            body: Email <a href="mailto:#">TBA</a>
+      - title: Office details
+        bullets:
+          - "Address: Conference organizing committee"
+          - "Conference email: TBA"
+          - Please include your name and topic in the subject line.
+      - title: Venue and Directions
+        body:
+          "The conference will be held at <strong>KG Reddy College of Engineering
+          and Technology</strong>. Use the details below for navigation and planning
+          your arrival.
 
-        '
-      image_path: img/kgreddy.png
-      cards:
-      - title: Complete Address
-        meta: Conference venue
-        body: 'Beside Moinabad Police Station,<br>
+          "
+        image_path: img/kgreddy.png
+        cards:
+          - title: Complete Address
+            meta: Conference venue
+            body: "Beside Moinabad Police Station,<br>
 
-          Chilkur Village, Moinabad Mandal,<br>
+              Chilkur Village, Moinabad Mandal,<br>
 
-          Hyderabad, 500075, Telangana, India.
+              Hyderabad, 500075, Telangana, India.
 
-          '
-      - title: Map and Navigation
-        meta: Directions
-        body: '<a href="https://maps.google.com/?q=KG+Reddy+College+of+Engineering+and+Technology+Beside+Moinabad+Police+Station+Chilkur+Village+Moinabad+Mandal+Hyderabad+500075+Telangana+India"
-          target="_blank" rel="noopener noreferrer">Open in Google Maps</a><br>
+              "
+          - title: Map and Navigation
+            meta: Directions
+            body:
+              '<a href="https://maps.google.com/?q=KG+Reddy+College+of+Engineering+and+Technology+Beside+Moinabad+Police+Station+Chilkur+Village+Moinabad+Mandal+Hyderabad+500075+Telangana+India"
+              target="_blank" rel="noopener noreferrer">Open in Google Maps</a><br>
 
-          <a href="https://www.kgr.ac.in/" target="_blank" rel="noopener noreferrer">Visit
-          Website</a>
+              <a href="https://www.kgr.ac.in/" target="_blank" rel="noopener noreferrer">Visit
+              Website</a>
 
-          '
-      - title: Arrival Guidance
-        meta: Campus entry
-        body: 'Please arrive at least 30 minutes before your first session for smooth
-          entry, registration, and check-in at the college campus.
+              '
+          - title: Arrival Guidance
+            meta: Campus entry
+            body:
+              "Please arrive at least 30 minutes before your first session for smooth
+              entry, registration, and check-in at the college campus.
 
-          '
+              "
