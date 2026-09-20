@@ -451,14 +451,14 @@ pages:
             body: ""
       - title: Program Chair
         cards:
+          - title: Dr. S. Sai Satyanarayana Reddy
+            subtitle: Principal, KG Reddy College of Engineering & Technology, India
+            body: ""
           - title: Dr B Praveen Kumar
             subtitle: Associate Professor, Vardhaman College of Engineering, India
             body: ""
           - title: Dr Shitharth Selvarajan
             subtitle: Lecturer, Leeds Beckett University, Leeds, United Kingdom
-            body: ""
-          - title: Dr. S. Sai Satyanarayana Reddy
-            subtitle: Principal, KG Reddy College of Engineering & Technology, India
             body: ""
       - title: Track Chair
         cards:
