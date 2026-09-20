@@ -462,7 +462,15 @@ pages:
             body: ""
       - title: Program Co-Chair
         cards:
-
+          - title: Dr. Soumya Sucharita Singha
+            subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
+            body: ""
+          - title: Dr. Raghavendra Prasad
+            subtitle: Professor & Associate Dean, Medhavi Skills University, Sikkim, India
+            body: ""
+          - title: Dr. Sudhakar Singha
+            subtitle: Assistant Professor, GITAM (Deemed to be University), Hyderabad, India
+            body: ""
       - title: Track Chair
         cards:
           - meta: Track 1
@@ -590,6 +598,9 @@ pages:
               Indian Institute of Technology (Indian School of Mines), Dhanbad,
               India
             body: ""
+          - title: Dr. Tarun Kumar Rajak
+            subtitle: Shri Shankaracharya Institute of Professional Management & Technology, Chhattisgarh, India
+            body: ""
           - title: Dr. Bibhuti Bhushan Das
             subtitle: National Institute of Technology Karnataka, Surathkal, India
             body: ""
@@ -607,17 +618,14 @@ pages:
               Adjunct Faculty, Indian Institute of Technology (Indian School of
               Mines), Dhanbad, India
             body: ""
-          - title: Dr. U K Dewangan
-            subtitle: National Institute of Technology, Raipur, India
-            body: ""
           - title: Dr. Abhilasha Chaudhuri
             subtitle: National Institute of Technology, Surat, India
             body: ""
           - title: Dr. Satya Verma
             subtitle: Siksha 'O' Anusandhan, Odisha, India
             body: ""
-          - title: Dr. Sudhakar Singha
-            subtitle: GITAM Deemed to be University, Telangana, India
+          - title: Dr. Naresh Kumar Kar
+            subtitle: GITAM (Deemed to be University), Telangana, India
             body: ""
           - title: Dr. Bhumika Das
             subtitle: Lakshmi Chand Institute of Technology, Chhattisgarh, India
@@ -634,8 +642,11 @@ pages:
           - title: Dr. Chennarapu Hari Prasad
             subtitle: Mahindra University, Telangana, India
             body: ""
-          - title: Dr. Soumya Sucharita Singha
-            subtitle: Dean R&D, CRID, KG Reddy College of Engineering & Technology, India
+          - title: Dr. Hemlata Sinha
+            subtitle: Shri Shankaracharya Institute of Professional Management & Technology, Chhattisgarh, India
+            body: ""
+          - title: Dr. Rityuj Singh Parihar
+            subtitle: Shri Shankaracharya Institute of Professional Management & Technology, Chhattisgarh, India
             body: ""
 
       - title: Organizing Committee
