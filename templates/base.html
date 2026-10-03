@@ -52,6 +52,7 @@
         <div class="conference-hero-row">
           <div class="conference-meta">
             <span class="conference-chip conference-chip-cta"><strong>Date:</strong> {{ conference.dates }}</span>
+            <span class="conference-chip conference-chip-cta"><strong>Mode:</strong> {{ conference.event_mode }}</span>
             <span class="conference-chip conference-chip-cta"><strong>Venue:</strong>
               {% if conference.venue and conference.venue.map_url %}
               <a href="{{ conference.venue.map_url }}" target="_blank" rel="noopener noreferrer">{{ conference.location }}</a>
